@@ -1175,3 +1175,32 @@ main,
     font-size: 0.94rem;
   }
 }
+.price {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.price-note {
+  display: block;
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 4px;
+  font-weight: 400;
+}
+
+.price-extra {
+  display: block;
+  font-size: 0.85rem;
+  color: #10b981;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.pricing-trust {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.95rem;
+  color: #374151;
+  opacity: 0.8;
+}
