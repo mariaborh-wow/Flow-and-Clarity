@@ -11,18 +11,17 @@ const translations = {
     navServices: "Leistungen",
     navPricing: "Preise",
     navAbout: "Über mich",
-    navFaq: "FAQ",
     navContact: "Kontakt",
 
-    heroBadge: "Webseiten & digitale Struktur für Selbstständige",
-    heroTitle: "Mehr Klarheit zwischen Ihrem Angebot und Ihren Kunden.",
+    heroBadge: "Individuelle Websites für Selbstständige",
+    heroTitle: "Websites, die Ihr Business klar, modern und professionell zeigen.",
     heroText:
-      "Individuelle Webseiten und klare digitale Struktur, damit Ihr Business professionell wirkt, schneller verstanden wird und leichter Anfragen bekommt.",
+      "Ich erstelle Websites und helfe zusätzlich mit Google Sheets und digitaler Struktur – damit Kunden schneller verstehen, was Sie anbieten.",
     heroBtn1: "Projekt anfragen",
     heroBtn2: "Preise ansehen",
-    meta2: "für Handy und Desktop",
-    meta3: "klarer Einstieg für kleine Businesses",
-    metaSheets: "Google Sheets Hilfe & Struktur",
+    heroPoint1: "Webdesign",
+    heroPoint2: "Google Sheets",
+    heroPoint3: "klare Struktur",
 
     visualFloatingBadge: "Mehr Anfragen",
     visualEyebrow: "Was ich für Ihr Business löse",
@@ -30,128 +29,69 @@ const translations = {
     visualList1: "professioneller erster Eindruck",
     visualList2: "leichter Kontakt für potenzielle Kunden",
     visualList3: "übersichtliche digitale Struktur",
-    visualList4: "individuelle Umsetzung statt Standard-Vorlage",
-    floatingPill1: "Webseiten",
-    floatingPill2: "Google Sheets",
-    floatingPill3: "Struktur",
-    floatingPill4: "Klarheit",
+    visualList4: "individuelle Umsetzung statt Vorlage",
+    chip1: "Websites",
+    chip2: "Klarheit",
+    chip3: "Struktur",
 
-    visualsOverline: "Vorteile",
-    visualsTitle: "Klare visuelle Vorteile für einen starken ersten Eindruck.",
-    visualCard1Title: "Mehr Vertrauen",
-    visualCard1Text:
-      "Ein moderner Auftritt wirkt professionell und macht Ihr Angebot glaubwürdiger.",
-    visualCard2Title: "Mehr Klarheit",
-    visualCard2Text:
-      "Besucher verstehen schneller, was Sie anbieten und warum sie Sie wählen sollten.",
-    visualCard3Title: "Mehr Ordnung",
-    visualCard3Text:
-      "Strukturierte Inhalte und Google Sheets helfen Ihnen auch intern sauberer zu arbeiten.",
-    visualCard4Title: "Mehr Wirkung",
-    visualCard4Text:
-      "Design, Text und Logik greifen ineinander und bringen Ihr Business stärker nach vorn.",
-
-    trustOverline: "Für wen",
-    trustTitle:
-      "Für Selbstständige, die professionell wirken wollen – ohne unnötigen Aufwand.",
-    trustCard1Title: "Lokale Dienstleistungen",
-    trustCard1Text:
-      "Für Anbieter, die online klar, modern und vertrauenswürdig auftreten wollen.",
-    trustCard2Title: "Beauty, Beratung, Handwerk",
-    trustCard2Text:
-      "Für kleine Businesses, die mehr Übersicht und einen besseren ersten Eindruck brauchen.",
-    trustCard3Title: "Startende Selbstständige",
-    trustCard3Text:
-      "Für alle, die nicht bei null sichtbar bleiben möchten, sondern professionell starten wollen.",
+    quick1Title: "Modern",
+    quick1Text: "Saubere, moderne Websites mit starker Wirkung.",
+    quick2Title: "Verständlich",
+    quick2Text: "Ihr Angebot wird klar und schnell erfassbar.",
+    quick3Title: "Strukturiert",
+    quick3Text: "Auch hinter den Kulissen mehr Ordnung und Übersicht.",
 
     servicesOverline: "Leistungen",
-    servicesTitle:
-      "Ich helfe dabei, Ihr Angebot sichtbar, verständlich und geordnet zu machen.",
-    service1Title: "Individuelle Websites",
+    servicesTitle: "Was ich für Ihr Business umsetzen kann.",
+    service1Title: "Websites",
     service1Text:
-      "Moderne Webseiten für Selbstständige – abgestimmt auf Ihr Angebot, Ihre Zielgruppe und Ihre Wirkung.",
-    service2Title: "Mobile & Desktop Optimierung",
+      "Individuelle Websites für Selbstständige und kleine Businesses – modern, klar und passend zu Ihrem Angebot.",
+    service2Title: "Google Sheets",
     service2Text:
-      "Ihr Auftritt funktioniert sauber auf dem Handy und am Computer – klar, schnell und angenehm.",
-    service3Title: "Google Sheets Hilfe & Struktur",
+      "Hilfe bei Tabellen, Struktur und praktischen Übersichten für den Alltag.",
+    service2Price: "ab 75 €",
+    service3Title: "Digitale Klarheit",
     service3Text:
-      "Ich helfe dabei, Ordnung in Tabellen zu bringen oder eine übersichtliche Arbeits-Tabelle für Ihren Alltag zu erstellen.",
-    service3Price: "ab 75 €",
-    service4Title: "Klare Kundenführung",
-    service4Text:
-      "Ich denke nicht nur an Design, sondern daran, wie Besucher schnell verstehen, was Sie anbieten.",
+      "Ich denke nicht nur an Design, sondern daran, wie Besucher schneller verstehen, was Sie anbieten – und wie der Kontakt leichter wird.",
 
     pricingOverline: "Preise",
     pricingTitle: "Zwei klare Pakete für einen professionellen Start.",
     starterTag: "Klarer Einstieg",
     starterTitle: "Starter",
     starterText:
-      "Für kleine Businesses, die eine moderne, saubere und klare Online-Präsenz brauchen.",
+      "Für kleine Businesses, die eine moderne und klare Website brauchen.",
     starterList1: "1 Landing Page",
     starterList2: "individuelles Design",
     starterList3: "mobile Optimierung",
     starterList4: "Kontakt / WhatsApp Integration",
-    starterList5: "Basis-Animationen & ruhige Effekte",
-    starterList6: "Preis klar ab 280 €",
     starterBtn: "Dieses Paket anfragen",
 
     businessTag: "Mehr Wirkung",
     businessTitle: "Business",
     businessText:
-      "Für Selbstständige, die professioneller auftreten und ihr Angebot stärker präsentieren möchten.",
-    businessList1: "mehrere Sektionen / erweiterte Struktur",
-    businessList2: "individuelle visuelle Gestaltung",
+      "Für Selbstständige, die professioneller auftreten und ihr Angebot stärker zeigen möchten.",
+    businessList1: "mehrere Sektionen",
+    businessList2: "stärkere visuelle Gestaltung",
     businessList3: "FAQ / Preise / Vertrauenselemente",
-    businessList4: "stärkere Benutzerführung",
-    businessList5: "Hilfe bei Struktur und Textaufbau",
-    businessList6: "Hilfe bei Domain-Anbindung",
-    businessList7: "Standort / Route / Lage einbauen",
+    businessList4: "Hilfe bei Domain-Anbindung",
+    businessList5: "Standort / Route / Lage einbauen",
     businessBtn: "Business anfragen",
-    pricingNote:
-      "Zusätzliche Google Sheets Unterstützung oder weitere Blöcke können individuell ergänzt werden.",
 
     aboutOverline: "Über mich",
-    aboutTitle:
-      "Ich arbeite nicht nur schön – sondern mit Blick auf Wirkung und Klarheit.",
+    aboutTitle: "Schön ist gut. Klar und wirksam ist besser.",
     aboutText1:
-      "Ich bin Maria und ich entwickle Webseiten für Selbstständige und kleine Businesses. Dabei achte ich nicht nur auf das Design, sondern auch darauf, wie Ihr Angebot nach außen wirkt.",
+      "Ich bin Maria und ich erstelle Websites für Selbstständige und kleine Businesses.",
     aboutText2:
-      "Ich nehme mir Zeit für Ihr Anliegen, denke mich in Ihren Bedarf hinein und entwickle Lösungen, die klar, modern und sinnvoll aufgebaut sind.",
-    aboutText3:
-      "Neben Webseiten helfe ich auch dabei, Ordnung in Google Sheets zu bringen oder eine passende Arbeits-Tabelle für Ihren Alltag zu erstellen.",
-    aboutText4:
-      "So wird es für Sie einfacher, Anfragen, Kunden oder interne Abläufe übersichtlich und praktisch zu organisieren.",
+      "Zusätzlich helfe ich mit Google Sheets und klarer digitaler Struktur, damit Ihr Angebot nicht nur gut aussieht, sondern auch verständlich wirkt.",
     aboutCard1Label: "Fokus",
     aboutCard1Value: "klarer Auftritt",
     aboutCard2Label: "Ansatz",
     aboutCard2Value: "individuell statt Standard",
-    aboutCard3Label: "Ziel",
-    aboutCard3Value: "Verbindung zu Ihren Kunden",
-    aboutCard4Label: "Arbeitsweise",
-    aboutCard4Value: "ruhig, klar und professionell",
-
-    faqOverline: "FAQ",
-    faqTitle: "Antworten auf die wichtigsten Fragen.",
-    faq1Q: "Wie läuft die Zusammenarbeit ab?",
-    faq1A:
-      "Sie schreiben mir Ihr Anliegen, ich schaue mir Ihren Bedarf an und wir finden eine passende Lösung für Ihren Start.",
-    faq2Q: "Arbeiten Sie nur mit großen Projekten?",
-    faq2A:
-      "Nein. Gerade kleine und mittlere Projekte für Selbstständige und lokale Businesses stehen im Fokus.",
-    faq3Q: "Brauche ich schon fertige Texte?",
-    faq3A:
-      "Nicht unbedingt. Ich kann Ihnen auch bei Struktur, Formulierungen und klarer Darstellung helfen.",
-    faq4Q: "Können auch Google Sheets Lösungen ergänzt werden?",
-    faq4A:
-      "Ja. Einfache Tabellen für Struktur, Übersicht und Arbeitsabläufe können zusätzlich umgesetzt werden.",
-    faq5Q: "Was ist eine Domain und wofür braucht man sie?",
-    faq5A:
-      "Eine Domain ist Ihre Webadresse im Internet, zum Beispiel ihrname.de. Sie hilft dabei, dass Ihr Business professionell gefunden wird und Ihre Website leicht erreichbar ist.",
 
     contactOverline: "Kontakt",
     contactTitle: "Schreiben Sie mir direkt.",
     contactText:
-      "Wenn Sie eine Website, mehr Struktur oder eine klare digitale Lösung für Ihr Business suchen, können Sie mir direkt schreiben.",
+      "Wenn Sie eine Website oder mehr digitale Klarheit für Ihr Business suchen, können Sie mir direkt schreiben.",
     contactMailLabel: "E-Mail",
     contactPhoneLabel: "Telefon",
     contactWhatsappValue: "Nachricht senden",
@@ -161,7 +101,8 @@ const translations = {
     formMessage: "Nachricht",
     formBtn: "Anfrage vorbereiten",
     formNote: "Beim Klick wird Ihre Anfrage als E-Mail vorbereitet.",
-    footerText: "Webseiten & digitale Struktur für Selbstständige"
+
+    footerText: "Websites & digitale Struktur für Selbstständige"
   },
 
   ru: {
@@ -169,147 +110,87 @@ const translations = {
     navServices: "Услуги",
     navPricing: "Цены",
     navAbout: "Обо мне",
-    navFaq: "FAQ",
     navContact: "Контакт",
 
-    heroBadge: "Сайты и цифровая структура для предпринимателей",
-    heroTitle: "Больше ясности между вашим предложением и вашими клиентами.",
+    heroBadge: "Индивидуальные сайты для предпринимателей",
+    heroTitle: "Сайты, которые показывают ваш бизнес ясно, современно и профессионально.",
     heroText:
-      "Индивидуальные сайты и понятная цифровая структура, чтобы ваш бизнес выглядел профессионально, быстрее понимался и легче получал заявки.",
+      "Я создаю сайты и дополнительно помогаю с Google Sheets и цифровой структурой — чтобы клиент быстрее понимал, что вы предлагаете.",
     heroBtn1: "Обсудить проект",
     heroBtn2: "Посмотреть цены",
-    meta2: "для телефона и компьютера",
-    meta3: "понятный старт для малого бизнеса",
-    metaSheets: "помощь и порядок в Google Sheets",
+    heroPoint1: "Веб-дизайн",
+    heroPoint2: "Google Sheets",
+    heroPoint3: "понятная структура",
 
     visualFloatingBadge: "Больше заявок",
     visualEyebrow: "Что я решаю для вашего бизнеса",
-    visualTitle: "Более ясная подача. Более лёгкий контакт.",
+    visualTitle: "Понятнее подача. Легче контакт.",
     visualList1: "профессиональное первое впечатление",
     visualList2: "удобный контакт для потенциальных клиентов",
     visualList3: "понятная цифровая структура",
     visualList4: "индивидуальная реализация вместо шаблона",
-    floatingPill1: "Сайты",
-    floatingPill2: "Google Sheets",
-    floatingPill3: "Структура",
-    floatingPill4: "Ясность",
+    chip1: "Сайты",
+    chip2: "Ясность",
+    chip3: "Структура",
 
-    visualsOverline: "Преимущества",
-    visualsTitle: "Понятные визуальные преимущества для сильного первого впечатления.",
-    visualCard1Title: "Больше доверия",
-    visualCard1Text:
-      "Современная подача делает ваше предложение более профессиональным и убедительным.",
-    visualCard2Title: "Больше ясности",
-    visualCard2Text:
-      "Посетитель быстрее понимает, что вы предлагаете и почему стоит выбрать именно вас.",
-    visualCard3Title: "Больше порядка",
-    visualCard3Text:
-      "Структурированный контент и Google Sheets помогают и внутри бизнеса работать чище.",
-    visualCard4Title: "Больше эффекта",
-    visualCard4Text:
-      "Дизайн, текст и логика работают вместе и сильнее продвигают ваш бизнес.",
-
-    trustOverline: "Для кого",
-    trustTitle:
-      "Для предпринимателей, которые хотят выглядеть профессионально — без лишней сложности.",
-    trustCard1Title: "Локальные услуги",
-    trustCard1Text:
-      "Для тех, кто хочет выглядеть в интернете ясно, современно и вызывать доверие.",
-    trustCard2Title: "Beauty, консультации, услуги",
-    trustCard2Text:
-      "Для малого бизнеса, которому нужна лучшая подача и больше порядка.",
-    trustCard3Title: "Начинающие предприниматели",
-    trustCard3Text:
-      "Для тех, кто не хочет оставаться невидимым и хочет стартовать профессионально.",
+    quick1Title: "Современно",
+    quick1Text: "Чистые современные сайты с сильной подачей.",
+    quick2Title: "Понятно",
+    quick2Text: "Ваше предложение считывается быстро и ясно.",
+    quick3Title: "Структурно",
+    quick3Text: "Больше порядка и внутри бизнеса.",
 
     servicesOverline: "Услуги",
-    servicesTitle:
-      "Я помогаю сделать ваше предложение заметным, понятным и структурированным.",
-    service1Title: "Индивидуальные сайты",
+    servicesTitle: "Что я могу сделать для вашего бизнеса.",
+    service1Title: "Сайты",
     service1Text:
-      "Современные сайты для предпринимателей — под ваш запрос, аудиторию и нужное впечатление.",
-    service2Title: "Оптимизация под телефон и компьютер",
+      "Индивидуальные сайты для предпринимателей и малого бизнеса — современные, понятные и под ваш запрос.",
+    service2Title: "Google Sheets",
     service2Text:
-      "Ваш сайт будет аккуратно и удобно работать и на телефоне, и на компьютере.",
-    service3Title: "Помощь и структура в Google Sheets",
+      "Помощь с таблицами, структурой и практичными рабочими обзорами.",
+    service2Price: "от 75 €",
+    service3Title: "Цифровая ясность",
     service3Text:
-      "Я могу помочь навести порядок в таблицах или сделать для вас удобную рабочую таблицу для повседневной работы.",
-    service3Price: "от 75 €",
-    service4Title: "Понятный путь для клиента",
-    service4Text:
-      "Я думаю не только о дизайне, но и о том, как посетитель быстро поймет, что вы предлагаете.",
+      "Я думаю не только о дизайне, но и о том, как посетитель быстрее поймёт ваше предложение — и как сделать контакт легче.",
 
     pricingOverline: "Цены",
     pricingTitle: "Два понятных пакета для профессионального старта.",
     starterTag: "Чёткий старт",
     starterTitle: "Starter",
     starterText:
-      "Для малого бизнеса, которому нужен современный, чистый и понятный онлайн-образ.",
+      "Для малого бизнеса, которому нужен современный и понятный сайт.",
     starterList1: "1 landing page",
     starterList2: "индивидуальный дизайн",
     starterList3: "адаптация под телефон",
     starterList4: "контакты / WhatsApp",
-    starterList5: "базовые анимации и спокойные эффекты",
-    starterList6: "чёткая цена от 280 €",
     starterBtn: "Выбрать этот пакет",
 
     businessTag: "Больше эффекта",
     businessTitle: "Business",
     businessText:
-      "Для предпринимателей, которые хотят выглядеть профессиональнее и сильнее подать свои услуги.",
-    businessList1: "несколько секций / расширенная структура",
-    businessList2: "индивидуальный визуальный подход",
+      "Для предпринимателей, которые хотят выглядеть профессиональнее и сильнее показать свои услуги.",
+    businessList1: "несколько секций",
+    businessList2: "более сильная визуальная подача",
     businessList3: "FAQ / цены / блоки доверия",
-    businessList4: "более сильная логика подачи",
-    businessList5: "помощь со структурой и текстом",
-    businessList6: "помощь с подключением домена",
-    businessList7: "добавление локации / маршрута / адреса",
+    businessList4: "помощь с доменом",
+    businessList5: "добавление адреса / маршрута",
     businessBtn: "Запросить Business",
-    pricingNote:
-      "Поддержка по Google Sheets или дополнительные блоки могут добавляться индивидуально.",
 
     aboutOverline: "Обо мне",
-    aboutTitle:
-      "Я работаю не просто красиво — а с фокусом на результат и ясность.",
+    aboutTitle: "Красиво — хорошо. Понятно и эффективно — лучше.",
     aboutText1:
-      "Я Мария, и я создаю сайты для предпринимателей и малого бизнеса. Я думаю не только о дизайне, но и о том, как ваше предложение воспринимается со стороны.",
+      "Я Мария, и я создаю сайты для предпринимателей и малого бизнеса.",
     aboutText2:
-      "Я внимательно вникаю в ваш запрос и создаю решения, которые выглядят современно, логично и профессионально.",
-    aboutText3:
-      "Помимо сайтов, я также могу помочь вам навести порядок в Google Sheets или сделать для вас удобную рабочую таблицу.",
-    aboutText4:
-      "Так вам будет проще организовать заявки, клиентов и внутренние процессы понятно и удобно.",
+      "Дополнительно я помогаю с Google Sheets и цифровой структурой, чтобы ваше предложение не только выглядело хорошо, но и воспринималось понятно.",
     aboutCard1Label: "Фокус",
-    aboutCard1Value: "понятный образ бизнеса",
+    aboutCard1Value: "понятный образ",
     aboutCard2Label: "Подход",
-    aboutCard2Value: "индивидуально, а не шаблонно",
-    aboutCard3Label: "Цель",
-    aboutCard3Value: "связь с вашими клиентами",
-    aboutCard4Label: "Стиль работы",
-    aboutCard4Value: "спокойно, ясно и профессионально",
-
-    faqOverline: "FAQ",
-    faqTitle: "Ответы на важные вопросы.",
-    faq1Q: "Как проходит работа?",
-    faq1A:
-      "Вы пишете мне ваш запрос, я смотрю, что вам нужно, и мы подбираем подходящее решение для старта.",
-    faq2Q: "Вы работаете только с большими проектами?",
-    faq2A:
-      "Нет. Как раз небольшие и средние проекты для предпринимателей и локального бизнеса — в центре внимания.",
-    faq3Q: "Нужны ли уже готовые тексты?",
-    faq3A:
-      "Не обязательно. Я могу помочь и со структурой, и с формулировками, и с подачей.",
-    faq4Q: "Можно ли добавить Google Sheets решения?",
-    faq4A:
-      "Да. Простые таблицы для структуры, порядка и рабочих процессов тоже можно сделать.",
-    faq5Q: "Что такое домен и зачем он нужен?",
-    faq5A:
-      "Домен — это адрес вашего сайта в интернете, например ihrname.de. Он помогает вашему бизнесу выглядеть профессионально, легче находиться и быть удобным для клиентов.",
+    aboutCard2Value: "индивидуально, не шаблонно",
 
     contactOverline: "Контакт",
     contactTitle: "Напишите мне напрямую.",
     contactText:
-      "Если вам нужен сайт, больше структуры или понятное цифровое решение для вашего бизнеса — можете написать мне сразу.",
+      "Если вам нужен сайт или больше цифровой ясности для вашего бизнеса — можете написать мне сразу.",
     contactMailLabel: "Почта",
     contactPhoneLabel: "Телефон",
     contactWhatsappValue: "Написать сообщение",
@@ -319,6 +200,7 @@ const translations = {
     formMessage: "Сообщение",
     formBtn: "Подготовить запрос",
     formNote: "После нажатия откроется подготовленное письмо.",
+
     footerText: "Сайты и цифровая структура для предпринимателей"
   }
 };
@@ -351,23 +233,17 @@ applyLanguage(savedLang);
 
 window.addEventListener("load", () => {
   setTimeout(() => {
-    if (intro) {
-      intro.classList.add("hide");
-    }
-  }, 1700);
+    if (intro) intro.classList.add("hide");
+  }, 1600);
 });
 
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
+      if (entry.isIntersecting) entry.target.classList.add("visible");
     });
   },
-  {
-    threshold: 0.16
-  }
+  { threshold: 0.14 }
 );
 
 revealElements.forEach((element) => observer.observe(element));
@@ -406,14 +282,34 @@ if (contactForm) {
         ? `Имя: ${name}\nКонтакт: ${contact}\n\nСообщение:\n${message}`
         : `Name: ${name}\nKontakt: ${contact}\n\nNachricht:\n${message}`;
 
-    const mailto = `mailto:Maria.webhilfe@gmail.com?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
-
+    const mailto = `mailto:Maria.webhilfe@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailto;
   });
 }
 
+/* subtle tilt effect */
+const tiltCards = document.querySelectorAll(".tilt-card");
+
+tiltCards.forEach((card) => {
+  card.addEventListener("mousemove", (e) => {
+    if (window.innerWidth < 900) return;
+
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const rotateY = ((x / rect.width) - 0.5) * 8;
+    const rotateX = ((y / rect.height) - 0.5) * -8;
+
+    card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "";
+  });
+});
+
+/* animated background */
 const bgCanvas = document.getElementById("bgCanvas");
 
 if (bgCanvas) {
@@ -433,16 +329,16 @@ if (bgCanvas) {
 
   function createParticles() {
     particles = [];
-    const count = window.innerWidth < 768 ? 55 : 95;
+    const count = window.innerWidth < 768 ? 48 : 82;
 
     for (let i = 0; i < count; i++) {
       particles.push({
         x: Math.random() * window.innerWidth,
         y: Math.random() * window.innerHeight,
         size: Math.random() * 15 + 10,
-        speedY: Math.random() * 0.22 + 0.06,
-        speedX: (Math.random() - 0.5) * 0.14,
-        opacity: Math.random() * 0.12 + 0.03,
+        speedY: Math.random() * 0.22 + 0.05,
+        speedX: (Math.random() - 0.5) * 0.12,
+        opacity: Math.random() * 0.11 + 0.02,
         symbol: symbols[Math.floor(Math.random() * symbols.length)],
         changeAfter: Math.random() * 130 + 40,
         frame: 0
@@ -460,7 +356,7 @@ if (bgCanvas) {
           x,
           y,
           size: Math.random() * 10 + 16,
-          opacity: Math.random() * 0.028 + 0.008,
+          opacity: Math.random() * 0.024 + 0.006,
           pulse: Math.random() * Math.PI * 2
         });
       }
@@ -469,15 +365,14 @@ if (bgCanvas) {
 
   function drawCells(time) {
     cells.forEach((cell) => {
-      const pulseOpacity = cell.opacity + Math.sin(time * 1.2 + cell.pulse) * 0.008;
-      ctx.fillStyle = `rgba(105, 118, 134, ${Math.max(0.006, pulseOpacity)})`;
+      const pulseOpacity = cell.opacity + Math.sin(time * 1.2 + cell.pulse) * 0.006;
+      ctx.fillStyle = `rgba(105, 118, 134, ${Math.max(0.004, pulseOpacity)})`;
       ctx.fillRect(cell.x, cell.y, cell.size, cell.size);
     });
   }
 
   function drawParticles(time) {
     ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
-
     drawCells(time);
 
     particles.forEach((p) => {
