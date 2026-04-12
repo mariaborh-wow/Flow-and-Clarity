@@ -9,25 +9,25 @@ const translations = {
   de: {
     introTitle: "Ich mache Ihren Wert sichtbar.",
     navServices: "Leistungen",
-    navPortfolio: "Portfolio",
     navPricing: "Preise",
     navAbout: "Über mich",
     navFaq: "FAQ",
     navContact: "Kontakt",
 
     heroBadge: "Webseiten & digitale Struktur für Selbstständige",
-    heroTitle: "Ich bringe Ihr Angebot näher an Ihre potenziellen Kunden.",
+    heroTitle: "Mehr Klarheit zwischen Ihrem Angebot und Ihren Kunden.",
     heroText:
-      "Individuelle Webseiten, klare Struktur und durchdachte Google Sheets für kleine Unternehmen, Selbstständige und lokale Dienstleistungen.",
+      "Individuelle Webseiten und klare digitale Struktur, damit Ihr Business professionell wirkt, schneller verstanden wird und leichter Anfragen bekommt.",
     heroBtn1: "Projekt anfragen",
     heroBtn2: "Preise ansehen",
     meta2: "für Handy und Desktop",
     meta3: "klarer Einstieg für kleine Businesses",
     metaSheets: "Google Sheets Hilfe & Struktur",
 
+    visualFloatingBadge: "Mehr Anfragen",
     visualEyebrow: "Was ich für Ihr Business löse",
-    visualTitle: "Mehr Klarheit. Mehr Wirkung. Weniger Distanz zum Kunden.",
-    visualList1: "professioneller Online-Auftritt",
+    visualTitle: "Klarer auftreten. Leichter verstanden werden.",
+    visualList1: "professioneller erster Eindruck",
     visualList2: "leichter Kontakt für potenzielle Kunden",
     visualList3: "übersichtliche digitale Struktur",
     visualList4: "individuelle Umsetzung statt Standard-Vorlage",
@@ -80,13 +80,6 @@ const translations = {
     service4Title: "Klare Kundenführung",
     service4Text:
       "Ich denke nicht nur an Design, sondern daran, wie Besucher schnell verstehen, was Sie anbieten.",
-
-    portfolioOverline: "Portfolio",
-    portfolioTitle: "Zwei Projekte, die bereits Wirkung zeigen.",
-    portfolioSasText:
-      "Moderner Auftritt für einen Autoteile-Anbieter mit klarer Struktur, WhatsApp-Anfrage und starker Wirkung.",
-    portfolioKristinaText:
-      "Eleganter, ruhiger und vertrauensvoller Auftritt mit femininem Stil und klarer Benutzerführung.",
 
     pricingOverline: "Preise",
     pricingTitle: "Zwei klare Pakete für einen professionellen Start.",
@@ -174,25 +167,25 @@ const translations = {
   ru: {
     introTitle: "Я покажу вашу ценность людям.",
     navServices: "Услуги",
-    navPortfolio: "Портфолио",
     navPricing: "Цены",
     navAbout: "Обо мне",
     navFaq: "FAQ",
     navContact: "Контакт",
 
     heroBadge: "Сайты и цифровая структура для предпринимателей",
-    heroTitle: "Я помогаю приблизить ваше предложение к вашим потенциальным клиентам.",
+    heroTitle: "Больше ясности между вашим предложением и вашими клиентами.",
     heroText:
-      "Индивидуальные сайты, понятная структура и продуманные Google Sheets для малого бизнеса, предпринимателей и локальных услуг.",
+      "Индивидуальные сайты и понятная цифровая структура, чтобы ваш бизнес выглядел профессионально, быстрее понимался и легче получал заявки.",
     heroBtn1: "Обсудить проект",
     heroBtn2: "Посмотреть цены",
     meta2: "для телефона и компьютера",
     meta3: "понятный старт для малого бизнеса",
     metaSheets: "помощь и порядок в Google Sheets",
 
+    visualFloatingBadge: "Больше заявок",
     visualEyebrow: "Что я решаю для вашего бизнеса",
-    visualTitle: "Больше ясности. Больше эффекта. Меньше дистанции с клиентом.",
-    visualList1: "профессиональное онлайн-присутствие",
+    visualTitle: "Более ясная подача. Более лёгкий контакт.",
+    visualList1: "профессиональное первое впечатление",
     visualList2: "удобный контакт для потенциальных клиентов",
     visualList3: "понятная цифровая структура",
     visualList4: "индивидуальная реализация вместо шаблона",
@@ -245,13 +238,6 @@ const translations = {
     service4Title: "Понятный путь для клиента",
     service4Text:
       "Я думаю не только о дизайне, но и о том, как посетитель быстро поймет, что вы предлагаете.",
-
-    portfolioOverline: "Портфолио",
-    portfolioTitle: "Два проекта, которые уже дают нужное впечатление.",
-    portfolioSasText:
-      "Современная подача для поставщика автозапчастей с чёткой структурой, WhatsApp-запросом и сильным образом.",
-    portfolioKristinaText:
-      "Элегантная, спокойная и вызывающая доверие подача с женственным стилем и понятной логикой.",
 
     pricingOverline: "Цены",
     pricingTitle: "Два понятных пакета для профессионального старта.",
@@ -428,7 +414,6 @@ if (contactForm) {
   });
 }
 
-/* Animated background: symbols + changing digits + light cells */
 const bgCanvas = document.getElementById("bgCanvas");
 
 if (bgCanvas) {
