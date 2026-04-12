@@ -9,6 +9,7 @@ const translations = {
   de: {
     introTitle: "Ich mache Ihren Wert sichtbar.",
     navServices: "Leistungen",
+    navPortfolio: "Portfolio",
     navPricing: "Preise",
     navAbout: "Über mich",
     navFaq: "FAQ",
@@ -34,6 +35,21 @@ const translations = {
     floatingPill2: "Google Sheets",
     floatingPill3: "Struktur",
     floatingPill4: "Klarheit",
+
+    visualsOverline: "Vorteile",
+    visualsTitle: "Klare visuelle Vorteile für einen starken ersten Eindruck.",
+    visualCard1Title: "Mehr Vertrauen",
+    visualCard1Text:
+      "Ein moderner Auftritt wirkt professionell und macht Ihr Angebot glaubwürdiger.",
+    visualCard2Title: "Mehr Klarheit",
+    visualCard2Text:
+      "Besucher verstehen schneller, was Sie anbieten und warum sie Sie wählen sollten.",
+    visualCard3Title: "Mehr Ordnung",
+    visualCard3Text:
+      "Strukturierte Inhalte und Google Sheets helfen Ihnen auch intern sauberer zu arbeiten.",
+    visualCard4Title: "Mehr Wirkung",
+    visualCard4Text:
+      "Design, Text und Logik greifen ineinander und bringen Ihr Business stärker nach vorn.",
 
     trustOverline: "Für wen",
     trustTitle:
@@ -64,6 +80,13 @@ const translations = {
     service4Title: "Klare Kundenführung",
     service4Text:
       "Ich denke nicht nur an Design, sondern daran, wie Besucher schnell verstehen, was Sie anbieten.",
+
+    portfolioOverline: "Portfolio",
+    portfolioTitle: "Zwei Projekte, die bereits Wirkung zeigen.",
+    portfolioSasText:
+      "Moderner Auftritt für einen Autoteile-Anbieter mit klarer Struktur, WhatsApp-Anfrage und starker Wirkung.",
+    portfolioKristinaText:
+      "Eleganter, ruhiger und vertrauensvoller Auftritt mit femininem Stil und klarer Benutzerführung.",
 
     pricingOverline: "Preise",
     pricingTitle: "Zwei klare Pakete für einen professionellen Start.",
@@ -145,13 +168,13 @@ const translations = {
     formMessage: "Nachricht",
     formBtn: "Anfrage vorbereiten",
     formNote: "Beim Klick wird Ihre Anfrage als E-Mail vorbereitet.",
-
     footerText: "Webseiten & digitale Struktur für Selbstständige"
   },
 
   ru: {
     introTitle: "Я покажу вашу ценность людям.",
     navServices: "Услуги",
+    navPortfolio: "Портфолио",
     navPricing: "Цены",
     navAbout: "Обо мне",
     navFaq: "FAQ",
@@ -177,6 +200,21 @@ const translations = {
     floatingPill2: "Google Sheets",
     floatingPill3: "Структура",
     floatingPill4: "Ясность",
+
+    visualsOverline: "Преимущества",
+    visualsTitle: "Понятные визуальные преимущества для сильного первого впечатления.",
+    visualCard1Title: "Больше доверия",
+    visualCard1Text:
+      "Современная подача делает ваше предложение более профессиональным и убедительным.",
+    visualCard2Title: "Больше ясности",
+    visualCard2Text:
+      "Посетитель быстрее понимает, что вы предлагаете и почему стоит выбрать именно вас.",
+    visualCard3Title: "Больше порядка",
+    visualCard3Text:
+      "Структурированный контент и Google Sheets помогают и внутри бизнеса работать чище.",
+    visualCard4Title: "Больше эффекта",
+    visualCard4Text:
+      "Дизайн, текст и логика работают вместе и сильнее продвигают ваш бизнес.",
 
     trustOverline: "Для кого",
     trustTitle:
@@ -207,6 +245,13 @@ const translations = {
     service4Title: "Понятный путь для клиента",
     service4Text:
       "Я думаю не только о дизайне, но и о том, как посетитель быстро поймет, что вы предлагаете.",
+
+    portfolioOverline: "Портфолио",
+    portfolioTitle: "Два проекта, которые уже дают нужное впечатление.",
+    portfolioSasText:
+      "Современная подача для поставщика автозапчастей с чёткой структурой, WhatsApp-запросом и сильным образом.",
+    portfolioKristinaText:
+      "Элегантная, спокойная и вызывающая доверие подача с женственным стилем и понятной логикой.",
 
     pricingOverline: "Цены",
     pricingTitle: "Два понятных пакета для профессионального старта.",
@@ -288,7 +333,6 @@ const translations = {
     formMessage: "Сообщение",
     formBtn: "Подготовить запрос",
     formNote: "После нажатия откроется подготовленное письмо.",
-
     footerText: "Сайты и цифровая структура для предпринимателей"
   }
 };

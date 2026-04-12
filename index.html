@@ -53,6 +53,7 @@
 
       <nav class="nav" id="nav">
         <a href="#services" data-i18n="navServices">Leistungen</a>
+        <a href="#portfolio" data-i18n="navPortfolio">Portfolio</a>
         <a href="#pricing" data-i18n="navPricing">Preise</a>
         <a href="#about" data-i18n="navAbout">Über mich</a>
         <a href="#faq" data-i18n="navFaq">FAQ</a>
@@ -74,6 +75,7 @@
   </header>
 
   <main>
+    <!-- HERO -->
     <section class="hero section">
       <div class="container hero__grid">
         <div class="hero__content reveal">
@@ -115,6 +117,15 @@
           <div class="hero-orb hero-orb--1"></div>
           <div class="hero-orb hero-orb--2"></div>
 
+          <div class="hero-image-card">
+            <img
+              src="images/hero-visual.png"
+              alt="Wachstum und digitale Struktur"
+              class="hero-image"
+            />
+            <div class="hero-image-glow"></div>
+          </div>
+
           <div class="hero-card hero-card--main hero-card--clean">
             <p class="hero-card__eyebrow" data-i18n="visualEyebrow">Was ich für Ihr Business löse</p>
             <h3 data-i18n="visualTitle">Mehr Klarheit. Mehr Wirkung. Weniger Distanz zum Kunden.</h3>
@@ -137,6 +148,53 @@
       </div>
     </section>
 
+    <!-- VISUAL BENEFITS -->
+    <section class="visuals section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-head__overline" data-i18n="visualsOverline">Vorteile</span>
+          <h2 class="section-head__title" data-i18n="visualsTitle">
+            Klare visuelle Vorteile für einen starken ersten Eindruck.
+          </h2>
+        </div>
+
+        <div class="visual-cards">
+          <article class="visual-card reveal">
+            <div class="visual-card__icon">↗</div>
+            <h3 data-i18n="visualCard1Title">Mehr Vertrauen</h3>
+            <p data-i18n="visualCard1Text">
+              Ein moderner Auftritt wirkt professionell und macht Ihr Angebot glaubwürdiger.
+            </p>
+          </article>
+
+          <article class="visual-card reveal">
+            <div class="visual-card__icon">◎</div>
+            <h3 data-i18n="visualCard2Title">Mehr Klarheit</h3>
+            <p data-i18n="visualCard2Text">
+              Besucher verstehen schneller, was Sie anbieten und warum sie Sie wählen sollten.
+            </p>
+          </article>
+
+          <article class="visual-card reveal">
+            <div class="visual-card__icon">▣</div>
+            <h3 data-i18n="visualCard3Title">Mehr Ordnung</h3>
+            <p data-i18n="visualCard3Text">
+              Strukturierte Inhalte und Google Sheets helfen Ihnen auch intern sauberer zu arbeiten.
+            </p>
+          </article>
+
+          <article class="visual-card reveal">
+            <div class="visual-card__icon">✦</div>
+            <h3 data-i18n="visualCard4Title">Mehr Wirkung</h3>
+            <p data-i18n="visualCard4Text">
+              Design, Text und Logik greifen ineinander und bringen Ihr Business stärker nach vorn.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST -->
     <section class="trust section">
       <div class="container">
         <div class="section-head reveal">
@@ -169,6 +227,7 @@
       </div>
     </section>
 
+    <!-- SERVICES -->
     <section class="services section" id="services">
       <div class="container">
         <div class="section-head reveal">
@@ -215,6 +274,47 @@
       </div>
     </section>
 
+    <!-- PORTFOLIO -->
+    <section class="portfolio section" id="portfolio">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-head__overline" data-i18n="portfolioOverline">Portfolio</span>
+          <h2 class="section-head__title" data-i18n="portfolioTitle">
+            Zwei Projekte, die bereits Wirkung zeigen.
+          </h2>
+        </div>
+
+        <div class="portfolio__grid">
+          <article class="portfolio-card reveal">
+            <div class="portfolio-card__image-wrap">
+              <img src="images/portfolio-sasparts.jpg" alt="SAS PARTS Website" class="portfolio-card__image" />
+            </div>
+            <div class="portfolio-card__content">
+              <span class="portfolio-card__tag">Automotive</span>
+              <h3>SAS PARTS</h3>
+              <p data-i18n="portfolioSasText">
+                Moderner Auftritt für einen Autoteile-Anbieter mit klarer Struktur, WhatsApp-Anfrage und starker Wirkung.
+              </p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal reveal-delay">
+            <div class="portfolio-card__image-wrap">
+              <img src="images/portfolio-kristina.jpg" alt="Kristina Deibus Website" class="portfolio-card__image" />
+            </div>
+            <div class="portfolio-card__content">
+              <span class="portfolio-card__tag">Beauty / Personal Brand</span>
+              <h3>Kristina Deibus</h3>
+              <p data-i18n="portfolioKristinaText">
+                Eleganter, ruhiger und vertrauensvoller Auftritt mit femininem Stil und klarer Benutzerführung.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
     <section class="pricing section" id="pricing">
       <div class="container">
         <div class="section-head reveal">
@@ -293,6 +393,7 @@
       </div>
     </section>
 
+    <!-- ABOUT -->
     <section class="about section" id="about">
       <div class="container about__grid">
         <div class="about__content reveal">
@@ -323,27 +424,34 @@
           </p>
         </div>
 
-        <div class="about__cards reveal reveal-delay">
-          <div class="about-card">
-            <span class="about-card__label" data-i18n="aboutCard1Label">Fokus</span>
-            <strong data-i18n="aboutCard1Value">klarer Auftritt</strong>
+        <div class="about__side reveal reveal-delay">
+          <div class="about-photo">
+            <img src="images/maria-business.png" alt="Maria - Webdesign & Struktur" />
           </div>
-          <div class="about-card">
-            <span class="about-card__label" data-i18n="aboutCard2Label">Ansatz</span>
-            <strong data-i18n="aboutCard2Value">individuell statt Standard</strong>
-          </div>
-          <div class="about-card">
-            <span class="about-card__label" data-i18n="aboutCard3Label">Ziel</span>
-            <strong data-i18n="aboutCard3Value">Verbindung zu Ihren Kunden</strong>
-          </div>
-          <div class="about-card">
-            <span class="about-card__label" data-i18n="aboutCard4Label">Arbeitsweise</span>
-            <strong data-i18n="aboutCard4Value">ruhig, klar und professionell</strong>
+
+          <div class="about__cards">
+            <div class="about-card">
+              <span class="about-card__label" data-i18n="aboutCard1Label">Fokus</span>
+              <strong data-i18n="aboutCard1Value">klarer Auftritt</strong>
+            </div>
+            <div class="about-card">
+              <span class="about-card__label" data-i18n="aboutCard2Label">Ansatz</span>
+              <strong data-i18n="aboutCard2Value">individuell statt Standard</strong>
+            </div>
+            <div class="about-card">
+              <span class="about-card__label" data-i18n="aboutCard3Label">Ziel</span>
+              <strong data-i18n="aboutCard3Value">Verbindung zu Ihren Kunden</strong>
+            </div>
+            <div class="about-card">
+              <span class="about-card__label" data-i18n="aboutCard4Label">Arbeitsweise</span>
+              <strong data-i18n="aboutCard4Value">ruhig, klar und professionell</strong>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- FAQ -->
     <section class="faq section" id="faq">
       <div class="container">
         <div class="section-head reveal">
@@ -393,6 +501,7 @@
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section class="contact section" id="contact">
       <div class="container contact__grid">
         <div class="contact__info reveal">

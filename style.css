@@ -2,7 +2,8 @@
   --bg: #f6fbfa;
   --bg-2: #edf7f5;
   --surface: rgba(255, 255, 255, 0.68);
-  --surface-strong: rgba(255, 255, 255, 0.86);
+  --surface-strong: rgba(255, 255, 255, 0.82);
+  --surface-soft: rgba(255, 255, 255, 0.52);
   --text: #1f2530;
   --muted: #5f6877;
   --line: rgba(60, 82, 90, 0.12);
@@ -52,6 +53,11 @@ button,
 input,
 textarea {
   font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 .container {
@@ -350,7 +356,7 @@ main,
 
 .hero__grid {
   display: grid;
-  grid-template-columns: 1.08fr 0.92fr;
+  grid-template-columns: 1.02fr 0.98fr;
   gap: 42px;
   align-items: center;
 }
@@ -479,7 +485,7 @@ main,
 
 .hero__visual {
   position: relative;
-  min-height: 560px;
+  min-height: 620px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -518,27 +524,30 @@ main,
   box-shadow: var(--shadow-strong);
 }
 
-.hero-card--main {
-  padding: 34px;
-  max-width: 510px;
+.hero-card--image {
   width: 100%;
+  max-width: 520px;
+  padding: 16px;
   position: relative;
-  z-index: 2;
+  z-index: 1;
+  background: rgba(255,255,255,0.42);
 }
 
-.hero-card--clean {
-  overflow: hidden;
+.hero-card--image img {
+  width: 100%;
+  border-radius: 22px;
+  opacity: 0.8;
+  mix-blend-mode: multiply;
 }
 
-.hero-card--clean::before {
-  content: "";
+.hero-card--floating {
+  padding: 28px;
+  max-width: 380px;
   position: absolute;
-  inset: -20% auto auto -10%;
-  width: 220px;
-  height: 220px;
-  background: radial-gradient(circle, rgba(168,230,216,0.20), transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
+  right: 0;
+  bottom: 18px;
+  z-index: 2;
+  background: rgba(255,255,255,0.82);
 }
 
 .hero-card__eyebrow {
@@ -549,7 +558,7 @@ main,
   font-size: 0.78rem;
 }
 
-.hero-card--main h3 {
+.hero-card--floating h3 {
   margin: 0 0 18px;
   font-size: 2rem;
   line-height: 1.08;
@@ -604,77 +613,106 @@ main,
   box-shadow: 0 10px 18px rgba(130, 140, 190, 0.12);
 }
 
+.visual-services__grid,
 .trust__grid,
 .services__grid,
-.pricing__grid {
+.pricing__grid,
+.portfolio__grid {
   display: grid;
   gap: 22px;
+}
+
+.visual-services__grid {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .trust__grid {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.services__grid {
+.services__grid,
+.pricing__grid,
+.portfolio__grid {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.pricing__grid {
-  grid-template-columns: repeat(2, 1fr);
-}
-
+.visual-service-card,
 .trust-card,
 .service-card,
 .price-card,
 .about-card,
 .chat-box,
 .contact-item,
-.faq-item {
+.faq-item,
+.portfolio-card {
   background: var(--surface);
   border: 1px solid rgba(255,255,255,0.55);
   backdrop-filter: blur(14px);
   box-shadow: var(--shadow);
 }
 
+.visual-service-card,
 .trust-card,
 .service-card,
 .price-card,
 .chat-box,
-.faq-item {
+.faq-item,
+.portfolio-card {
   border-radius: var(--radius-xl);
 }
 
+.visual-service-card,
 .trust-card,
 .service-card,
 .price-card,
 .contact-item,
 .about-card,
-.faq-item {
+.faq-item,
+.portfolio-card {
   transition: transform var(--transition), box-shadow var(--transition);
 }
 
+.visual-service-card:hover,
 .trust-card:hover,
 .service-card:hover,
 .price-card:hover,
 .contact-item:hover,
 .about-card:hover,
-.faq-item:hover {
+.faq-item:hover,
+.portfolio-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-strong);
 }
 
-.trust-card {
-  padding: 28px;
+.visual-service-card {
+  padding: 26px;
+  text-align: left;
+  background: rgba(255,255,255,0.6);
 }
 
+.visual-service-card__icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 16px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, rgba(168,230,216,0.55), rgba(216,200,255,0.55));
+}
+
+.visual-service-card h3,
 .trust-card h3,
 .service-card h3,
-.price-card h3 {
+.price-card h3,
+.portfolio-card h3 {
   margin: 0 0 14px;
   font-size: 1.35rem;
   letter-spacing: -0.03em;
 }
 
+.visual-service-card p,
 .trust-card p,
 .service-card p,
 .price-card__text,
@@ -682,10 +720,15 @@ main,
 .about__content p,
 .contact__text,
 .faq-item p,
-.form-note {
+.form-note,
+.portfolio-card p {
   margin: 0;
   color: var(--muted);
   line-height: 1.75;
+}
+
+.trust-card {
+  padding: 28px;
 }
 
 .service-card {
@@ -726,6 +769,125 @@ main,
   color: #355c57;
 }
 
+.portfolio-card {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  min-height: 280px;
+}
+
+.portfolio-card__media {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at top left, rgba(168,230,216,0.22), transparent 36%),
+    radial-gradient(circle at bottom right, rgba(216,200,255,0.22), transparent 36%),
+    rgba(255,255,255,0.45);
+}
+
+.portfolio-card__content {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.portfolio-card__tag {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 14px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.7);
+  border: 1px solid var(--line);
+  color: #50616f;
+  font-size: 0.82rem;
+}
+
+.portfolio-mockup {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 22px;
+  padding: 14px;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 18px 40px rgba(132, 144, 190, 0.16);
+}
+
+.portfolio-mockup__bar {
+  height: 14px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+  background: linear-gradient(90deg, rgba(168,230,216,0.8), rgba(216,200,255,0.8));
+}
+
+.portfolio-mockup__hero {
+  height: 110px;
+  border-radius: 16px;
+  margin-bottom: 14px;
+  background:
+    linear-gradient(135deg, rgba(192,216,230,0.45), rgba(255,255,255,0.75)),
+    linear-gradient(180deg, #eff7f7, #f8f7ff);
+}
+
+.portfolio-mockup__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.portfolio-mockup__grid span {
+  height: 68px;
+  border-radius: 14px;
+  background: rgba(245,248,252,0.9);
+  border: 1px solid rgba(120,140,160,0.08);
+}
+
+.portfolio-phone {
+  width: 180px;
+  height: 300px;
+  border-radius: 28px;
+  padding: 10px;
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 18px 40px rgba(132, 144, 190, 0.18);
+}
+
+.portfolio-phone__notch {
+  width: 70px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(180,190,200,0.25);
+  margin: 0 auto 10px;
+}
+
+.portfolio-phone__screen {
+  height: calc(100% - 20px);
+  border-radius: 22px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #fffaf8, #fefcff);
+  position: relative;
+}
+
+.portfolio-phone__hero {
+  height: 42%;
+  background:
+    linear-gradient(180deg, rgba(255,240,236,0.8), rgba(255,255,255,0.9)),
+    radial-gradient(circle at center, rgba(232,198,212,0.24), transparent 45%);
+}
+
+.portfolio-phone__lines {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 18px;
+  top: 52%;
+  border-radius: 16px;
+  background:
+    linear-gradient(rgba(230,210,220,0.45) 10px, transparent 10px) top left / 100% 26px repeat-y;
+  opacity: 0.8;
+}
+
 .price-card {
   padding: 30px;
   position: relative;
@@ -753,7 +915,7 @@ main,
   margin: 14px 0 12px;
 }
 
-.price-card__price span {
+.price-card__price > span:first-child {
   font-size: 1rem;
   font-weight: 500;
   color: var(--muted);
@@ -798,6 +960,26 @@ main,
 
 .about__grid {
   grid-template-columns: 1.05fr 0.95fr;
+}
+
+.about__side {
+  display: grid;
+  gap: 20px;
+}
+
+.about-photo {
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.45);
+  border: 1px solid rgba(255,255,255,0.65);
+  box-shadow: var(--shadow-strong);
+  padding: 14px;
+}
+
+.about-photo img {
+  width: 100%;
+  border-radius: 18px;
+  opacity: 0.9;
 }
 
 .about__cards {
@@ -1004,6 +1186,22 @@ main,
   transition-delay: 0.12s;
 }
 
+.price-note {
+  display: block;
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 4px;
+  font-weight: 400;
+}
+
+.price-extra {
+  display: block;
+  font-size: 0.85rem;
+  color: #10b981;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
 @keyframes floatGlow {
   from {
     transform: translateY(0) translateX(0) scale(1);
@@ -1039,7 +1237,9 @@ main,
   .contact__grid,
   .trust__grid,
   .services__grid,
-  .pricing__grid {
+  .pricing__grid,
+  .portfolio__grid,
+  .visual-services__grid {
     grid-template-columns: 1fr;
   }
 
@@ -1048,8 +1248,16 @@ main,
     margin-top: 10px;
   }
 
-  .hero-card--main {
+  .hero-card--image {
     max-width: 100%;
+  }
+
+  .hero-card--floating {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    max-width: 100%;
+    margin-top: 20px;
   }
 
   .hero__meta {
@@ -1058,6 +1266,10 @@ main,
 
   .about__cards {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .portfolio-card {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1140,26 +1352,30 @@ main,
   }
 
   .hero__text,
+  .visual-service-card p,
   .trust-card p,
   .service-card p,
   .price-card__text,
   .about__content p,
   .faq-item p,
-  .contact__text {
+  .contact__text,
+  .portfolio-card p {
     font-size: 0.98rem;
     line-height: 1.7;
   }
 
-  .hero-card--main,
+  .hero-card--floating,
   .service-card,
   .trust-card,
   .price-card,
   .chat-box,
-  .faq-item {
+  .faq-item,
+  .portfolio-card,
+  .visual-service-card {
     padding: 22px;
   }
 
-  .hero-card--main h3 {
+  .hero-card--floating h3 {
     font-size: 1.55rem;
   }
 
@@ -1174,33 +1390,4 @@ main,
     height: 50px;
     font-size: 0.94rem;
   }
-}
-.price {
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin-top: 10px;
-}
-
-.price-note {
-  display: block;
-  font-size: 0.85rem;
-  color: #6b7280;
-  margin-top: 4px;
-  font-weight: 400;
-}
-
-.price-extra {
-  display: block;
-  font-size: 0.85rem;
-  color: #10b981;
-  margin-top: 4px;
-  font-weight: 500;
-}
-
-.pricing-trust {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 0.95rem;
-  color: #374151;
-  opacity: 0.8;
 }
