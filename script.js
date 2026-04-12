@@ -13,10 +13,10 @@ const translations = {
     navAbout: "Über mich",
     navContact: "Kontakt",
 
-    heroBadge: "Individuelle Websites für Selbstständige",
-    heroTitle: "Websites, die Ihr Business klar, modern und professionell zeigen.",
+    heroBadge: "Websites für Selbstständige",
+    heroTitle: "Moderne Websites, die Ihr Business klar zeigen.",
     heroText:
-      "Ich erstelle Websites und helfe zusätzlich mit Google Sheets und digitaler Struktur – damit Kunden schneller verstehen, was Sie anbieten.",
+      "Ich erstelle Websites für Selbstständige und helfe zusätzlich mit Google Sheets und digitaler Struktur.",
     heroBtn1: "Projekt anfragen",
     heroBtn2: "Preise ansehen",
     heroPoint1: "Webdesign",
@@ -78,15 +78,24 @@ const translations = {
     businessBtn: "Business anfragen",
 
     aboutOverline: "Über mich",
-    aboutTitle: "Schön ist gut. Klar und wirksam ist besser.",
+    aboutTitle: "Ich gestalte Websites, die Ihr Angebot klar und professionell zeigen.",
+    aboutLead:
+      "Ich bin Maria und ich unterstütze Selbstständige dabei, online moderner, verständlicher und sichtbarer aufzutreten.",
     aboutText1:
-      "Ich bin Maria und ich erstelle Websites für Selbstständige und kleine Businesses.",
-    aboutText2:
-      "Zusätzlich helfe ich mit Google Sheets und klarer digitaler Struktur, damit Ihr Angebot nicht nur gut aussieht, sondern auch verständlich wirkt.",
-    aboutCard1Label: "Fokus",
-    aboutCard1Value: "klarer Auftritt",
-    aboutCard2Label: "Ansatz",
-    aboutCard2Value: "individuell statt Standard",
+      "Ich verbinde Design, Struktur und klare Nutzerführung – damit Besucher schneller verstehen, was Sie anbieten und wie sie Sie kontaktieren können.",
+    aboutStrip1: "individuelle Websites",
+    aboutStrip2: "klare Struktur",
+    aboutStrip3: "leichter Kontakt",
+    aboutExtraTitle: "Zusätzliche Hilfe mit Google Sheets",
+    aboutExtraText:
+      "Wenn Sie möchten, kann ich Ihnen zusätzlich helfen, Tabellen übersichtlicher, praktischer und angenehmer für den Alltag zu machen.",
+    aboutExtraPrice: "ab 75 €",
+    aboutFloat1Label: "Website",
+    aboutFloat1Value: "klar & modern",
+    aboutFloat2Label: "Google Sheets",
+    aboutFloat2Value: "optional dazu",
+    aboutFloat3Label: "Ziel",
+    aboutFloat3Value: "mehr Klarheit",
 
     contactOverline: "Kontakt",
     contactTitle: "Schreiben Sie mir direkt.",
@@ -112,10 +121,10 @@ const translations = {
     navAbout: "Обо мне",
     navContact: "Контакт",
 
-    heroBadge: "Индивидуальные сайты для предпринимателей",
-    heroTitle: "Сайты, которые показывают ваш бизнес ясно, современно и профессионально.",
+    heroBadge: "Сайты для предпринимателей",
+    heroTitle: "Современные сайты, которые ясно показывают ваш бизнес.",
     heroText:
-      "Я создаю сайты и дополнительно помогаю с Google Sheets и цифровой структурой — чтобы клиент быстрее понимал, что вы предлагаете.",
+      "Я создаю сайты для предпринимателей и дополнительно помогаю с Google Sheets и цифровой структурой.",
     heroBtn1: "Обсудить проект",
     heroBtn2: "Посмотреть цены",
     heroPoint1: "Веб-дизайн",
@@ -177,15 +186,24 @@ const translations = {
     businessBtn: "Запросить Business",
 
     aboutOverline: "Обо мне",
-    aboutTitle: "Красиво — хорошо. Понятно и эффективно — лучше.",
+    aboutTitle: "Я создаю сайты, которые ясно и профессионально показывают ваше предложение.",
+    aboutLead:
+      "Я Мария, и я помогаю предпринимателям выглядеть в интернете современнее, понятнее и заметнее.",
     aboutText1:
-      "Я Мария, и я создаю сайты для предпринимателей и малого бизнеса.",
-    aboutText2:
-      "Дополнительно я помогаю с Google Sheets и цифровой структурой, чтобы ваше предложение не только выглядело хорошо, но и воспринималось понятно.",
-    aboutCard1Label: "Фокус",
-    aboutCard1Value: "понятный образ",
-    aboutCard2Label: "Подход",
-    aboutCard2Value: "индивидуально, не шаблонно",
+      "Я соединяю дизайн, структуру и понятную подачу — чтобы посетитель быстрее понимал, что вы предлагаете и как с вами связаться.",
+    aboutStrip1: "индивидуальные сайты",
+    aboutStrip2: "понятная структура",
+    aboutStrip3: "лёгкий контакт",
+    aboutExtraTitle: "Дополнительная помощь с Google Sheets",
+    aboutExtraText:
+      "Если хотите, я дополнительно могу помочь сделать таблицы более понятными, практичными и удобными для повседневной работы.",
+    aboutExtraPrice: "от 75 €",
+    aboutFloat1Label: "Сайт",
+    aboutFloat1Value: "ясно и современно",
+    aboutFloat2Label: "Google Sheets",
+    aboutFloat2Value: "дополнительно",
+    aboutFloat3Label: "Цель",
+    aboutFloat3Value: "больше ясности",
 
     contactOverline: "Контакт",
     contactTitle: "Напишите мне напрямую.",
@@ -287,10 +305,10 @@ if (contactForm) {
   });
 }
 
-/* subtle tilt effect */
-const tiltCards = document.querySelectorAll(".tilt-card");
+/* tilt + magnetic effect */
+const interactiveCards = document.querySelectorAll(".tilt-card, .magnetic-card");
 
-tiltCards.forEach((card) => {
+interactiveCards.forEach((card) => {
   card.addEventListener("mousemove", (e) => {
     if (window.innerWidth < 900) return;
 
@@ -301,7 +319,7 @@ tiltCards.forEach((card) => {
     const rotateY = ((x / rect.width) - 0.5) * 8;
     const rotateX = ((y / rect.height) - 0.5) * -8;
 
-    card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+    card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
   });
 
   card.addEventListener("mouseleave", () => {

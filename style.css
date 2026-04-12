@@ -1,6 +1,5 @@
 :root {
   --bg: #f6fbfa;
-  --bg-2: #edf7f5;
   --surface: rgba(255, 255, 255, 0.68);
   --surface-strong: rgba(255, 255, 255, 0.84);
   --text: #1f2530;
@@ -15,7 +14,6 @@
   --radius-xl: 28px;
   --radius-lg: 20px;
   --radius-md: 14px;
-  --radius-sm: 12px;
   --container: 1180px;
   --transition: 0.35s ease;
 }
@@ -74,7 +72,7 @@ main,
 }
 
 .section {
-  padding: 92px 0;
+  padding: 88px 0;
   position: relative;
   z-index: 2;
 }
@@ -103,8 +101,8 @@ main,
 
 .section-head__title {
   margin: 0;
-  font-size: clamp(2rem, 4vw, 3.3rem);
-  line-height: 1.06;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.05;
   letter-spacing: -0.03em;
 }
 
@@ -158,7 +156,7 @@ main,
     linear-gradient(90deg, rgba(90, 105, 120, 0.08) 1px, transparent 1px);
   background-size: 42px 42px;
   mask-image: radial-gradient(circle at center, black 62%, transparent 96%);
-  opacity: 0.7;
+  opacity: 0.72;
   animation: gridPulse 7s ease-in-out infinite;
 }
 
@@ -347,9 +345,40 @@ main,
   top: 28px;
 }
 
+/* COMMON CARDS */
+.glass-card,
+.quick-card,
+.service-card,
+.price-card,
+.about-card,
+.chat-box,
+.contact-item,
+.about-extra-service,
+.faq-item {
+  background: var(--surface);
+  border: 1px solid rgba(255,255,255,0.58);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius-xl);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.quick-card:hover,
+.service-card:hover,
+.price-card:hover,
+.about-card:hover,
+.contact-item:hover,
+.about-extra-service:hover,
+.faq-item:hover,
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-strong);
+  border-color: rgba(127, 213, 194, 0.28);
+}
+
 /* HERO */
 .hero {
-  padding-top: 46px;
+  padding-top: 44px;
   min-height: calc(100vh - 88px);
   display: flex;
   align-items: center;
@@ -376,7 +405,7 @@ main,
 
 .hero__title {
   margin: 0 0 18px;
-  font-size: clamp(2.7rem, 5.8vw, 5.2rem);
+  font-size: clamp(2.7rem, 5.8vw, 5.1rem);
   line-height: 0.94;
   letter-spacing: -0.06em;
   max-width: 740px;
@@ -474,10 +503,9 @@ main,
   color: #56736f;
 }
 
-/* RIGHT VISUAL */
 .hero__visual {
   position: relative;
-  min-height: 710px;
+  min-height: 720px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -511,7 +539,7 @@ main,
 .hero-showcase {
   position: relative;
   width: 100%;
-  max-width: 610px;
+  max-width: 620px;
   min-height: 690px;
   display: flex;
   align-items: flex-end;
@@ -616,10 +644,6 @@ main,
   margin-bottom: 24px;
   padding: 24px;
   border-radius: 26px;
-  background: rgba(255, 255, 255, 0.84);
-  border: 1px solid rgba(255,255,255,0.8);
-  backdrop-filter: blur(18px);
-  box-shadow: 0 24px 60px rgba(120, 132, 186, 0.16);
 }
 
 .hero-card__eyebrow {
@@ -666,37 +690,17 @@ main,
 }
 
 /* QUICK */
-.quick__grid {
+.quick__grid,
+.services__grid,
+.pricing__grid,
+.about__cards,
+.contact-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 22px;
 }
 
-.quick-card,
-.visual-card,
-.service-card,
-.price-card,
-.about-card,
-.chat-box,
-.contact-item,
-.faq-item {
-  background: var(--surface);
-  border: 1px solid rgba(255,255,255,0.55);
-  backdrop-filter: blur(14px);
-  box-shadow: var(--shadow);
-  border-radius: var(--radius-xl);
-  transition: transform var(--transition), box-shadow var(--transition);
-}
-
-.quick-card:hover,
-.visual-card:hover,
-.service-card:hover,
-.price-card:hover,
-.contact-item:hover,
-.about-card:hover,
-.faq-item:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-strong);
+.quick__grid {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .quick-card {
@@ -704,7 +708,6 @@ main,
 }
 
 .quick-card__icon,
-.visual-card__icon,
 .service-card__icon {
   width: 54px;
   height: 54px;
@@ -718,7 +721,6 @@ main,
 }
 
 .quick-card h3,
-.visual-card h3,
 .service-card h3,
 .price-card h3 {
   margin: 0 0 12px;
@@ -727,34 +729,19 @@ main,
 }
 
 .quick-card p,
-.visual-card p,
 .service-card p,
 .price-card__text,
 .about__content p,
 .contact__text,
-.faq-item p,
 .form-note {
   margin: 0;
   color: var(--muted);
   line-height: 1.72;
 }
 
-/* VISUALS */
-.visual-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
-}
-
-.visual-card {
-  padding: 24px;
-}
-
 /* SERVICES */
 .services__grid {
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
 }
 
 .service-card {
@@ -790,9 +777,7 @@ main,
 
 /* PRICING */
 .pricing__grid {
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
 }
 
 .price-card {
@@ -873,38 +858,199 @@ main,
 .about__grid,
 .contact__grid {
   display: grid;
-  gap: 34px;
-  align-items: start;
+  gap: 46px;
+  align-items: center;
 }
 
 .about__grid {
-  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-columns: 1fr 1fr;
 }
 
-.about__side {
+.about__content {
+  max-width: 640px;
+}
+
+.about__lead {
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: var(--text);
+  margin: 0 0 18px;
+  font-weight: 500;
+}
+
+.about-service-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.about-service-strip__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 15px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.78);
+  border: 1px solid rgba(255,255,255,0.72);
+  box-shadow: var(--shadow);
+  color: #50626f;
+  font-size: 0.92rem;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.about-service-strip__item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-strong);
+}
+
+.about-service-strip__icon {
+  color: #53736b;
+}
+
+.about-extra-service {
   display: grid;
-  gap: 20px;
+  grid-template-columns: 56px 1fr;
+  gap: 16px;
+  margin-top: 28px;
+  padding: 22px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-extra-service::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  right: -50px;
+  bottom: -60px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(216,200,255,0.22), transparent 70%);
+  pointer-events: none;
+}
+
+.about-extra-service__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, rgba(168,230,216,0.72), rgba(216,200,255,0.72));
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.about-extra-service h3 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+}
+
+.about-extra-service p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.about-extra-service__price {
+  display: inline-flex;
+  margin-top: 14px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(168, 230, 216, 0.18);
+  border: 1px solid rgba(127, 213, 194, 0.25);
+  font-weight: 700;
+  color: #355c57;
+  font-size: 0.92rem;
+}
+
+.about__visual {
+  position: relative;
+}
+
+.about-photo-wrap {
+  position: relative;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-photo-glow {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(168,230,216,0.26), rgba(216,200,255,0.18), transparent 72%);
+  filter: blur(22px);
+  animation: floatGlowSoft 8s ease-in-out infinite;
 }
 
 .about-photo {
-  border-radius: 24px;
-  overflow: hidden;
-  background: rgba(255,255,255,0.45);
-  border: 1px solid rgba(255,255,255,0.65);
-  box-shadow: var(--shadow-strong);
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 420px;
   padding: 14px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.76);
+  box-shadow: var(--shadow-strong);
+  backdrop-filter: blur(16px);
 }
 
 .about-photo img {
   width: 100%;
-  border-radius: 18px;
-  opacity: 0.92;
+  border-radius: 22px;
+  opacity: 0.96;
+}
+
+.about-floating-card {
+  position: absolute;
+  z-index: 3;
+  min-width: 170px;
+  padding: 14px 16px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.8);
+  border: 1px solid rgba(255,255,255,0.8);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 36px rgba(128, 140, 190, 0.14);
+  animation: floatCard 6s ease-in-out infinite;
+}
+
+.about-floating-card__label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.about-floating-card strong {
+  font-size: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.about-floating-card--1 {
+  top: 36px;
+  left: 0;
+}
+
+.about-floating-card--2 {
+  top: 110px;
+  right: 0;
+  animation-delay: 1.2s;
+}
+
+.about-floating-card--3 {
+  bottom: 50px;
+  left: 18px;
+  animation-delay: 2.1s;
 }
 
 .about__cards {
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
+  margin-top: 22px;
 }
 
 .about-card {
@@ -928,8 +1074,6 @@ main,
 }
 
 .contact-list {
-  display: grid;
-  gap: 14px;
   margin-top: 28px;
 }
 
@@ -1106,7 +1250,8 @@ main,
   transition-delay: 0.12s;
 }
 
-.tilt-card {
+.tilt-card,
+.magnetic-card {
   transform-style: preserve-3d;
   will-change: transform;
 }
@@ -1149,11 +1294,28 @@ main,
   }
 }
 
+@keyframes floatCard {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes floatGlowSoft {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.05) translateY(-8px);
+  }
+}
+
 /* RESPONSIVE */
 @media (max-width: 1100px) {
   .hero__grid,
   .quick__grid,
-  .visual-cards,
   .services__grid,
   .pricing__grid,
   .about__grid,
@@ -1177,8 +1339,8 @@ main,
     padding: 24px;
   }
 
-  .about__cards {
-    grid-template-columns: 1fr 1fr;
+  .about-photo-wrap {
+    min-height: 500px;
   }
 }
 
@@ -1236,9 +1398,7 @@ main,
     font-size: 1.4rem;
   }
 
-  .about__cards,
-  .footer__top,
-  .footer__bottom {
+  .about-extra-service {
     grid-template-columns: 1fr;
   }
 
@@ -1275,7 +1435,6 @@ main,
 
   .hero__text,
   .quick-card p,
-  .visual-card p,
   .service-card p,
   .price-card__text,
   .about__content p,
@@ -1285,10 +1444,10 @@ main,
   }
 
   .quick-card,
-  .visual-card,
   .service-card,
   .price-card,
-  .chat-box {
+  .chat-box,
+  .about-extra-service {
     padding: 22px;
   }
 
@@ -1308,6 +1467,26 @@ main,
 
   .price-card__price {
     font-size: 2rem;
+  }
+
+  .about-floating-card {
+    min-width: 140px;
+    padding: 12px 14px;
+  }
+
+  .about-floating-card--1 {
+    top: 8px;
+    left: 0;
+  }
+
+  .about-floating-card--2 {
+    top: 70px;
+    right: 0;
+  }
+
+  .about-floating-card--3 {
+    bottom: 12px;
+    left: 8px;
   }
 
   .whatsapp-float {
