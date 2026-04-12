@@ -8,51 +8,48 @@ const contactForm = document.getElementById("contactForm");
 const translations = {
   de: {
     introTitle: "Ich mache Ihren Wert sichtbar.",
+
     navServices: "Leistungen",
+    navPortfolio: "Portfolio",
     navPricing: "Preise",
     navAbout: "Über mich",
     navContact: "Kontakt",
 
-    heroBadge: "Websites für Selbstständige",
-    heroTitle: "Moderne Websites, die Ihr Business klar zeigen.",
-    heroText:
-      "Ich erstelle Websites für Selbstständige und helfe zusätzlich mit Google Sheets und digitaler Struktur.",
+    heroEyebrow: "Websites für Selbstständige",
+    heroTitle: "Moderne Websites, die Ihr Business klar und professionell zeigen.",
+    heroSubtitle: "Für Selbstständige, lokale Dienstleistungen und kleine Businesses.",
     heroBtn1: "Projekt anfragen",
-    heroBtn2: "Preise ansehen",
-    heroPoint1: "Webdesign",
-    heroPoint2: "Google Sheets",
-    heroPoint3: "klare Struktur",
-
-    visualFloatingBadge: "Mehr Anfragen",
-    visualEyebrow: "Was ich für Ihr Business löse",
-    visualTitle: "Klarer auftreten. Leichter verstanden werden.",
-    visualList1: "professioneller erster Eindruck",
-    visualList2: "leichter Kontakt für potenzielle Kunden",
-    visualList3: "übersichtliche digitale Struktur",
-    visualList4: "individuelle Umsetzung statt Vorlage",
-    chip1: "Websites",
-    chip2: "Klarheit",
-    chip3: "Struktur",
+    heroBtn2: "Arbeiten ansehen",
+    heroBadge1: "Webdesign",
+    heroBadge2: "klare Struktur",
+    heroBadge3: "Google Sheets optional",
 
     quick1Title: "Modern",
-    quick1Text: "Saubere, moderne Websites mit starker Wirkung.",
+    quick1Text: "Saubere Websites mit starkem ersten Eindruck.",
     quick2Title: "Verständlich",
-    quick2Text: "Ihr Angebot wird klar und schnell erfassbar.",
+    quick2Text: "Ihr Angebot wird schneller verstanden.",
     quick3Title: "Strukturiert",
-    quick3Text: "Auch hinter den Kulissen mehr Ordnung und Übersicht.",
+    quick3Text: "Auch intern mehr Ordnung und Übersicht.",
 
     servicesOverline: "Leistungen",
-    servicesTitle: "Was ich für Ihr Business umsetzen kann.",
-    service1Title: "Websites",
+    servicesTitle: "Was Sie konkret bekommen.",
+    service1Title: "Website Erstellung",
     service1Text:
       "Individuelle Websites für Selbstständige und kleine Businesses – modern, klar und passend zu Ihrem Angebot.",
-    service2Title: "Google Sheets",
+    service2Title: "Klare Nutzerführung",
     service2Text:
-      "Hilfe bei Tabellen, Struktur und praktischen Übersichten für den Alltag.",
-    service2Price: "ab 75 €",
-    service3Title: "Digitale Klarheit",
+      "Struktur, Text und Aufbau so, dass Besucher schneller verstehen, was Sie anbieten.",
+    service3Title: "Google Sheets Hilfe optional",
     service3Text:
-      "Ich denke nicht nur an Design, sondern daran, wie Besucher schneller verstehen, was Sie anbieten – und wie der Kontakt leichter wird.",
+      "Wenn Sie möchten, helfe ich zusätzlich mit übersichtlichen Tabellen und praktischer Struktur für den Alltag.",
+    service3Price: "ab 75 €",
+
+    portfolioOverline: "Portfolio",
+    portfolioTitle: "Beispiele meiner Arbeit.",
+    portfolioSasText:
+      "Klarer Aufbau, starke Wirkung und direkter Kontakt per WhatsApp.",
+    portfolioKristinaText:
+      "Feminin, elegant und vertrauensvoll – mit klarer Führung für Kundinnen.",
 
     pricingOverline: "Preise",
     pricingTitle: "Zwei klare Pakete für einen professionellen Start.",
@@ -86,10 +83,6 @@ const translations = {
     aboutStrip1: "individuelle Websites",
     aboutStrip2: "klare Struktur",
     aboutStrip3: "leichter Kontakt",
-    aboutExtraTitle: "Zusätzliche Hilfe mit Google Sheets",
-    aboutExtraText:
-      "Wenn Sie möchten, kann ich Ihnen zusätzlich helfen, Tabellen übersichtlicher, praktischer und angenehmer für den Alltag zu machen.",
-    aboutExtraPrice: "ab 75 €",
     aboutFloat1Label: "Website",
     aboutFloat1Value: "klar & modern",
     aboutFloat2Label: "Google Sheets",
@@ -116,51 +109,48 @@ const translations = {
 
   ru: {
     introTitle: "Я покажу вашу ценность людям.",
+
     navServices: "Услуги",
+    navPortfolio: "Портфолио",
     navPricing: "Цены",
     navAbout: "Обо мне",
     navContact: "Контакт",
 
-    heroBadge: "Сайты для предпринимателей",
-    heroTitle: "Современные сайты, которые ясно показывают ваш бизнес.",
-    heroText:
-      "Я создаю сайты для предпринимателей и дополнительно помогаю с Google Sheets и цифровой структурой.",
+    heroEyebrow: "Сайты для предпринимателей",
+    heroTitle: "Современные сайты, которые ясно и профессионально показывают ваш бизнес.",
+    heroSubtitle: "Для предпринимателей, локальных услуг и малого бизнеса.",
     heroBtn1: "Обсудить проект",
-    heroBtn2: "Посмотреть цены",
-    heroPoint1: "Веб-дизайн",
-    heroPoint2: "Google Sheets",
-    heroPoint3: "понятная структура",
-
-    visualFloatingBadge: "Больше заявок",
-    visualEyebrow: "Что я решаю для вашего бизнеса",
-    visualTitle: "Понятнее подача. Легче контакт.",
-    visualList1: "профессиональное первое впечатление",
-    visualList2: "удобный контакт для потенциальных клиентов",
-    visualList3: "понятная цифровая структура",
-    visualList4: "индивидуальная реализация вместо шаблона",
-    chip1: "Сайты",
-    chip2: "Ясность",
-    chip3: "Структура",
+    heroBtn2: "Посмотреть работы",
+    heroBadge1: "Веб-дизайн",
+    heroBadge2: "понятная структура",
+    heroBadge3: "Google Sheets дополнительно",
 
     quick1Title: "Современно",
-    quick1Text: "Чистые современные сайты с сильной подачей.",
+    quick1Text: "Чистые сайты с сильным первым впечатлением.",
     quick2Title: "Понятно",
-    quick2Text: "Ваше предложение считывается быстро и ясно.",
+    quick2Text: "Ваше предложение понимается быстрее.",
     quick3Title: "Структурно",
     quick3Text: "Больше порядка и внутри бизнеса.",
 
     servicesOverline: "Услуги",
-    servicesTitle: "Что я могу сделать для вашего бизнеса.",
-    service1Title: "Сайты",
+    servicesTitle: "Что вы конкретно получаете.",
+    service1Title: "Создание сайтов",
     service1Text:
       "Индивидуальные сайты для предпринимателей и малого бизнеса — современные, понятные и под ваш запрос.",
-    service2Title: "Google Sheets",
+    service2Title: "Понятная подача",
     service2Text:
-      "Помощь с таблицами, структурой и практичными рабочими обзорами.",
-    service2Price: "от 75 €",
-    service3Title: "Цифровая ясность",
+      "Структура, тексты и блоки так, чтобы посетитель быстрее понимал, что вы предлагаете.",
+    service3Title: "Помощь с Google Sheets дополнительно",
     service3Text:
-      "Я думаю не только о дизайне, но и о том, как посетитель быстрее поймёт ваше предложение — и как сделать контакт легче.",
+      "Если хотите, я дополнительно помогу с понятными таблицами и удобной структурой для повседневной работы.",
+    service3Price: "от 75 €",
+
+    portfolioOverline: "Портфолио",
+    portfolioTitle: "Примеры моей работы.",
+    portfolioSasText:
+      "Понятная структура, сильная подача и прямой контакт через WhatsApp.",
+    portfolioKristinaText:
+      "Женственно, элегантно и с доверием — с понятной подачей для клиенток.",
 
     pricingOverline: "Цены",
     pricingTitle: "Два понятных пакета для профессионального старта.",
@@ -194,10 +184,6 @@ const translations = {
     aboutStrip1: "индивидуальные сайты",
     aboutStrip2: "понятная структура",
     aboutStrip3: "лёгкий контакт",
-    aboutExtraTitle: "Дополнительная помощь с Google Sheets",
-    aboutExtraText:
-      "Если хотите, я дополнительно могу помочь сделать таблицы более понятными, практичными и удобными для повседневной работы.",
-    aboutExtraPrice: "от 75 €",
     aboutFloat1Label: "Сайт",
     aboutFloat1Value: "ясно и современно",
     aboutFloat2Label: "Google Sheets",
@@ -249,16 +235,20 @@ langButtons.forEach((button) => {
 const savedLang = localStorage.getItem("flowClarityLang") || "de";
 applyLanguage(savedLang);
 
+/* Intro hide */
 window.addEventListener("load", () => {
   setTimeout(() => {
     if (intro) intro.classList.add("hide");
-  }, 1600);
+  }, 1500);
 });
 
+/* Reveal on scroll */
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) entry.target.classList.add("visible");
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
     });
   },
   { threshold: 0.14 }
@@ -266,6 +256,7 @@ const observer = new IntersectionObserver(
 
 revealElements.forEach((element) => observer.observe(element));
 
+/* Mobile menu */
 if (menuToggle && nav) {
   menuToggle.addEventListener("click", () => {
     nav.classList.toggle("open");
@@ -280,6 +271,7 @@ if (menuToggle && nav) {
   });
 }
 
+/* Contact form -> mailto */
 if (contactForm) {
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -305,10 +297,10 @@ if (contactForm) {
   });
 }
 
-/* tilt + magnetic effect */
-const interactiveCards = document.querySelectorAll(".tilt-card, .magnetic-card");
+/* Tilt cards */
+const tiltCards = document.querySelectorAll(".tilt-card");
 
-interactiveCards.forEach((card) => {
+tiltCards.forEach((card) => {
   card.addEventListener("mousemove", (e) => {
     if (window.innerWidth < 900) return;
 
@@ -316,8 +308,8 @@ interactiveCards.forEach((card) => {
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
-    const rotateY = ((x / rect.width) - 0.5) * 8;
-    const rotateX = ((y / rect.height) - 0.5) * -8;
+    const rotateY = ((x / rect.width) - 0.5) * 7;
+    const rotateX = ((y / rect.height) - 0.5) * -7;
 
     card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
   });
@@ -327,7 +319,7 @@ interactiveCards.forEach((card) => {
   });
 });
 
-/* animated background */
+/* Animated background */
 const bgCanvas = document.getElementById("bgCanvas");
 
 if (bgCanvas) {
