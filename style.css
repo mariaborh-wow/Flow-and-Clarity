@@ -693,32 +693,61 @@ main,
 }
 
 .portfolio-shots {
-  margin-top: 18px;
+  margin-top: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  gap: 16px;
 }
 
 .portfolio-shot {
-  height: 220px;
-  border-radius: 18px;
+  position: relative;
+  min-height: 250px;
+  padding: 14px;
+  border-radius: 22px;
   overflow: hidden;
-  background: rgba(255,255,255,0.72);
-  border: 1px solid rgba(255,255,255,0.78);
-  box-shadow: 0 14px 28px rgba(130, 140, 190, 0.1);
-  transition: transform var(--transition), box-shadow var(--transition);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.92), rgba(248,251,252,0.82));
+  border: 1px solid rgba(255,255,255,0.82);
+  box-shadow: 0 14px 28px rgba(130, 140, 190, 0.10);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition);
+}
+
+.portfolio-shot::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top left, rgba(168,230,216,0.14), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(216,200,255,0.14), transparent 34%);
+  pointer-events: none;
 }
 
 .portfolio-shot:hover {
-  transform: translateY(-3px) scale(1.01);
-  box-shadow: 0 20px 36px rgba(130, 140, 190, 0.14);
+  transform: translateY(-6px);
+  box-shadow: 0 24px 40px rgba(130, 140, 190, 0.16);
+  border-color: rgba(127, 213, 194, 0.25);
 }
 
 .portfolio-shot img {
+  position: relative;
+  z-index: 1;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 220px;
+  object-fit: contain;
+  object-position: center top;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.82);
+  box-shadow: 0 10px 24px rgba(120, 135, 180, 0.08);
+  transition: transform var(--transition);
 }
+
+.portfolio-shot:hover img {
+  transform: scale(1.02);
+}
+
 
 /* PRICING */
 .pricing__grid {
@@ -1329,12 +1358,17 @@ main,
   }
 
   .portfolio-shots {
-    grid-template-columns: 1fr;
-  }
+  grid-template-columns: 1fr;
+}
 
-  .portfolio-shot {
-    height: 200px;
-  }
+.portfolio-shot {
+  min-height: 220px;
+  padding: 12px;
+}
+
+.portfolio-shot img {
+  height: 190px;
+}
 
   .about-photo {
     max-width: 290px;
