@@ -21,7 +21,7 @@ const translations = {
     introTitle: "Ich mache Ihre Wirkung sichtbar.",
 
     navServices: "Leistungen",
-    navCase: "SAS PARTS",
+    navCase: "Referenzen",
     navPricing: "Preise",
     navAbout: "Über mich",
     navFaq: "FAQ",
@@ -32,11 +32,17 @@ const translations = {
     heroSubtitle:
       "Für Selbstständige und kleine Businesses, die online professionell, modern und auffallend auftreten wollen — ohne billig oder chaotisch zu wirken.",
     heroBtn1: "Projekt anfragen",
-    heroBtn2: "SAS PARTS ansehen",
+    heroBtn2: "Beispiele ansehen",
     heroChip1: "Premium Look",
     heroChip2: "Scroll-Effekte",
     heroChip3: "klare Nutzerführung",
     heroCard2: "soll sitzen",
+    heroCaseLabel: "Modernes Beispiel",
+    heroMetric1Label: "Anfragen",
+    heroMetric2Label: "Klarer Kontaktweg",
+    heroMetric2Value: "schnell & direkt",
+    heroFloat2: "Wirkung",
+    heroFloat3: "Struktur",
 
     trust1Title: "Auffälliger erster Eindruck",
     trust1Text:
@@ -61,14 +67,14 @@ const translations = {
       "Wenn gewünscht, ergänze ich die Website mit sinnvoller digitaler Struktur für Ihren Alltag.",
     service3Price: "ab 75 €",
 
-    sasOverline: "Featured Showcase",
-    sasTitle: "SAS PARTS — direkt, maskulin, modern und auf Kontakt gebaut.",
+    sasOverline: "Referenzprojekt",
+    sasTitle: "Beispiel für einen modernen Website-Auftritt im Bereich Autoteile.",
     sasText:
-      "Statt das Projekt wie ein klassisches Portfolio zu zeigen, wird es hier wie ein starker Referenz-Case inszeniert: visuell, präsent und mit echtem Zug nach vorn.",
-    sasPoint1: "klare Hero-Wirkung",
-    sasPoint2: "WhatsApp-Fokus für direkte Anfragen",
-    sasPoint3: "dunkle, hochwertige Performance-Optik",
-    sasBtn: "So etwas will ich auch",
+      "Dieses Beispiel zeigt, wie ein Auftritt für den Automotive-Bereich modern, direkt und hochwertig wirken kann — mit klarer Struktur und Fokus auf schnelle Kontaktaufnahme.",
+    sasPoint1: "starke visuelle Wirkung im ersten Screen",
+    sasPoint2: "klare Kontaktwege für schnelle Anfragen",
+    sasPoint3: "hochwertige, moderne Automotive-Optik",
+    sasBtn: "Projekt besprechen",
 
     pricingOverline: "Preise",
     pricingTitle: "Klar. Direkt. Ohne unnötiges Theater.",
@@ -148,7 +154,7 @@ const translations = {
     introTitle: "Я делаю вашу подачу заметной.",
 
     navServices: "Услуги",
-    navCase: "SAS PARTS",
+    navCase: "Примеры",
     navPricing: "Цены",
     navAbout: "Обо мне",
     navFaq: "FAQ",
@@ -159,11 +165,17 @@ const translations = {
     heroSubtitle:
       "Для предпринимателей и малого бизнеса, которые хотят выглядеть в интернете профессионально, современно и заметно — без ощущения дешёвого или хаотичного сайта.",
     heroBtn1: "Обсудить проект",
-    heroBtn2: "Посмотреть SAS PARTS",
+    heroBtn2: "Посмотреть примеры",
     heroChip1: "Премиум-подача",
     heroChip2: "Scroll-эффекты",
     heroChip3: "понятная структура",
     heroCard2: "должен цеплять",
+    heroCaseLabel: "Современный пример",
+    heroMetric1Label: "Заявки",
+    heroMetric2Label: "Понятный контакт",
+    heroMetric2Value: "быстро и прямо",
+    heroFloat2: "Эффект",
+    heroFloat3: "Структура",
 
     trust1Title: "Сильное первое впечатление",
     trust1Text:
@@ -188,14 +200,14 @@ const translations = {
       "При желании я дополняю сайт понятной цифровой структурой для повседневной работы.",
     service3Price: "от 75 €",
 
-    sasOverline: "Главный showcase",
-    sasTitle: "SAS PARTS — прямо, брутально, современно и с упором на контакт.",
+    sasOverline: "Пример проекта",
+    sasTitle: "Пример современного сайта для сферы автозапчастей.",
     sasText:
-      "Вместо классического “портфолио” этот проект показан как сильный референс-кейс: визуально, уверенно и с правильным акцентом.",
-    sasPoint1: "сильный hero-экран",
-    sasPoint2: "фокус на WhatsApp для быстрых заявок",
-    sasPoint3: "тёмная дорогая performance-эстетика",
-    sasBtn: "Хочу что-то такое же",
+      "Этот пример показывает, как может выглядеть современный, уверенный и визуально сильный сайт для automotive-направления — с понятной структурой и быстрым контактом.",
+    sasPoint1: "сильное визуальное впечатление в первом экране",
+    sasPoint2: "понятные точки контакта для быстрых заявок",
+    sasPoint3: "современная и дорогая automotive-эстетика",
+    sasBtn: "Обсудить проект",
 
     pricingOverline: "Цены",
     pricingTitle: "Чётко. Прямо. Без лишнего цирка.",
@@ -367,7 +379,7 @@ function updateScrollProgress() {
   scrollProgress.style.width = `${Math.min(progress, 100)}%`;
 }
 
-window.addEventListener("scroll", updateScrollProgress);
+window.addEventListener("scroll", updateScrollProgress, { passive: true });
 window.addEventListener("resize", updateScrollProgress);
 updateScrollProgress();
 
@@ -458,7 +470,7 @@ spotlightCards.forEach((card) => {
   });
 });
 
-/* hero + sas parallax */
+/* hero + cases parallax */
 function updateParallax() {
   const scrollY = window.scrollY;
 
@@ -471,9 +483,8 @@ function updateParallax() {
   }
 
   if (sasVisual && window.innerWidth > 900) {
-    const sasRect = sasVisual.getBoundingClientRect();
-    const offset = sasRect.top / window.innerHeight;
-
+    const rect = sasVisual.getBoundingClientRect();
+    const offset = rect.top / window.innerHeight;
     sasVisual.style.transform = `translateY(${offset * -22}px)`;
   }
 }
@@ -501,9 +512,13 @@ window.addEventListener("load", () => {
 });
 
 /* prevent weird stuck transforms on touch devices */
-window.addEventListener("touchstart", () => {
-  if (window.innerWidth < 900) {
-    tiltCards.forEach((card) => (card.style.transform = ""));
-    magneticElements.forEach((el) => (el.style.transform = ""));
-  }
-}, { passive: true });
+window.addEventListener(
+  "touchstart",
+  () => {
+    if (window.innerWidth < 900) {
+      tiltCards.forEach((card) => (card.style.transform = ""));
+      magneticElements.forEach((el) => (el.style.transform = ""));
+    }
+  },
+  { passive: true }
+);
