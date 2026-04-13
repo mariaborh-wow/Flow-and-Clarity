@@ -21,7 +21,7 @@ const translations = {
     heroEyebrow: "Websites ab 280 € für Selbstständige",
     heroTitle: "Moderne Websites, die Ihr Business klar und professionell zeigen.",
     heroSubtitle:
-      "Für Selbstständige, lokale Dienstleistungen und kleine Businesses, die online vertrauensvoller und moderner wirken möchten.",
+      "Für Selbstständige, lokale Dienstleistungen und kleine Businesses, die online moderner, vertrauensvoller und verständlicher auftreten möchten.",
     heroBtn1: "Projekt anfragen",
     heroBtn2: "Arbeiten ansehen",
     heroBadge1: "Webdesign",
@@ -288,15 +288,12 @@ langButtons.forEach((button) => {
   });
 });
 
-const savedLang = localStorage.getItem("flowClarityLang") || "de";
-applyLanguage(savedLang);
+applyLanguage(localStorage.getItem("flowClarityLang") || "de");
 
 /* intro */
 window.addEventListener("load", () => {
   setTimeout(() => {
-    if (intro) {
-      intro.classList.add("hide");
-    }
+    if (intro) intro.classList.add("hide");
   }, 1600);
 });
 
@@ -329,7 +326,7 @@ if (menuToggle && nav) {
   });
 }
 
-/* active nav while scrolling */
+/* active nav */
 const sections = document.querySelectorAll("main section[id]");
 
 function setActiveNavLink() {
@@ -361,7 +358,6 @@ if (contactForm) {
     const name = document.getElementById("name")?.value.trim() || "";
     const contact = document.getElementById("email")?.value.trim() || "";
     const message = document.getElementById("message")?.value.trim() || "";
-
     const lang = localStorage.getItem("flowClarityLang") || "de";
 
     const subject =
@@ -374,10 +370,7 @@ if (contactForm) {
         ? `Имя: ${name}\nКонтакт: ${contact}\n\nСообщение:\n${message}`
         : `Name: ${name}\nKontakt: ${contact}\n\nNachricht:\n${message}`;
 
-    const mailto = `mailto:Maria.webhilfe@gmail.com?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
-
+    const mailto = `mailto:Maria.webhilfe@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailto;
   });
 }
@@ -404,7 +397,7 @@ tiltCards.forEach((card) => {
   });
 });
 
-/* faq: only one open at a time */
+/* faq - one open */
 faqItems.forEach((item) => {
   item.addEventListener("toggle", () => {
     if (item.open) {
@@ -417,7 +410,7 @@ faqItems.forEach((item) => {
   });
 });
 
-/* animated background */
+/* background canvas */
 const bgCanvas = document.getElementById("bgCanvas");
 
 if (bgCanvas) {
@@ -437,7 +430,7 @@ if (bgCanvas) {
 
   function createParticles() {
     particles = [];
-    const count = window.innerWidth < 768 ? 48 : 82;
+    const count = window.innerWidth < 768 ? 52 : 86;
 
     for (let i = 0; i < count; i++) {
       particles.push({
@@ -508,7 +501,7 @@ if (bgCanvas) {
       }
 
       if (p.x < -24) p.x = window.innerWidth + 24;
-      if (p.x > window.innerWidth + 24) p.x = -24;
+      if (p.x > window.innerHeight + 24) p.x = -24;
     });
   }
 
