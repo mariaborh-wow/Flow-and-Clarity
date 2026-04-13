@@ -3,42 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flow and Clarity | Websites für Selbstständige</title>
+  <title>Flow and Clarity | Moderne Websites mit Wirkung</title>
   <meta
     name="description"
-    content="Flow and Clarity – moderne Websites für Selbstständige, kleine Businesses und lokale Dienstleistungen. Zusätzlich Hilfe mit Google Sheets und digitaler Struktur."
+    content="Flow and Clarity erstellt moderne Websites mit Charakter für Selbstständige, lokale Dienstleistungen und kleine Businesses. Klar, hochwertig und aufmerksamkeitsstark."
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet"
   />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <div class="noise"></div>
+  <div class="bg-orb bg-orb--1"></div>
+  <div class="bg-orb bg-orb--2"></div>
+  <div class="bg-grid"></div>
+
   <!-- INTRO -->
   <div class="intro" id="intro">
-    <div class="intro__bg"></div>
-    <div class="intro__content">
+    <div class="intro__inner">
       <p class="intro__label">Flow and Clarity</p>
-      <h1 class="intro__title" data-i18n="introTitle">Ich mache Ihren Wert sichtbar.</h1>
+      <h1 class="intro__title" data-i18n="introTitle">Ich mache Ihre Wirkung sichtbar.</h1>
+      <div class="intro__line"></div>
     </div>
-  </div>
-
-  <!-- BACKGROUND -->
-  <canvas id="bgCanvas" class="bg-canvas"></canvas>
-
-  <div class="site-bg">
-    <div class="glow glow--1"></div>
-    <div class="glow glow--2"></div>
-    <div class="glow glow--3"></div>
-    <div class="grid-overlay"></div>
   </div>
 
   <!-- WHATSAPP -->
   <a
-    class="whatsapp-float"
+    class="whatsapp-float magnetic"
     href="https://wa.me/4915224584744"
     target="_blank"
     rel="noopener noreferrer"
@@ -57,7 +54,7 @@
 
       <nav class="nav" id="nav">
         <a href="#services" data-i18n="navServices">Leistungen</a>
-        <a href="#portfolio" data-i18n="navPortfolio">Portfolio</a>
+        <a href="#sas" data-i18n="navCase">SAS PARTS</a>
         <a href="#pricing" data-i18n="navPricing">Preise</a>
         <a href="#about" data-i18n="navAbout">Über mich</a>
         <a href="#faq" data-i18n="navFaq">FAQ</a>
@@ -81,56 +78,89 @@
   <main>
     <!-- HERO -->
     <section class="hero" id="hero">
-      <div class="hero__bg"></div>
+      <div class="hero__bg" id="heroBg"></div>
       <div class="hero__overlay"></div>
 
-      <div class="container hero__content">
-        <div class="hero__text reveal">
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
           <div class="hero__eyebrow" data-i18n="heroEyebrow">
-            Websites ab 280 € für Selbstständige
+            Websites ab 280 € • klar • stark • modern
           </div>
 
           <h1 class="hero__title" data-i18n="heroTitle">
-            Moderne Websites, die Ihr Business klar und professionell zeigen.
+            Websites, die nicht nur da sind — sondern hängen bleiben.
           </h1>
 
           <p class="hero__subtitle" data-i18n="heroSubtitle">
-            Für Selbstständige, lokale Dienstleistungen und kleine Businesses, die online moderner, vertrauensvoller und verständlicher auftreten möchten.
+            Für Selbstständige und kleine Businesses, die online professionell, modern und auffallend auftreten wollen — ohne billig oder chaotisch zu wirken.
           </p>
 
-          <div class="hero__buttons">
-            <a href="#contact" class="btn btn--primary" data-i18n="heroBtn1">Projekt anfragen</a>
-            <a href="#portfolio" class="btn btn--secondary" data-i18n="heroBtn2">Arbeiten ansehen</a>
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--primary magnetic" data-i18n="heroBtn1">Projekt anfragen</a>
+            <a href="#sas" class="btn btn--ghost magnetic" data-i18n="heroBtn2">SAS PARTS ansehen</a>
           </div>
 
-          <div class="hero__badges">
-            <span data-i18n="heroBadge1">Webdesign</span>
-            <span data-i18n="heroBadge2">klare Struktur</span>
-            <span data-i18n="heroBadge3">Google Sheets optional</span>
+          <div class="hero__chips">
+            <span data-i18n="heroChip1">Premium Look</span>
+            <span data-i18n="heroChip2">Scroll-Effekte</span>
+            <span data-i18n="heroChip3">klare Nutzerführung</span>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal reveal-delay">
+          <div class="hero-stack" id="heroStack">
+            <div class="hero-card hero-card--back">
+              <span class="hero-card__label">Visual Impact</span>
+              <strong>Modern • Clean • Bold</strong>
+            </div>
+
+            <div class="hero-card hero-card--mid">
+              <span class="hero-card__label">Erster Eindruck</span>
+              <strong data-i18n="heroCard2">soll sitzen</strong>
+            </div>
+
+            <div class="hero-card hero-card--front">
+              <span class="hero-card__kicker">SAS PARTS</span>
+              <div class="hero-card__screen">
+                <div class="hero-screen__bar"></div>
+                <div class="hero-screen__body">
+                  <div class="hero-screen__title">Teile. Schnell. Klar.</div>
+                  <div class="hero-screen__tags">
+                    <span>WhatsApp</span>
+                    <span>Automotive</span>
+                    <span>Performance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-float hero-float--1">2026</div>
+            <div class="hero-float hero-float--2">Wirkung</div>
+            <div class="hero-float hero-float--3">Scroll</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- QUICK TRUST -->
-    <section class="quick section">
-      <div class="container quick__grid">
-        <article class="quick-card reveal tilt-card">
-          <div class="quick-card__icon">↗</div>
-          <h3 data-i18n="quick1Title">Modern</h3>
-          <p data-i18n="quick1Text">Saubere Websites mit starkem ersten Eindruck.</p>
+    <!-- TRUST STRIP -->
+    <section class="trust section">
+      <div class="container trust__grid">
+        <article class="trust-card reveal tilt-card spotlight-card">
+          <span class="trust-card__number">01</span>
+          <h3 data-i18n="trust1Title">Auffälliger erster Eindruck</h3>
+          <p data-i18n="trust1Text">Nicht generisch. Nicht langweilig. Sondern visuell klar und mit Charakter.</p>
         </article>
 
-        <article class="quick-card reveal tilt-card">
-          <div class="quick-card__icon">◎</div>
-          <h3 data-i18n="quick2Title">Verständlich</h3>
-          <p data-i18n="quick2Text">Ihr Angebot wird schneller verstanden.</p>
+        <article class="trust-card reveal tilt-card spotlight-card">
+          <span class="trust-card__number">02</span>
+          <h3 data-i18n="trust2Title">Struktur, die verkauft</h3>
+          <p data-i18n="trust2Text">Besucher verstehen schneller, was angeboten wird und was der nächste Schritt ist.</p>
         </article>
 
-        <article class="quick-card reveal tilt-card">
-          <div class="quick-card__icon">▣</div>
-          <h3 data-i18n="quick3Title">Strukturiert</h3>
-          <p data-i18n="quick3Text">Auch intern mehr Ordnung und Übersicht.</p>
+        <article class="trust-card reveal tilt-card spotlight-card">
+          <span class="trust-card__number">03</span>
+          <h3 data-i18n="trust3Title">Modern statt “08/15”</h3>
+          <p data-i18n="trust3Text">Scroll, Tiefe, Dynamik und hochwertige Details — aber ohne nervige Überladung.</p>
         </article>
       </div>
     </section>
@@ -141,93 +171,100 @@
         <div class="section-head reveal">
           <span class="section-head__overline" data-i18n="servicesOverline">Leistungen</span>
           <h2 class="section-head__title" data-i18n="servicesTitle">
-            Was Sie konkret bekommen.
+            Was Ihre Website bei mir bekommen kann.
           </h2>
         </div>
 
         <div class="services__grid">
-          <article class="service-card reveal tilt-card">
-            <div class="service-card__icon">01</div>
-            <h3 data-i18n="service1Title">Website Erstellung</h3>
+          <article class="service-card reveal tilt-card spotlight-card">
+            <div class="service-card__top">
+              <span class="service-card__index">01</span>
+              <span class="service-card__tag">Webdesign</span>
+            </div>
+            <h3 data-i18n="service1Title">Individuelle Website</h3>
             <p data-i18n="service1Text">
-              Individuelle Websites für Selbstständige und kleine Businesses – modern, klar und passend zu Ihrem Angebot.
+              Eine Website, die nicht nach Baukasten aussieht, sondern nach echter Marke.
             </p>
           </article>
 
-          <article class="service-card reveal tilt-card">
-            <div class="service-card__icon">02</div>
+          <article class="service-card reveal tilt-card spotlight-card">
+            <div class="service-card__top">
+              <span class="service-card__index">02</span>
+              <span class="service-card__tag">User Flow</span>
+            </div>
             <h3 data-i18n="service2Title">Klare Nutzerführung</h3>
             <p data-i18n="service2Text">
-              Struktur, Text und Aufbau so, dass Besucher schneller verstehen, was Sie anbieten.
+              Aufbau, Texte und Call-to-Actions so, dass Besucher schneller handeln.
             </p>
           </article>
 
-          <article class="service-card reveal tilt-card service-card--wide">
-            <div class="service-card__icon">03</div>
-            <h3 data-i18n="service3Title">Google Sheets Hilfe optional</h3>
+          <article class="service-card reveal tilt-card spotlight-card service-card--wide">
+            <div class="service-card__top">
+              <span class="service-card__index">03</span>
+              <span class="service-card__tag">Digital Structure</span>
+            </div>
+            <h3 data-i18n="service3Title">Google Sheets optional</h3>
             <p data-i18n="service3Text">
-              Wenn Sie möchten, helfe ich zusätzlich mit übersichtlichen Tabellen und praktischer Struktur für den Alltag.
+              Wenn gewünscht, ergänze ich die Website mit sinnvoller digitaler Struktur für Ihren Alltag.
             </p>
-            <div class="service-card__price" data-i18n="service3Price">ab 75 €</div>
+            <div class="service-card__pill" data-i18n="service3Price">ab 75 €</div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- PORTFOLIO -->
-    <section class="portfolio section" id="portfolio">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="section-head__overline" data-i18n="portfolioOverline">Portfolio</span>
-          <h2 class="section-head__title" data-i18n="portfolioTitle">
-            Beispiele meiner Arbeit.
+    <!-- SAS SHOWCASE -->
+    <section class="sas section" id="sas">
+      <div class="container sas__grid">
+        <div class="sas__content reveal">
+          <span class="section-head__overline" data-i18n="sasOverline">Featured Showcase</span>
+          <h2 class="sas__title" data-i18n="sasTitle">
+            SAS PARTS — direkt, maskulin, modern und auf Kontakt gebaut.
           </h2>
+          <p class="sas__text" data-i18n="sasText">
+            Statt das Projekt wie ein klassisches Portfolio zu zeigen, wird es hier wie ein starker Referenz-Case inszeniert: visuell, präsent und mit echtem Zug nach vorn.
+          </p>
+
+          <div class="sas__points">
+            <div class="sas-point">
+              <span>•</span>
+              <p data-i18n="sasPoint1">klare Hero-Wirkung</p>
+            </div>
+            <div class="sas-point">
+              <span>•</span>
+              <p data-i18n="sasPoint2">WhatsApp-Fokus für direkte Anfragen</p>
+            </div>
+            <div class="sas-point">
+              <span>•</span>
+              <p data-i18n="sasPoint3">dunkle, hochwertige Performance-Optik</p>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn--primary magnetic" data-i18n="sasBtn">So etwas will ich auch</a>
         </div>
 
-        <div class="portfolio__grid">
-          <article class="portfolio-card reveal">
-            <div class="portfolio-card__top">
-              <div>
-                <span class="portfolio-card__tag">Automotive</span>
-                <h3>SAS PARTS</h3>
-              </div>
+        <div class="sas__visual reveal reveal-delay" id="sasVisual">
+          <div class="sas-browser sas-browser--main tilt-card spotlight-card">
+            <div class="sas-browser__top">
+              <span></span><span></span><span></span>
             </div>
-
-            <p class="portfolio-card__text" data-i18n="portfolioSasText">
-              Klarer Aufbau, starke Wirkung und direkter Kontakt per WhatsApp.
-            </p>
-
-            <div class="portfolio-shots">
-              <div class="portfolio-shot">
-                <img src="images/sasparts-main.jpg" alt="SAS PARTS Startseite" />
-              </div>
-              <div class="portfolio-shot">
-                <img src="images/sasparts-second.jpg" alt="SAS PARTS weiterer Bereich" />
-              </div>
+            <div class="sas-browser__body">
+              <img src="images/sasparts-main.jpg" alt="SAS PARTS Startseite" />
             </div>
-          </article>
+          </div>
 
-          <article class="portfolio-card reveal reveal-delay">
-            <div class="portfolio-card__top">
-              <div>
-                <span class="portfolio-card__tag">Beauty</span>
-                <h3>Kristina Deibus</h3>
-              </div>
+          <div class="sas-browser sas-browser--side tilt-card spotlight-card">
+            <div class="sas-browser__top">
+              <span></span><span></span><span></span>
             </div>
-
-            <p class="portfolio-card__text" data-i18n="portfolioKristinaText">
-              Feminin, elegant und vertrauensvoll – mit klarer Führung für Kundinnen.
-            </p>
-
-            <div class="portfolio-shots">
-              <div class="portfolio-shot">
-                <img src="images/kristina-main.jpg" alt="Kristina Deibus Startseite" />
-              </div>
-              <div class="portfolio-shot">
-                <img src="images/kristina-second.jpg" alt="Kristina Deibus weiterer Bereich" />
-              </div>
+            <div class="sas-browser__body">
+              <img src="images/sasparts-second.jpg" alt="SAS PARTS Bereich" />
             </div>
-          </article>
+          </div>
+
+          <div class="sas-badge sas-badge--1">Automotive</div>
+          <div class="sas-badge sas-badge--2">High Intent</div>
+          <div class="sas-badge sas-badge--3">Fast Contact</div>
         </div>
       </div>
     </section>
@@ -238,62 +275,46 @@
         <div class="section-head reveal">
           <span class="section-head__overline" data-i18n="pricingOverline">Preise</span>
           <h2 class="section-head__title" data-i18n="pricingTitle">
-            Klare Preise ohne Verwirrung.
+            Klar. Direkt. Ohne unnötiges Theater.
           </h2>
         </div>
 
         <div class="pricing__grid">
-          <article class="price-card reveal">
-            <div class="price-card__top">
-              <span class="price-card__tag" data-i18n="websiteTag">Website</span>
-              <h3 data-i18n="websiteTitle">ab 280 €</h3>
-              <div class="price-card__price-note-wrap">
-                <span class="price-note" data-i18n="websitePriceNote">einmalige Zahlung</span>
-                <span class="price-extra" data-i18n="websiteExtra">Preis abhängig von Umfang und Funktion</span>
-              </div>
-            </div>
-
+          <article class="price-card reveal spotlight-card">
+            <span class="price-card__tag" data-i18n="websiteTag">Website</span>
+            <h3 data-i18n="websiteTitle">ab 280 €</h3>
+            <p class="price-card__meta" data-i18n="websitePriceNote">einmalige Zahlung</p>
             <p class="price-card__text" data-i18n="websiteText">
-              Für Selbstständige und kleine Businesses, die online professionell und modern auftreten möchten.
+              Für Selbstständige und kleine Businesses, die online hochwertiger wirken wollen.
             </p>
 
             <ul class="price-card__list">
               <li data-i18n="websiteList1">individuelles Design</li>
-              <li data-i18n="websiteList2">mobile & Desktop Optimierung</li>
-              <li data-i18n="websiteList3">klare Struktur & Nutzerführung</li>
+              <li data-i18n="websiteList2">mobil & Desktop optimiert</li>
+              <li data-i18n="websiteList3">klare Struktur</li>
               <li data-i18n="websiteList4">Kontakt / WhatsApp Integration</li>
-              <li data-i18n="websiteList5">moderne visuelle Darstellung</li>
+              <li data-i18n="websiteList5">moderne visuelle Wirkung</li>
             </ul>
 
-            <a href="#contact" class="btn btn--primary btn--full" data-i18n="websiteBtn">
-              Website anfragen
-            </a>
+            <a href="#contact" class="btn btn--primary btn--full magnetic" data-i18n="websiteBtn">Website anfragen</a>
           </article>
 
-          <article class="price-card reveal reveal-delay">
-            <div class="price-card__top">
-              <span class="price-card__tag" data-i18n="sheetsTag">Google Sheets</span>
-              <h3 data-i18n="sheetsTitle">ab 75 €</h3>
-              <div class="price-card__price-note-wrap">
-                <span class="price-note" data-i18n="sheetsPriceNote">je nach Aufwand</span>
-                <span class="price-extra" data-i18n="sheetsExtra">Preis abhängig vom Umfang</span>
-              </div>
-            </div>
-
+          <article class="price-card reveal reveal-delay spotlight-card">
+            <span class="price-card__tag" data-i18n="sheetsTag">Google Sheets</span>
+            <h3 data-i18n="sheetsTitle">ab 75 €</h3>
+            <p class="price-card__meta" data-i18n="sheetsPriceNote">je nach Aufwand</p>
             <p class="price-card__text" data-i18n="sheetsText">
-              Struktur und Ordnung für Tabellen, Prozesse, Kundenübersicht oder den Arbeitsalltag.
+              Struktur, Ordnung und Übersicht für Tabellen, Abläufe und Alltag.
             </p>
 
             <ul class="price-card__list">
               <li data-i18n="sheetsList1">klare Tabellenstruktur</li>
               <li data-i18n="sheetsList2">individuelle Lösungen</li>
-              <li data-i18n="sheetsList3">Übersicht für Ihren Alltag</li>
-              <li data-i18n="sheetsList4">einfach und verständlich aufgebaut</li>
+              <li data-i18n="sheetsList3">besserer Überblick</li>
+              <li data-i18n="sheetsList4">einfach aufgebaut</li>
             </ul>
 
-            <a href="#contact" class="btn btn--sheets btn--full" data-i18n="sheetsBtn">
-              Hilfe anfragen
-            </a>
+            <a href="#contact" class="btn btn--secondary-dark btn--full magnetic" data-i18n="sheetsBtn">Hilfe anfragen</a>
           </article>
         </div>
       </div>
@@ -303,60 +324,39 @@
     <section class="about section" id="about">
       <div class="container about__grid">
         <div class="about__content reveal">
-          <div class="section-head section-head--left">
-            <span class="section-head__overline" data-i18n="aboutOverline">Über mich</span>
-            <h2 class="section-head__title" data-i18n="aboutTitle">
-              Ich gestalte Websites, die Ihr Angebot klar und professionell zeigen.
-            </h2>
-          </div>
-
+          <span class="section-head__overline" data-i18n="aboutOverline">Über mich</span>
+          <h2 class="about__title" data-i18n="aboutTitle">
+            Ich erstelle Websites, die nicht nur ordentlich aussehen — sondern wirken.
+          </h2>
           <p class="about__lead" data-i18n="aboutLead">
-            Ich bin Maria und ich unterstütze Selbstständige dabei, online moderner, verständlicher und sichtbarer aufzutreten.
+            Ich bin Maria und verbinde Design, Klarheit und moderne Nutzerführung für Selbstständige.
+          </p>
+          <p class="about__text" data-i18n="aboutText1">
+            Das Ziel ist nicht einfach “eine Website zu haben”, sondern online so aufzutreten, dass Vertrauen, Qualität und Stil sofort spürbar werden.
           </p>
 
-          <p data-i18n="aboutText1">
-            Ich verbinde Design, Struktur und klare Nutzerführung – damit Besucher schneller verstehen, was Sie anbieten und wie sie Sie kontaktieren können.
-          </p>
-
-          <div class="about-service-strip">
-            <div class="about-service-strip__item">
-              <span class="about-service-strip__icon">✦</span>
-              <span data-i18n="aboutStrip1">individuelle Websites</span>
-            </div>
-
-            <div class="about-service-strip__item">
-              <span class="about-service-strip__icon">◎</span>
-              <span data-i18n="aboutStrip2">klare Struktur</span>
-            </div>
-
-            <div class="about-service-strip__item">
-              <span class="about-service-strip__icon">▣</span>
-              <span data-i18n="aboutStrip3">leichter Kontakt</span>
-            </div>
+          <div class="about__chips">
+            <span data-i18n="aboutStrip1">individuelle Websites</span>
+            <span data-i18n="aboutStrip2">klare Struktur</span>
+            <span data-i18n="aboutStrip3">leichter Kontakt</span>
           </div>
         </div>
 
         <div class="about__visual reveal reveal-delay">
-          <div class="about-photo-wrap">
-            <div class="about-photo-glow"></div>
-
-            <div class="about-photo">
-              <img src="images/maria-business.png" alt="Maria - Webdesign & Struktur" />
-            </div>
-
-            <div class="about-floating-card about-floating-card--1">
-              <span class="about-floating-card__label" data-i18n="aboutFloat1Label">Website</span>
+          <div class="about-panel spotlight-card">
+            <div class="about-panel__glow"></div>
+            <img src="images/maria-business.png" alt="Maria - Webdesign" />
+            <div class="about-mini about-mini--1">
+              <span data-i18n="aboutFloat1Label">Website</span>
               <strong data-i18n="aboutFloat1Value">klar & modern</strong>
             </div>
-
-            <div class="about-floating-card about-floating-card--2">
-              <span class="about-floating-card__label" data-i18n="aboutFloat2Label">Google Sheets</span>
+            <div class="about-mini about-mini--2">
+              <span data-i18n="aboutFloat2Label">Google Sheets</span>
               <strong data-i18n="aboutFloat2Value">optional dazu</strong>
             </div>
-
-            <div class="about-floating-card about-floating-card--3">
-              <span class="about-floating-card__label" data-i18n="aboutFloat3Label">Ziel</span>
-              <strong data-i18n="aboutFloat3Value">mehr Klarheit</strong>
+            <div class="about-mini about-mini--3">
+              <span data-i18n="aboutFloat3Label">Ziel</span>
+              <strong data-i18n="aboutFloat3Value">mehr Wirkung</strong>
             </div>
           </div>
         </div>
@@ -369,51 +369,29 @@
         <div class="section-head reveal">
           <span class="section-head__overline" data-i18n="faqOverline">FAQ</span>
           <h2 class="section-head__title" data-i18n="faqTitle">
-            Fragen, die für Selbstständige wirklich wichtig sind.
+            Fragen, die wirklich zählen.
           </h2>
         </div>
 
         <div class="faq__list">
-          <details class="faq-item reveal">
-            <summary data-i18n="faq1Q">Was kostet eine Website bei Ihnen?</summary>
-            <p data-i18n="faq1A">
-              Eine einfache Website startet ab 280 €. Der endgültige Preis hängt vom Umfang, der Struktur, zusätzlichen Funktionen und dem gewünschten Aufbau ab.
-            </p>
+          <details class="faq-item reveal spotlight-card">
+            <summary data-i18n="faq1Q">Was kostet eine Website?</summary>
+            <p data-i18n="faq1A">Eine einfache Website startet ab 280 €. Der Endpreis hängt vom Umfang und den gewünschten Funktionen ab.</p>
           </details>
 
-          <details class="faq-item reveal">
-            <summary data-i18n="faq2Q">Wovon hängt der Preis genau ab?</summary>
-            <p data-i18n="faq2A">
-              Der Preis hängt von der Komplexität der Website, den gewünschten Funktionen, der Anzahl der Bereiche, der Domain-Anbindung und dem individuellen Aufwand ab.
-            </p>
+          <details class="faq-item reveal spotlight-card">
+            <summary data-i18n="faq2Q">Kann die Website später erweitert werden?</summary>
+            <p data-i18n="faq2A">Ja. Sie kann später ergänzt, angepasst und weiterentwickelt werden.</p>
           </details>
 
-          <details class="faq-item reveal">
-            <summary data-i18n="faq3Q">Muss ich schon Texte oder Bilder fertig haben?</summary>
-            <p data-i18n="faq3A">
-              Nein. Wenn nötig, kann ich Ihnen helfen, die Struktur klarer aufzubauen und Inhalte sinnvoll zu ordnen.
-            </p>
+          <details class="faq-item reveal spotlight-card">
+            <summary data-i18n="faq3Q">Helfen Sie bei Texten und Struktur?</summary>
+            <p data-i18n="faq3A">Ja. Wenn nötig, helfe ich bei Aufbau, Klarheit und Nutzerführung.</p>
           </details>
 
-          <details class="faq-item reveal">
-            <summary data-i18n="faq4Q">Kann ich auch nur Hilfe mit Google Sheets bekommen?</summary>
-            <p data-i18n="faq4A">
-              Ja. Google Sheets Unterstützung beginnt ab 75 € und kann unabhängig von einer Website angefragt werden.
-            </p>
-          </details>
-
-          <details class="faq-item reveal">
-            <summary data-i18n="faq5Q">Kann ich später noch Änderungen oder Erweiterungen machen?</summary>
-            <p data-i18n="faq5A">
-              Ja. Eine Website kann später erweitert, angepasst und weiterentwickelt werden – je nachdem, wie Ihr Business wächst.
-            </p>
-          </details>
-
-          <details class="faq-item reveal">
-            <summary data-i18n="faq6Q">Helfen Sie auch bei Domain und technischer Einrichtung?</summary>
-            <p data-i18n="faq6A">
-              Ja. Je nach Projekt kann ich auch bei der Domain-Anbindung und der grundlegenden technischen Einrichtung helfen.
-            </p>
+          <details class="faq-item reveal spotlight-card">
+            <summary data-i18n="faq4Q">Helfen Sie auch mit Domain und Technik?</summary>
+            <p data-i18n="faq4A">Ja. Je nach Projekt unterstütze ich auch bei Domain und technischer Einrichtung.</p>
           </details>
         </div>
       </div>
@@ -423,29 +401,24 @@
     <section class="contact section" id="contact">
       <div class="container contact__grid">
         <div class="contact__info reveal">
-          <div class="section-head section-head--left">
-            <span class="section-head__overline" data-i18n="contactOverline">Kontakt</span>
-            <h2 class="section-head__title" data-i18n="contactTitle">
-              Schreiben Sie mir direkt.
-            </h2>
-          </div>
-
+          <span class="section-head__overline" data-i18n="contactOverline">Kontakt</span>
+          <h2 class="contact__title" data-i18n="contactTitle">Schreiben Sie mir direkt.</h2>
           <p class="contact__text" data-i18n="contactText">
-            Wenn Sie eine Website oder mehr digitale Klarheit für Ihr Business suchen, können Sie mir direkt schreiben.
+            Wenn Sie etwas Moderneres, Auffälligeres und Klareres für Ihr Business wollen, schreiben Sie mir direkt.
           </p>
 
           <div class="contact-list">
-            <a href="mailto:Maria.webhilfe@gmail.com" class="contact-item">
+            <a href="mailto:Maria.webhilfe@gmail.com" class="contact-item spotlight-card">
               <span class="contact-item__label" data-i18n="contactMailLabel">E-Mail</span>
               <span class="contact-item__value">Maria.webhilfe@gmail.com</span>
             </a>
 
-            <a href="tel:+4915224584744" class="contact-item">
+            <a href="tel:+4915224584744" class="contact-item spotlight-card">
               <span class="contact-item__label" data-i18n="contactPhoneLabel">Telefon</span>
               <span class="contact-item__value">+49 1522 4584744</span>
             </a>
 
-            <a href="https://wa.me/4915224584744" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <a href="https://wa.me/4915224584744" target="_blank" rel="noopener noreferrer" class="contact-item spotlight-card">
               <span class="contact-item__label">WhatsApp</span>
               <span class="contact-item__value" data-i18n="contactWhatsappValue">Nachricht senden</span>
             </a>
@@ -453,7 +426,7 @@
         </div>
 
         <div class="contact__form reveal reveal-delay">
-          <div class="chat-box">
+          <div class="chat-box spotlight-card">
             <div class="chat-box__top">
               <span class="chat-dot"></span>
               <span data-i18n="chatTitle">Frage direkt senden</span>
@@ -480,7 +453,7 @@
                 ></textarea>
               </div>
 
-              <button type="submit" class="btn btn--primary btn--full" data-i18n="formBtn">
+              <button type="submit" class="btn btn--primary btn--full magnetic" data-i18n="formBtn">
                 Anfrage vorbereiten
               </button>
             </form>
@@ -494,31 +467,18 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer footer--rich">
-    <div class="container footer__top">
-      <div class="footer-brand">
-        <div class="footer-brand__mark">
-          <span></span>
-        </div>
-        <div>
-          <strong>Flow and Clarity</strong>
-          <p data-i18n="footerText">Websites & digitale Struktur für Selbstständige</p>
-        </div>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <strong>Flow and Clarity</strong>
+        <p data-i18n="footerText">Websites mit Wirkung für Selbstständige</p>
       </div>
 
-      <div class="footer__cta">
+      <div class="footer__links">
         <a href="mailto:Maria.webhilfe@gmail.com">Maria.webhilfe@gmail.com</a>
-        <a href="tel:+4915224584744">+49 1522 4584744</a>
-      </div>
-    </div>
-
-    <div class="container footer__bottom">
-      <div class="footer__legal">
         <a href="impressum.html">Impressum</a>
         <a href="datenschutz.html">Datenschutz</a>
       </div>
-      <p class="footer__copy">© 2026 Flow and Clarity</p>
     </div>
   </footer>
 

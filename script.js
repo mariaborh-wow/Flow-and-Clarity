@@ -3,91 +3,105 @@ const revealElements = document.querySelectorAll(".reveal");
 const langButtons = document.querySelectorAll(".lang-btn");
 const menuToggle = document.getElementById("menuToggle");
 const nav = document.getElementById("nav");
+const navLinks = document.querySelectorAll(".nav a");
+const sections = document.querySelectorAll("main section[id]");
 const contactForm = document.getElementById("contactForm");
 const faqItems = document.querySelectorAll(".faq-item");
-const navLinks = document.querySelectorAll(".nav a");
+const scrollProgress = document.getElementById("scrollProgress");
+const heroBg = document.getElementById("heroBg");
+const heroStack = document.getElementById("heroStack");
+const sasVisual = document.getElementById("sasVisual");
+
+const magneticElements = document.querySelectorAll(".magnetic");
+const tiltCards = document.querySelectorAll(".tilt-card");
+const spotlightCards = document.querySelectorAll(".spotlight-card");
 
 const translations = {
   de: {
-    introTitle: "Ich mache Ihren Wert sichtbar.",
+    introTitle: "Ich mache Ihre Wirkung sichtbar.",
 
     navServices: "Leistungen",
-    navPortfolio: "Portfolio",
+    navCase: "SAS PARTS",
     navPricing: "Preise",
     navAbout: "Über mich",
     navFaq: "FAQ",
     navContact: "Kontakt",
 
-    heroEyebrow: "Websites ab 280 € für Selbstständige",
-    heroTitle: "Moderne Websites, die Ihr Business klar und professionell zeigen.",
+    heroEyebrow: "Websites ab 280 € • klar • stark • modern",
+    heroTitle: "Websites, die nicht nur da sind — sondern hängen bleiben.",
     heroSubtitle:
-      "Für Selbstständige, lokale Dienstleistungen und kleine Businesses, die online moderner, vertrauensvoller und verständlicher auftreten möchten.",
+      "Für Selbstständige und kleine Businesses, die online professionell, modern und auffallend auftreten wollen — ohne billig oder chaotisch zu wirken.",
     heroBtn1: "Projekt anfragen",
-    heroBtn2: "Arbeiten ansehen",
-    heroBadge1: "Webdesign",
-    heroBadge2: "klare Struktur",
-    heroBadge3: "Google Sheets optional",
+    heroBtn2: "SAS PARTS ansehen",
+    heroChip1: "Premium Look",
+    heroChip2: "Scroll-Effekte",
+    heroChip3: "klare Nutzerführung",
+    heroCard2: "soll sitzen",
 
-    quick1Title: "Modern",
-    quick1Text: "Saubere Websites mit starkem ersten Eindruck.",
-    quick2Title: "Verständlich",
-    quick2Text: "Ihr Angebot wird schneller verstanden.",
-    quick3Title: "Strukturiert",
-    quick3Text: "Auch intern mehr Ordnung und Übersicht.",
+    trust1Title: "Auffälliger erster Eindruck",
+    trust1Text:
+      "Nicht generisch. Nicht langweilig. Sondern visuell klar und mit Charakter.",
+    trust2Title: "Struktur, die verkauft",
+    trust2Text:
+      "Besucher verstehen schneller, was angeboten wird und was der nächste Schritt ist.",
+    trust3Title: "Modern statt “08/15”",
+    trust3Text:
+      "Scroll, Tiefe, Dynamik und hochwertige Details — aber ohne nervige Überladung.",
 
     servicesOverline: "Leistungen",
-    servicesTitle: "Was Sie konkret bekommen.",
-    service1Title: "Website Erstellung",
+    servicesTitle: "Was Ihre Website bei mir bekommen kann.",
+    service1Title: "Individuelle Website",
     service1Text:
-      "Individuelle Websites für Selbstständige und kleine Businesses – modern, klar und passend zu Ihrem Angebot.",
+      "Eine Website, die nicht nach Baukasten aussieht, sondern nach echter Marke.",
     service2Title: "Klare Nutzerführung",
     service2Text:
-      "Struktur, Text und Aufbau so, dass Besucher schneller verstehen, was Sie anbieten.",
-    service3Title: "Google Sheets Hilfe optional",
+      "Aufbau, Texte und Call-to-Actions so, dass Besucher schneller handeln.",
+    service3Title: "Google Sheets optional",
     service3Text:
-      "Wenn Sie möchten, helfe ich zusätzlich mit übersichtlichen Tabellen und praktischer Struktur für den Alltag.",
+      "Wenn gewünscht, ergänze ich die Website mit sinnvoller digitaler Struktur für Ihren Alltag.",
     service3Price: "ab 75 €",
 
-    portfolioOverline: "Portfolio",
-    portfolioTitle: "Beispiele meiner Arbeit.",
-    portfolioSasText:
-      "Klarer Aufbau, starke Wirkung und direkter Kontakt per WhatsApp.",
-    portfolioKristinaText:
-      "Feminin, elegant und vertrauensvoll – mit klarer Führung für Kundinnen.",
+    sasOverline: "Featured Showcase",
+    sasTitle: "SAS PARTS — direkt, maskulin, modern und auf Kontakt gebaut.",
+    sasText:
+      "Statt das Projekt wie ein klassisches Portfolio zu zeigen, wird es hier wie ein starker Referenz-Case inszeniert: visuell, präsent und mit echtem Zug nach vorn.",
+    sasPoint1: "klare Hero-Wirkung",
+    sasPoint2: "WhatsApp-Fokus für direkte Anfragen",
+    sasPoint3: "dunkle, hochwertige Performance-Optik",
+    sasBtn: "So etwas will ich auch",
 
     pricingOverline: "Preise",
-    pricingTitle: "Klare Preise ohne Verwirrung.",
+    pricingTitle: "Klar. Direkt. Ohne unnötiges Theater.",
     websiteTag: "Website",
     websiteTitle: "ab 280 €",
     websitePriceNote: "einmalige Zahlung",
-    websiteExtra: "Preis abhängig von Umfang und Funktion",
     websiteText:
-      "Für Selbstständige und kleine Businesses, die online professionell und modern auftreten möchten.",
+      "Für Selbstständige und kleine Businesses, die online hochwertiger wirken wollen.",
     websiteList1: "individuelles Design",
-    websiteList2: "mobile & Desktop Optimierung",
-    websiteList3: "klare Struktur & Nutzerführung",
+    websiteList2: "mobil & Desktop optimiert",
+    websiteList3: "klare Struktur",
     websiteList4: "Kontakt / WhatsApp Integration",
-    websiteList5: "moderne visuelle Darstellung",
+    websiteList5: "moderne visuelle Wirkung",
     websiteBtn: "Website anfragen",
 
     sheetsTag: "Google Sheets",
     sheetsTitle: "ab 75 €",
     sheetsPriceNote: "je nach Aufwand",
-    sheetsExtra: "Preis abhängig vom Umfang",
     sheetsText:
-      "Struktur und Ordnung für Tabellen, Prozesse, Kundenübersicht oder den Arbeitsalltag.",
+      "Struktur, Ordnung und Übersicht für Tabellen, Abläufe und Alltag.",
     sheetsList1: "klare Tabellenstruktur",
     sheetsList2: "individuelle Lösungen",
-    sheetsList3: "Übersicht für Ihren Alltag",
-    sheetsList4: "einfach und verständlich aufgebaut",
+    sheetsList3: "besserer Überblick",
+    sheetsList4: "einfach aufgebaut",
     sheetsBtn: "Hilfe anfragen",
 
     aboutOverline: "Über mich",
-    aboutTitle: "Ich gestalte Websites, die Ihr Angebot klar und professionell zeigen.",
+    aboutTitle:
+      "Ich erstelle Websites, die nicht nur ordentlich aussehen — sondern wirken.",
     aboutLead:
-      "Ich bin Maria und ich unterstütze Selbstständige dabei, online moderner, verständlicher und sichtbarer aufzutreten.",
+      "Ich bin Maria und verbinde Design, Klarheit und moderne Nutzerführung für Selbstständige.",
     aboutText1:
-      "Ich verbinde Design, Struktur und klare Nutzerführung – damit Besucher schneller verstehen, was Sie anbieten und wie sie Sie kontaktieren können.",
+      "Das Ziel ist nicht einfach “eine Website zu haben”, sondern online so aufzutreten, dass Vertrauen, Qualität und Stil sofort spürbar werden.",
     aboutStrip1: "individuelle Websites",
     aboutStrip2: "klare Struktur",
     aboutStrip3: "leichter Kontakt",
@@ -96,33 +110,27 @@ const translations = {
     aboutFloat2Label: "Google Sheets",
     aboutFloat2Value: "optional dazu",
     aboutFloat3Label: "Ziel",
-    aboutFloat3Value: "mehr Klarheit",
+    aboutFloat3Value: "mehr Wirkung",
 
     faqOverline: "FAQ",
-    faqTitle: "Fragen, die für Selbstständige wirklich wichtig sind.",
-    faq1Q: "Was kostet eine Website bei Ihnen?",
+    faqTitle: "Fragen, die wirklich zählen.",
+    faq1Q: "Was kostet eine Website?",
     faq1A:
-      "Eine einfache Website startet ab 280 €. Der endgültige Preis hängt vom Umfang, der Struktur, zusätzlichen Funktionen und dem gewünschten Aufbau ab.",
-    faq2Q: "Wovon hängt der Preis genau ab?",
+      "Eine einfache Website startet ab 280 €. Der Endpreis hängt vom Umfang und den gewünschten Funktionen ab.",
+    faq2Q: "Kann die Website später erweitert werden?",
     faq2A:
-      "Der Preis hängt von der Komplexität der Website, den gewünschten Funktionen, der Anzahl der Bereiche, der Domain-Anbindung und dem individuellen Aufwand ab.",
-    faq3Q: "Muss ich schon Texte oder Bilder fertig haben?",
+      "Ja. Sie kann später ergänzt, angepasst und weiterentwickelt werden.",
+    faq3Q: "Helfen Sie bei Texten und Struktur?",
     faq3A:
-      "Nein. Wenn nötig, kann ich Ihnen helfen, die Struktur klarer aufzubauen und Inhalte sinnvoll zu ordnen.",
-    faq4Q: "Kann ich auch nur Hilfe mit Google Sheets bekommen?",
+      "Ja. Wenn nötig, helfe ich bei Aufbau, Klarheit und Nutzerführung.",
+    faq4Q: "Helfen Sie auch mit Domain und Technik?",
     faq4A:
-      "Ja. Google Sheets Unterstützung beginnt ab 75 € und kann unabhängig von einer Website angefragt werden.",
-    faq5Q: "Kann ich später noch Änderungen oder Erweiterungen machen?",
-    faq5A:
-      "Ja. Eine Website kann später erweitert, angepasst und weiterentwickelt werden – je nachdem, wie Ihr Business wächst.",
-    faq6Q: "Helfen Sie auch bei Domain und technischer Einrichtung?",
-    faq6A:
-      "Ja. Je nach Projekt kann ich auch bei der Domain-Anbindung und der grundlegenden technischen Einrichtung helfen.",
+      "Ja. Je nach Projekt unterstütze ich auch bei Domain und technischer Einrichtung.",
 
     contactOverline: "Kontakt",
     contactTitle: "Schreiben Sie mir direkt.",
     contactText:
-      "Wenn Sie eine Website oder mehr digitale Klarheit für Ihr Business suchen, können Sie mir direkt schreiben.",
+      "Wenn Sie etwas Moderneres, Auffälligeres und Klareres für Ihr Business wollen, schreiben Sie mir direkt.",
     contactMailLabel: "E-Mail",
     contactPhoneLabel: "Telefon",
     contactWhatsappValue: "Nachricht senden",
@@ -133,89 +141,94 @@ const translations = {
     formBtn: "Anfrage vorbereiten",
     formNote: "Beim Klick wird Ihre Anfrage als E-Mail vorbereitet.",
 
-    footerText: "Websites & digitale Struktur für Selbstständige"
+    footerText: "Websites mit Wirkung für Selbstständige"
   },
 
   ru: {
-    introTitle: "Я покажу вашу ценность людям.",
+    introTitle: "Я делаю вашу подачу заметной.",
 
     navServices: "Услуги",
-    navPortfolio: "Портфолио",
+    navCase: "SAS PARTS",
     navPricing: "Цены",
     navAbout: "Обо мне",
     navFaq: "FAQ",
     navContact: "Контакт",
 
-    heroEyebrow: "Сайты от 280 € для предпринимателей",
-    heroTitle: "Современные сайты, которые ясно и профессионально показывают ваш бизнес.",
+    heroEyebrow: "Сайты от 280 € • ясно • сильно • современно",
+    heroTitle: "Сайты, которые не просто существуют — а запоминаются.",
     heroSubtitle:
-      "Для предпринимателей, локальных услуг и малого бизнеса, которые хотят выглядеть в интернете современнее и надёжнее.",
+      "Для предпринимателей и малого бизнеса, которые хотят выглядеть в интернете профессионально, современно и заметно — без ощущения дешёвого или хаотичного сайта.",
     heroBtn1: "Обсудить проект",
-    heroBtn2: "Посмотреть работы",
-    heroBadge1: "Веб-дизайн",
-    heroBadge2: "понятная структура",
-    heroBadge3: "Google Sheets дополнительно",
+    heroBtn2: "Посмотреть SAS PARTS",
+    heroChip1: "Премиум-подача",
+    heroChip2: "Scroll-эффекты",
+    heroChip3: "понятная структура",
+    heroCard2: "должен цеплять",
 
-    quick1Title: "Современно",
-    quick1Text: "Чистые сайты с сильным первым впечатлением.",
-    quick2Title: "Понятно",
-    quick2Text: "Ваше предложение понимается быстрее.",
-    quick3Title: "Структурно",
-    quick3Text: "Больше порядка и внутри бизнеса.",
+    trust1Title: "Сильное первое впечатление",
+    trust1Text:
+      "Не шаблонно. Не скучно. А визуально чётко и с характером.",
+    trust2Title: "Структура, которая продаёт",
+    trust2Text:
+      "Посетители быстрее понимают, что ты предлагаешь и куда им нажать дальше.",
+    trust3Title: "Современно, а не “как у всех”",
+    trust3Text:
+      "Скролл, глубина, динамика и сильные детали — без визуального бардака.",
 
     servicesOverline: "Услуги",
-    servicesTitle: "Что вы конкретно получаете.",
-    service1Title: "Создание сайтов",
+    servicesTitle: "Что может получить ваш сайт у меня.",
+    service1Title: "Индивидуальный сайт",
     service1Text:
-      "Индивидуальные сайты для предпринимателей и малого бизнеса — современные, понятные и под ваш запрос.",
-    service2Title: "Понятная подача",
+      "Сайт, который выглядит не как шаблон, а как настоящий бренд.",
+    service2Title: "Понятная логика для клиента",
     service2Text:
-      "Структура, тексты и блоки так, чтобы посетитель быстрее понимал, что вы предлагаете.",
-    service3Title: "Помощь с Google Sheets дополнительно",
+      "Структура, тексты и блоки выстроены так, чтобы посетитель быстрее действовал.",
+    service3Title: "Google Sheets дополнительно",
     service3Text:
-      "Если хотите, я дополнительно помогу с понятными таблицами и удобной структурой для повседневной работы.",
+      "При желании я дополняю сайт понятной цифровой структурой для повседневной работы.",
     service3Price: "от 75 €",
 
-    portfolioOverline: "Портфолио",
-    portfolioTitle: "Примеры моей работы.",
-    portfolioSasText:
-      "Понятная структура, сильная подача и прямой контакт через WhatsApp.",
-    portfolioKristinaText:
-      "Женственно, элегантно и с доверием — с понятной подачей для клиенток.",
+    sasOverline: "Главный showcase",
+    sasTitle: "SAS PARTS — прямо, брутально, современно и с упором на контакт.",
+    sasText:
+      "Вместо классического “портфолио” этот проект показан как сильный референс-кейс: визуально, уверенно и с правильным акцентом.",
+    sasPoint1: "сильный hero-экран",
+    sasPoint2: "фокус на WhatsApp для быстрых заявок",
+    sasPoint3: "тёмная дорогая performance-эстетика",
+    sasBtn: "Хочу что-то такое же",
 
     pricingOverline: "Цены",
-    pricingTitle: "Понятные цены без путаницы.",
+    pricingTitle: "Чётко. Прямо. Без лишнего цирка.",
     websiteTag: "Сайт",
     websiteTitle: "от 280 €",
     websitePriceNote: "разовая оплата",
-    websiteExtra: "цена зависит от объёма и функций",
     websiteText:
-      "Для предпринимателей и малого бизнеса, которые хотят выглядеть в интернете профессионально и современно.",
+      "Для предпринимателей и малого бизнеса, которые хотят выглядеть в интернете дороже и сильнее.",
     websiteList1: "индивидуальный дизайн",
     websiteList2: "адаптация под телефон и компьютер",
-    websiteList3: "понятная структура и логика",
+    websiteList3: "понятная структура",
     websiteList4: "контакт / WhatsApp интеграция",
     websiteList5: "современная визуальная подача",
-    websiteBtn: "Запросить сайт",
+    websiteBtn: "Заказать сайт",
 
     sheetsTag: "Google Sheets",
     sheetsTitle: "от 75 €",
     sheetsPriceNote: "зависит от задачи",
-    sheetsExtra: "цена зависит от объёма",
     sheetsText:
-      "Структура и порядок для таблиц, процессов, клиентов и ежедневной работы.",
+      "Структура, порядок и удобство для таблиц, процессов и ежедневной работы.",
     sheetsList1: "понятная структура таблиц",
     sheetsList2: "индивидуальные решения",
-    sheetsList3: "удобный обзор для работы",
-    sheetsList4: "просто и понятно",
+    sheetsList3: "лучший обзор",
+    sheetsList4: "простая логика",
     sheetsBtn: "Запросить помощь",
 
     aboutOverline: "Обо мне",
-    aboutTitle: "Я создаю сайты, которые ясно и профессионально показывают ваше предложение.",
+    aboutTitle:
+      "Я создаю сайты, которые не просто выглядят аккуратно — а реально работают на впечатление.",
     aboutLead:
-      "Я Мария, и я помогаю предпринимателям выглядеть в интернете современнее, понятнее и заметнее.",
+      "Я Мария и соединяю дизайн, ясность и современную логику для предпринимателей.",
     aboutText1:
-      "Я соединяю дизайн, структуру и понятную подачу — чтобы посетитель быстрее понимал, что вы предлагаете и как с вами связаться.",
+      "Цель не в том, чтобы просто “иметь сайт”, а в том, чтобы онлайн сразу чувствовались доверие, качество и стиль.",
     aboutStrip1: "индивидуальные сайты",
     aboutStrip2: "понятная структура",
     aboutStrip3: "лёгкий контакт",
@@ -224,47 +237,42 @@ const translations = {
     aboutFloat2Label: "Google Sheets",
     aboutFloat2Value: "дополнительно",
     aboutFloat3Label: "Цель",
-    aboutFloat3Value: "больше ясности",
+    aboutFloat3Value: "больше эффекта",
 
     faqOverline: "FAQ",
-    faqTitle: "Вопросы, которые действительно важны для предпринимателей.",
+    faqTitle: "Вопросы, которые действительно важны.",
     faq1Q: "Сколько стоит сайт?",
     faq1A:
-      "Простой сайт начинается от 280 €. Итоговая цена зависит от объёма, структуры, дополнительных функций и нужного уровня проработки.",
-    faq2Q: "От чего именно зависит цена?",
+      "Простой сайт начинается от 280 €. Финальная цена зависит от объёма и нужных функций.",
+    faq2Q: "Можно ли расширить сайт позже?",
     faq2A:
-      "Цена зависит от сложности сайта, нужных функций, количества блоков, подключения домена и общего объёма работы.",
-    faq3Q: "Нужно ли мне уже иметь готовые тексты и фото?",
+      "Да. Его можно дополнять, менять и развивать дальше.",
+    faq3Q: "Вы помогаете с текстами и структурой?",
     faq3A:
-      "Нет. При необходимости я помогу выстроить структуру и логично собрать содержание.",
-    faq4Q: "Можно ли заказать только помощь с Google Sheets?",
+      "Да. Если нужно, я помогаю с логикой, ясностью и подачей.",
+    faq4Q: "Вы помогаете с доменом и технической частью?",
     faq4A:
-      "Да. Помощь с Google Sheets начинается от 75 € и может быть отдельной услугой.",
-    faq5Q: "Можно ли потом вносить изменения и расширять сайт?",
-    faq5A:
-      "Да. Сайт можно дорабатывать, расширять и развивать по мере роста вашего бизнеса.",
-    faq6Q: "Помогаете ли вы с доменом и технической частью?",
-    faq6A:
-      "Да. В зависимости от проекта я могу помочь с подключением домена и базовой технической настройкой.",
+      "Да. В зависимости от проекта я могу помочь и с доменом, и с базовой настройкой.",
 
     contactOverline: "Контакт",
     contactTitle: "Напишите мне напрямую.",
     contactText:
-      "Если вам нужен сайт или больше цифровой ясности для вашего бизнеса — можете написать мне сразу.",
+      "Если вы хотите для бизнеса что-то современнее, заметнее и сильнее — напишите мне сразу.",
     contactMailLabel: "Почта",
     contactPhoneLabel: "Телефон",
-    contactWhatsappValue: "Написать сообщение",
-    chatTitle: "Задать вопрос",
+    contactWhatsappValue: "Отправить сообщение",
+    chatTitle: "Отправить вопрос",
     formName: "Имя",
     formEmail: "E-Mail или WhatsApp",
     formMessage: "Сообщение",
     formBtn: "Подготовить запрос",
-    formNote: "После нажатия откроется подготовленное письмо.",
+    formNote: "При нажатии откроется подготовленное письмо.",
 
-    footerText: "Сайты и цифровая структура для предпринимателей"
+    footerText: "Сайты с эффектом для предпринимателей"
   }
 };
 
+/* language */
 function applyLanguage(lang) {
   document.documentElement.lang = lang === "ru" ? "ru" : "de";
 
@@ -294,10 +302,10 @@ applyLanguage(localStorage.getItem("flowClarityLang") || "de");
 window.addEventListener("load", () => {
   setTimeout(() => {
     if (intro) intro.classList.add("hide");
-  }, 1600);
+  }, 1500);
 });
 
-/* reveal */
+/* reveal observer */
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -327,10 +335,8 @@ if (menuToggle && nav) {
 }
 
 /* active nav */
-const sections = document.querySelectorAll("main section[id]");
-
 function setActiveNavLink() {
-  const scrollY = window.scrollY + 140;
+  const scrollY = window.scrollY + 160;
 
   sections.forEach((section) => {
     const sectionTop = section.offsetTop;
@@ -349,6 +355,21 @@ function setActiveNavLink() {
 
 window.addEventListener("scroll", setActiveNavLink);
 setActiveNavLink();
+
+/* scroll progress */
+function updateScrollProgress() {
+  if (!scrollProgress) return;
+
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+
+  scrollProgress.style.width = `${Math.min(progress, 100)}%`;
+}
+
+window.addEventListener("scroll", updateScrollProgress);
+window.addEventListener("resize", updateScrollProgress);
+updateScrollProgress();
 
 /* contact form */
 if (contactForm) {
@@ -375,29 +396,7 @@ if (contactForm) {
   });
 }
 
-/* tilt cards */
-const tiltCards = document.querySelectorAll(".tilt-card");
-
-tiltCards.forEach((card) => {
-  card.addEventListener("mousemove", (e) => {
-    if (window.innerWidth < 900) return;
-
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    const rotateY = ((x / rect.width) - 0.5) * 7;
-    const rotateX = ((y / rect.height) - 0.5) * -7;
-
-    card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
-  });
-
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = "";
-  });
-});
-
-/* faq - one open */
+/* faq - only one open */
 faqItems.forEach((item) => {
   item.addEventListener("toggle", () => {
     if (item.open) {
@@ -410,115 +409,101 @@ faqItems.forEach((item) => {
   });
 });
 
-/* background canvas */
-const bgCanvas = document.getElementById("bgCanvas");
+/* magnetic buttons */
+magneticElements.forEach((element) => {
+  element.addEventListener("mousemove", (e) => {
+    if (window.innerWidth < 900) return;
 
-if (bgCanvas) {
-  const ctx = bgCanvas.getContext("2d");
-  let particles = [];
-  let cells = [];
-  const symbols = ["0", "1", "2", "3", "5", "7", "8", "9", "+", "•", "=", "{", "}", "#"];
+    const rect = element.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
 
-  function resizeCanvas() {
-    const dpr = window.devicePixelRatio || 1;
-    bgCanvas.width = window.innerWidth * dpr;
-    bgCanvas.height = window.innerHeight * dpr;
-    bgCanvas.style.width = `${window.innerWidth}px`;
-    bgCanvas.style.height = `${window.innerHeight}px`;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  }
-
-  function createParticles() {
-    particles = [];
-    const count = window.innerWidth < 768 ? 52 : 86;
-
-    for (let i = 0; i < count; i++) {
-      particles.push({
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight,
-        size: Math.random() * 15 + 10,
-        speedY: Math.random() * 0.22 + 0.05,
-        speedX: (Math.random() - 0.5) * 0.12,
-        opacity: Math.random() * 0.11 + 0.02,
-        symbol: symbols[Math.floor(Math.random() * symbols.length)],
-        changeAfter: Math.random() * 130 + 40,
-        frame: 0
-      });
-    }
-  }
-
-  function createCells() {
-    cells = [];
-    const step = window.innerWidth < 768 ? 78 : 92;
-
-    for (let x = 0; x < window.innerWidth + step; x += step) {
-      for (let y = 0; y < window.innerHeight + step; y += step) {
-        cells.push({
-          x,
-          y,
-          size: Math.random() * 10 + 16,
-          opacity: Math.random() * 0.024 + 0.006,
-          pulse: Math.random() * Math.PI * 2
-        });
-      }
-    }
-  }
-
-  function drawCells(time) {
-    cells.forEach((cell) => {
-      const pulseOpacity = cell.opacity + Math.sin(time * 1.2 + cell.pulse) * 0.006;
-      ctx.fillStyle = `rgba(105, 118, 134, ${Math.max(0.004, pulseOpacity)})`;
-      ctx.fillRect(cell.x, cell.y, cell.size, cell.size);
-    });
-  }
-
-  function drawParticles(time) {
-    ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
-    drawCells(time);
-
-    particles.forEach((p) => {
-      p.frame += 1;
-
-      if (p.frame >= p.changeAfter) {
-        p.symbol = symbols[Math.floor(Math.random() * symbols.length)];
-        p.frame = 0;
-        p.changeAfter = Math.random() * 130 + 40;
-      }
-
-      ctx.font = `600 ${p.size}px Inter, sans-serif`;
-      ctx.textAlign = "center";
-      ctx.textBaseline = "middle";
-      ctx.fillStyle = `rgba(82, 98, 116, ${p.opacity})`;
-      ctx.fillText(p.symbol, p.x, p.y);
-
-      p.y += p.speedY;
-      p.x += p.speedX + Math.sin(time + p.y * 0.01) * 0.06;
-
-      if (p.y > window.innerHeight + 24) {
-        p.y = -24;
-        p.x = Math.random() * window.innerWidth;
-        p.symbol = symbols[Math.floor(Math.random() * symbols.length)];
-      }
-
-      if (p.x < -24) p.x = window.innerWidth + 24;
-      if (p.x > window.innerHeight + 24) p.x = -24;
-    });
-  }
-
-  function animate(now) {
-    const time = now * 0.001;
-    drawParticles(time);
-    requestAnimationFrame(animate);
-  }
-
-  resizeCanvas();
-  createParticles();
-  createCells();
-  requestAnimationFrame(animate);
-
-  window.addEventListener("resize", () => {
-    resizeCanvas();
-    createParticles();
-    createCells();
+    element.style.transform = `translate(${x * 0.12}px, ${y * 0.12}px)`;
   });
+
+  element.addEventListener("mouseleave", () => {
+    element.style.transform = "";
+  });
+});
+
+/* tilt cards */
+tiltCards.forEach((card) => {
+  card.addEventListener("mousemove", (e) => {
+    if (window.innerWidth < 900) return;
+
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const rotateY = ((x / rect.width) - 0.5) * 8;
+    const rotateX = ((y / rect.height) - 0.5) * -8;
+
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "";
+  });
+});
+
+/* spotlight cards */
+spotlightCards.forEach((card) => {
+  card.addEventListener("mousemove", (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    card.style.setProperty("--mx", `${x}px`);
+    card.style.setProperty("--my", `${y}px`);
+  });
+});
+
+/* hero + sas parallax */
+function updateParallax() {
+  const scrollY = window.scrollY;
+
+  if (heroBg) {
+    heroBg.style.transform = `scale(1.06) translateY(${scrollY * 0.16}px)`;
+  }
+
+  if (heroStack && window.innerWidth > 900) {
+    heroStack.style.transform = `translateY(${scrollY * -0.05}px)`;
+  }
+
+  if (sasVisual && window.innerWidth > 900) {
+    const sasRect = sasVisual.getBoundingClientRect();
+    const offset = sasRect.top / window.innerHeight;
+
+    sasVisual.style.transform = `translateY(${offset * -22}px)`;
+  }
 }
+
+window.addEventListener("scroll", updateParallax, { passive: true });
+window.addEventListener("resize", updateParallax);
+updateParallax();
+
+/* smoother entrance for hero stack */
+window.addEventListener("load", () => {
+  if (heroStack) {
+    heroStack.animate(
+      [
+        { opacity: 0, transform: "translateY(28px) scale(0.96)" },
+        { opacity: 1, transform: "translateY(0) scale(1)" }
+      ],
+      {
+        duration: 1000,
+        easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+        fill: "forwards",
+        delay: 350
+      }
+    );
+  }
+});
+
+/* prevent weird stuck transforms on touch devices */
+window.addEventListener("touchstart", () => {
+  if (window.innerWidth < 900) {
+    tiltCards.forEach((card) => (card.style.transform = ""));
+    magneticElements.forEach((el) => (el.style.transform = ""));
+  }
+}, { passive: true });
