@@ -3,263 +3,524 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Flow and Clarity | Webseiten für Selbstständige</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <title>Flow and Clarity | Websites für Selbstständige</title>
+  <meta
+    name="description"
+    content="Flow and Clarity – moderne Websites für Selbstständige, kleine Businesses und lokale Dienstleistungen. Zusätzlich Hilfe mit Google Sheets und digitaler Struktur."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-
-<!-- HEADER -->
-<header class="header">
-  <div class="container header__inner">
-    <div class="logo">Flow and Clarity</div>
-
-    <nav class="nav">
-      <a href="#services">Leistungen</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#pricing">Preise</a>
-      <a href="#about">Über mich</a>
-      <a href="#contact">Kontakt</a>
-    </nav>
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-
-  <div class="hero__bg">
-    <img src="images/hero-visual.png" alt="">
-    <div class="hero__overlay"></div>
+  <!-- INTRO -->
+  <div class="intro" id="intro">
+    <div class="intro__bg"></div>
+    <div class="intro__content">
+      <p class="intro__label">Flow and Clarity</p>
+      <h1 class="intro__title" data-i18n="introTitle">Ich mache Ihren Wert sichtbar.</h1>
+    </div>
   </div>
 
-  <div class="container hero__content">
+  <!-- BACKGROUND -->
+  <canvas id="bgCanvas" class="bg-canvas"></canvas>
 
-    <div class="hero__left">
+  <div class="site-bg">
+    <div class="glow glow--1"></div>
+    <div class="glow glow--2"></div>
+    <div class="glow glow--3"></div>
+    <div class="grid-overlay"></div>
+  </div>
 
-      <span class="hero__badge">
-        Webseiten für Selbstständige
-      </span>
+  <!-- WHATSAPP -->
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/4915224584744"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="WhatsApp"
+  >
+    <span>WhatsApp</span>
+  </a>
 
-      <h1 class="hero__title">
-        Moderne Websites,<br>
-        die Ihr Business<br>
-        klar und professionell zeigen.
-      </h1>
+  <!-- HEADER -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="#top" class="logo">
+        <span class="logo__dot"></span>
+        <span class="logo__text">Flow and Clarity</span>
+      </a>
 
-      <p class="hero__subtitle">
-        Für lokale Dienstleistungen, kleine Unternehmen und Selbstständige.
-      </p>
+      <nav class="nav" id="nav">
+        <a href="#services" data-i18n="navServices">Leistungen</a>
+        <a href="#portfolio" data-i18n="navPortfolio">Portfolio</a>
+        <a href="#pricing" data-i18n="navPricing">Preise</a>
+        <a href="#about" data-i18n="navAbout">Über mich</a>
+        <a href="#faq" data-i18n="navFaq">FAQ</a>
+        <a href="#contact" data-i18n="navContact">Kontakt</a>
+      </nav>
 
-      <div class="hero__buttons">
-        <a href="#contact" class="btn btn--primary">
-          Projekt anfragen
-        </a>
+      <div class="header__actions">
+        <div class="lang-switch">
+          <button class="lang-btn active" data-lang="de">DE</button>
+          <button class="lang-btn" data-lang="ru">RU</button>
+        </div>
 
-        <a href="#portfolio" class="btn btn--ghost">
-          Arbeiten ansehen
-        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__bg"></div>
+      <div class="hero__overlay"></div>
+
+      <div class="container hero__content">
+        <div class="hero__text reveal">
+          <div class="hero__eyebrow" data-i18n="heroEyebrow">
+            Websites ab 280 € für Selbstständige
+          </div>
+
+          <h1 class="hero__title" data-i18n="heroTitle">
+            Moderne Websites, die Ihr Business klar und professionell zeigen.
+          </h1>
+
+          <p class="hero__subtitle" data-i18n="heroSubtitle">
+            Für Selbstständige, lokale Dienstleistungen und kleine Businesses, die online vertrauensvoller und moderner wirken möchten.
+          </p>
+
+          <div class="hero__buttons">
+            <a href="#contact" class="btn btn--primary" data-i18n="heroBtn1">Projekt anfragen</a>
+            <a href="#portfolio" class="btn btn--secondary" data-i18n="heroBtn2">Arbeiten ansehen</a>
+          </div>
+
+          <div class="hero__badges">
+            <span data-i18n="heroBadge1">Webdesign</span>
+            <span data-i18n="heroBadge2">klare Struktur</span>
+            <span data-i18n="heroBadge3">Google Sheets optional</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK TRUST -->
+    <section class="quick section">
+      <div class="container quick__grid">
+        <article class="quick-card reveal tilt-card">
+          <div class="quick-card__icon">↗</div>
+          <h3 data-i18n="quick1Title">Modern</h3>
+          <p data-i18n="quick1Text">Saubere Websites mit starkem ersten Eindruck.</p>
+        </article>
+
+        <article class="quick-card reveal tilt-card">
+          <div class="quick-card__icon">◎</div>
+          <h3 data-i18n="quick2Title">Verständlich</h3>
+          <p data-i18n="quick2Text">Ihr Angebot wird schneller verstanden.</p>
+        </article>
+
+        <article class="quick-card reveal tilt-card">
+          <div class="quick-card__icon">▣</div>
+          <h3 data-i18n="quick3Title">Strukturiert</h3>
+          <p data-i18n="quick3Text">Auch intern mehr Ordnung und Übersicht.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-head__overline" data-i18n="servicesOverline">Leistungen</span>
+          <h2 class="section-head__title" data-i18n="servicesTitle">
+            Was Sie konkret bekommen.
+          </h2>
+        </div>
+
+        <div class="services__grid">
+          <article class="service-card reveal tilt-card">
+            <div class="service-card__icon">01</div>
+            <h3 data-i18n="service1Title">Website Erstellung</h3>
+            <p data-i18n="service1Text">
+              Individuelle Websites für Selbstständige und kleine Businesses – modern, klar und passend zu Ihrem Angebot.
+            </p>
+          </article>
+
+          <article class="service-card reveal tilt-card">
+            <div class="service-card__icon">02</div>
+            <h3 data-i18n="service2Title">Klare Nutzerführung</h3>
+            <p data-i18n="service2Text">
+              Struktur, Text und Aufbau so, dass Besucher schneller verstehen, was Sie anbieten.
+            </p>
+          </article>
+
+          <article class="service-card reveal tilt-card service-card--wide">
+            <div class="service-card__icon">03</div>
+            <h3 data-i18n="service3Title">Google Sheets Hilfe optional</h3>
+            <p data-i18n="service3Text">
+              Wenn Sie möchten, helfe ich zusätzlich mit übersichtlichen Tabellen und praktischer Struktur für den Alltag.
+            </p>
+            <div class="service-card__price" data-i18n="service3Price">ab 75 €</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="portfolio section" id="portfolio">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-head__overline" data-i18n="portfolioOverline">Portfolio</span>
+          <h2 class="section-head__title" data-i18n="portfolioTitle">
+            Beispiele meiner Arbeit.
+          </h2>
+        </div>
+
+        <div class="portfolio__grid">
+          <article class="portfolio-card reveal">
+            <div class="portfolio-card__top">
+              <div>
+                <span class="portfolio-card__tag">Automotive</span>
+                <h3>SAS PARTS</h3>
+              </div>
+            </div>
+
+            <p class="portfolio-card__text" data-i18n="portfolioSasText">
+              Klarer Aufbau, starke Wirkung und direkter Kontakt per WhatsApp.
+            </p>
+
+            <div class="portfolio-shots">
+              <div class="portfolio-shot">
+                <img src="images/sasparts-main.jpg" alt="SAS PARTS Startseite" />
+              </div>
+              <div class="portfolio-shot">
+                <img src="images/sasparts-second.jpg" alt="SAS PARTS weiterer Bereich" />
+              </div>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal reveal-delay">
+            <div class="portfolio-card__top">
+              <div>
+                <span class="portfolio-card__tag">Beauty</span>
+                <h3>Kristina Deibus</h3>
+              </div>
+            </div>
+
+            <p class="portfolio-card__text" data-i18n="portfolioKristinaText">
+              Feminin, elegant und vertrauensvoll – mit klarer Führung für Kundinnen.
+            </p>
+
+            <div class="portfolio-shots">
+              <div class="portfolio-shot">
+                <img src="images/kristina-main.jpg" alt="Kristina Deibus Startseite" />
+              </div>
+              <div class="portfolio-shot">
+                <img src="images/kristina-second.jpg" alt="Kristina Deibus weiterer Bereich" />
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="pricing section" id="pricing">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-head__overline" data-i18n="pricingOverline">Preise</span>
+          <h2 class="section-head__title" data-i18n="pricingTitle">
+            Klare Preise ohne Verwirrung.
+          </h2>
+        </div>
+
+        <div class="pricing__grid">
+          <article class="price-card reveal">
+            <div class="price-card__top">
+              <span class="price-card__tag" data-i18n="websiteTag">Website</span>
+              <h3 data-i18n="websiteTitle">ab 280 €</h3>
+              <div class="price-card__price-note-wrap">
+                <span class="price-note" data-i18n="websitePriceNote">einmalige Zahlung</span>
+                <span class="price-extra" data-i18n="websiteExtra">Preis abhängig von Umfang und Funktion</span>
+              </div>
+            </div>
+
+            <p class="price-card__text" data-i18n="websiteText">
+              Für Selbstständige und kleine Businesses, die online professionell und modern auftreten möchten.
+            </p>
+
+            <ul class="price-card__list">
+              <li data-i18n="websiteList1">individuelles Design</li>
+              <li data-i18n="websiteList2">mobile & Desktop Optimierung</li>
+              <li data-i18n="websiteList3">klare Struktur & Nutzerführung</li>
+              <li data-i18n="websiteList4">Kontakt / WhatsApp Integration</li>
+              <li data-i18n="websiteList5">moderne visuelle Darstellung</li>
+            </ul>
+
+            <a href="#contact" class="btn btn--primary btn--full" data-i18n="websiteBtn">
+              Website anfragen
+            </a>
+          </article>
+
+          <article class="price-card reveal reveal-delay">
+            <div class="price-card__top">
+              <span class="price-card__tag" data-i18n="sheetsTag">Google Sheets</span>
+              <h3 data-i18n="sheetsTitle">ab 75 €</h3>
+              <div class="price-card__price-note-wrap">
+                <span class="price-note" data-i18n="sheetsPriceNote">je nach Aufwand</span>
+                <span class="price-extra" data-i18n="sheetsExtra">Preis abhängig vom Umfang</span>
+              </div>
+            </div>
+
+            <p class="price-card__text" data-i18n="sheetsText">
+              Struktur und Ordnung für Tabellen, Prozesse, Kundenübersicht oder den Arbeitsalltag.
+            </p>
+
+            <ul class="price-card__list">
+              <li data-i18n="sheetsList1">klare Tabellenstruktur</li>
+              <li data-i18n="sheetsList2">individuelle Lösungen</li>
+              <li data-i18n="sheetsList3">Übersicht für Ihren Alltag</li>
+              <li data-i18n="sheetsList4">einfach und verständlich aufgebaut</li>
+            </ul>
+
+            <a href="#contact" class="btn btn--secondary btn--full" data-i18n="sheetsBtn">
+              Hilfe anfragen
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about section" id="about">
+      <div class="container about__grid">
+        <div class="about__content reveal">
+          <div class="section-head section-head--left">
+            <span class="section-head__overline" data-i18n="aboutOverline">Über mich</span>
+            <h2 class="section-head__title" data-i18n="aboutTitle">
+              Ich gestalte Websites, die Ihr Angebot klar und professionell zeigen.
+            </h2>
+          </div>
+
+          <p class="about__lead" data-i18n="aboutLead">
+            Ich bin Maria und ich unterstütze Selbstständige dabei, online moderner, verständlicher und sichtbarer aufzutreten.
+          </p>
+
+          <p data-i18n="aboutText1">
+            Ich verbinde Design, Struktur und klare Nutzerführung – damit Besucher schneller verstehen, was Sie anbieten und wie sie Sie kontaktieren können.
+          </p>
+
+          <div class="about-service-strip">
+            <div class="about-service-strip__item">
+              <span class="about-service-strip__icon">✦</span>
+              <span data-i18n="aboutStrip1">individuelle Websites</span>
+            </div>
+
+            <div class="about-service-strip__item">
+              <span class="about-service-strip__icon">◎</span>
+              <span data-i18n="aboutStrip2">klare Struktur</span>
+            </div>
+
+            <div class="about-service-strip__item">
+              <span class="about-service-strip__icon">▣</span>
+              <span data-i18n="aboutStrip3">leichter Kontakt</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__visual reveal reveal-delay">
+          <div class="about-photo-wrap">
+            <div class="about-photo-glow"></div>
+            <div class="about-photo">
+              <img src="images/maria-business.png" alt="Maria - Webdesign & Struktur" />
+            </div>
+
+            <div class="about-floating-card about-floating-card--1">
+              <span class="about-floating-card__label" data-i18n="aboutFloat1Label">Website</span>
+              <strong data-i18n="aboutFloat1Value">klar & modern</strong>
+            </div>
+
+            <div class="about-floating-card about-floating-card--2">
+              <span class="about-floating-card__label" data-i18n="aboutFloat2Label">Google Sheets</span>
+              <strong data-i18n="aboutFloat2Value">optional dazu</strong>
+            </div>
+
+            <div class="about-floating-card about-floating-card--3">
+              <span class="about-floating-card__label" data-i18n="aboutFloat3Label">Ziel</span>
+              <strong data-i18n="aboutFloat3Value">mehr Klarheit</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq section" id="faq">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-head__overline" data-i18n="faqOverline">FAQ</span>
+          <h2 class="section-head__title" data-i18n="faqTitle">
+            Fragen, die für Selbstständige wirklich wichtig sind.
+          </h2>
+        </div>
+
+        <div class="faq__list">
+          <details class="faq-item reveal">
+            <summary data-i18n="faq1Q">Was kostet eine Website bei Ihnen?</summary>
+            <p data-i18n="faq1A">
+              Eine einfache Website startet ab 280 €. Der endgültige Preis hängt vom Umfang, der Struktur, zusätzlichen Funktionen und dem gewünschten Aufbau ab.
+            </p>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary data-i18n="faq2Q">Wovon hängt der Preis genau ab?</summary>
+            <p data-i18n="faq2A">
+              Der Preis hängt von der Komplexität der Website, den gewünschten Funktionen, der Anzahl der Bereiche, der Domain-Anbindung und dem individuellen Aufwand ab.
+            </p>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary data-i18n="faq3Q">Muss ich schon Texte oder Bilder fertig haben?</summary>
+            <p data-i18n="faq3A">
+              Nein. Wenn nötig, kann ich Ihnen helfen, die Struktur klarer aufzubauen und Inhalte sinnvoll zu ordnen.
+            </p>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary data-i18n="faq4Q">Kann ich auch nur Hilfe mit Google Sheets bekommen?</summary>
+            <p data-i18n="faq4A">
+              Ja. Google Sheets Unterstützung beginnt ab 75 € und kann unabhängig von einer Website angefragt werden.
+            </p>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary data-i18n="faq5Q">Kann ich später noch Änderungen oder Erweiterungen machen?</summary>
+            <p data-i18n="faq5A">
+              Ja. Eine Website kann später erweitert, angepasst und weiterentwickelt werden – je nachdem, wie Ihr Business wächst.
+            </p>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary data-i18n="faq6Q">Helfen Sie auch bei Domain und technischer Einrichtung?</summary>
+            <p data-i18n="faq6A">
+              Ja. Je nach Projekt kann ich auch bei der Domain-Anbindung und der grundlegenden technischen Einrichtung helfen.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact section" id="contact">
+      <div class="container contact__grid">
+        <div class="contact__info reveal">
+          <div class="section-head section-head--left">
+            <span class="section-head__overline" data-i18n="contactOverline">Kontakt</span>
+            <h2 class="section-head__title" data-i18n="contactTitle">
+              Schreiben Sie mir direkt.
+            </h2>
+          </div>
+
+          <p class="contact__text" data-i18n="contactText">
+            Wenn Sie eine Website oder mehr digitale Klarheit für Ihr Business suchen, können Sie mir direkt schreiben.
+          </p>
+
+          <div class="contact-list">
+            <a href="mailto:Maria.webhilfe@gmail.com" class="contact-item">
+              <span class="contact-item__label" data-i18n="contactMailLabel">E-Mail</span>
+              <span class="contact-item__value">Maria.webhilfe@gmail.com</span>
+            </a>
+
+            <a href="tel:+4915224584744" class="contact-item">
+              <span class="contact-item__label" data-i18n="contactPhoneLabel">Telefon</span>
+              <span class="contact-item__value">+49 1522 4584744</span>
+            </a>
+
+            <a href="https://wa.me/4915224584744" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <span class="contact-item__label">WhatsApp</span>
+              <span class="contact-item__value" data-i18n="contactWhatsappValue">Nachricht senden</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact__form reveal reveal-delay">
+          <div class="chat-box">
+            <div class="chat-box__top">
+              <span class="chat-dot"></span>
+              <span data-i18n="chatTitle">Frage direkt senden</span>
+            </div>
+
+            <form class="form" id="contactForm">
+              <div class="form-group">
+                <label for="name" data-i18n="formName">Name</label>
+                <input type="text" id="name" name="name" placeholder="Ihr Name" />
+              </div>
+
+              <div class="form-group">
+                <label for="email" data-i18n="formEmail">E-Mail oder WhatsApp</label>
+                <input type="text" id="email" name="email" placeholder="Ihre Kontaktdaten" />
+              </div>
+
+              <div class="form-group">
+                <label for="message" data-i18n="formMessage">Nachricht</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Beschreiben Sie kurz Ihr Anliegen..."
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--full" data-i18n="formBtn">
+                Anfrage vorbereiten
+              </button>
+            </form>
+
+            <p class="form-note" data-i18n="formNote">
+              Beim Klick wird Ihre Anfrage als E-Mail vorbereitet.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer footer--rich">
+    <div class="container footer__top">
+      <div class="footer-brand">
+        <div class="footer-brand__mark">
+          <span></span>
+        </div>
+        <div>
+          <strong>Flow and Clarity</strong>
+          <p data-i18n="footerText">Websites & digitale Struktur für Selbstständige</p>
+        </div>
       </div>
 
+      <div class="footer__cta">
+        <a href="mailto:Maria.webhilfe@gmail.com">Maria.webhilfe@gmail.com</a>
+        <a href="tel:+4915224584744">+49 1522 4584744</a>
+      </div>
     </div>
 
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="section" id="services">
-
-  <div class="container">
-
-    <h2 class="section-title">
-      Was ich für Sie mache
-    </h2>
-
-    <div class="cards">
-
-      <div class="card">
-        <div class="card__icon">🌐</div>
-        <h3>Webseiten</h3>
-        <p>Individuelle Websites, die Ihr Angebot klar zeigen.</p>
+    <div class="container footer__bottom">
+      <div class="footer__legal">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
       </div>
-
-      <div class="card">
-        <div class="card__icon">📱</div>
-        <h3>Mobile Optimierung</h3>
-        <p>Perfekt auf Handy & Desktop angepasst.</p>
-      </div>
-
-      <div class="card">
-        <div class="card__icon">🧠</div>
-        <h3>Struktur</h3>
-        <p>Ihre Inhalte werden verständlich und logisch aufgebaut.</p>
-      </div>
-
-      <div class="card">
-        <div class="card__icon">📊</div>
-        <h3>Google Sheets (optional)</h3>
-        <p>Zusätzliche Hilfe für Ordnung & Übersicht im Business.</p>
-      </div>
-
+      <p class="footer__copy">© 2026 Flow and Clarity</p>
     </div>
+  </footer>
 
-  </div>
-</section>
-
-<!-- PORTFOLIO -->
-<section class="section" id="portfolio">
-
-  <div class="container">
-
-    <h2 class="section-title">
-      Beispiele
-    </h2>
-
-    <div class="portfolio">
-
-      <div class="portfolio-item">
-        <img src="images/sas-1.jpg">
-        <img src="images/sas-2.jpg">
-        <h3>SAS PARTS</h3>
-      </div>
-
-      <div class="portfolio-item">
-        <img src="images/kristina-1.jpg">
-        <img src="images/kristina-2.jpg">
-        <h3>Kristina Deibus</h3>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="section" id="pricing">
-
-  <div class="container">
-
-    <h2 class="section-title">
-      Preise
-    </h2>
-
-    <div class="pricing">
-
-      <!-- STARTER -->
-      <div class="price-card">
-
-        <span class="price-badge">Starter</span>
-
-        <h3>ab 280 €</h3>
-
-        <p>
-          Für kleine Businesses, die schnell online gehen wollen.
-        </p>
-
-        <ul>
-          <li>1 Landing Page</li>
-          <li>Individuelles Design</li>
-          <li>Mobile Optimierung</li>
-          <li>WhatsApp Kontakt</li>
-        </ul>
-
-        <a href="#contact" class="btn btn--soft">
-          Paket anfragen
-        </a>
-
-      </div>
-
-      <!-- BUSINESS -->
-      <div class="price-card price-card--big">
-
-        <span class="price-badge">Business</span>
-
-        <h3>ab 490 €</h3>
-
-        <p>
-          Für Selbstständige, die professionell auftreten wollen.
-        </p>
-
-        <ul>
-          <li>Mehrere Sektionen</li>
-          <li>Stärkere Wirkung</li>
-          <li>FAQ + Struktur</li>
-          <li>Design + Beratung</li>
-        </ul>
-
-        <a href="#contact" class="btn btn--primary">
-          Business anfragen
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="section" id="about">
-
-  <div class="container about">
-
-    <div class="about__text">
-      <h2>Über mich</h2>
-
-      <p>
-        Ich entwickle Webseiten für Selbstständige und kleine Businesses.
-      </p>
-
-      <p>
-        Mein Fokus ist nicht nur Design, sondern Wirkung:
-        dass Kunden sofort verstehen, was Sie anbieten.
-      </p>
-    </div>
-
-    <div class="about__img">
-      <img src="images/maria.png">
-    </div>
-
-  </div>
-
-</section>
-
-<!-- CONTACT -->
-<section class="section" id="contact">
-
-  <div class="container contact">
-
-    <h2>Kontakt</h2>
-
-    <p>Schreiben Sie mir direkt:</p>
-
-    <a href="mailto:Maria.webhilfe@gmail.com" class="btn btn--primary">
-      E-Mail senden
-    </a>
-
-    <a href="https://wa.me/4915224584744" class="btn btn--soft">
-      WhatsApp
-    </a>
-
-  </div>
-
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-
-    <p>© Flow and Clarity</p>
-
-    <div class="footer-links">
-      <a href="#">Impressum</a>
-      <a href="#">Datenschutz</a>
-    </div>
-
-  </div>
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
