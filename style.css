@@ -1846,3 +1846,49 @@ main,
     transform: scaleY(1.06);
   }
 }
+.pricing__grid--three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.pricing__subline {
+  text-align: center;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* мобильная адаптация */
+@media (max-width: 1100px) {
+  .pricing__grid--three {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* подсветка главного продукта */
+.price-card:nth-child(1) {
+  border: 1px solid rgba(158,255,214,0.4);
+  box-shadow:
+    0 0 0 1px rgba(158,255,214,0.2),
+    0 20px 80px rgba(109,240,193,0.25);
+  transform: scale(1.02);
+}
+
+/* бейдж "рекомендуем" */
+.price-card:nth-child(1)::after {
+  content: "Empfohlen";
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #081018;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  box-shadow: 0 0 12px rgba(158,255,214,0.4);
+}
+
+/* эффект дороже */
+.price-card:hover {
+  transform: translateY(-8px) scale(1.01);
+}

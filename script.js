@@ -20,505 +20,185 @@ const translations = {
   de: {
     introTitle: "Ich mache Ihre Wirkung sichtbar.",
 
-    navServices: "Leistungen",
-    navCase: "Referenzen",
-    navPricing: "Preise",
-    navAbout: "Über mich",
-    navFaq: "FAQ",
-    navContact: "Kontakt",
-
-    heroEyebrow: "Websites ab 280 € • klar • stark • modern",
-    heroTitle: "Websites, die nicht nur da sind — sondern hängen bleiben.",
-    heroSubtitle:
-      "Für Selbstständige und kleine Businesses, die online professionell, modern und auffallend auftreten wollen — ohne billig oder chaotisch zu wirken.",
-    heroBtn1: "Projekt anfragen",
-    heroBtn2: "Beispiele ansehen",
-    heroChip1: "Premium Look",
-    heroChip2: "Scroll-Effekte",
-    heroChip3: "klare Nutzerführung",
-    heroCard2: "soll sitzen",
-    heroCaseLabel: "Modernes Beispiel",
-    heroMetric1Label: "Anfragen",
-    heroMetric2Label: "Klarer Kontaktweg",
-    heroMetric2Value: "schnell & direkt",
-    heroFloat2: "Wirkung",
-    heroFloat3: "Struktur",
-
-    trust1Title: "Auffälliger erster Eindruck",
-    trust1Text:
-      "Nicht generisch. Nicht langweilig. Sondern visuell klar und mit Charakter.",
-    trust2Title: "Struktur, die verkauft",
-    trust2Text:
-      "Besucher verstehen schneller, was angeboten wird und was der nächste Schritt ist.",
-    trust3Title: "Modern statt “08/15”",
-    trust3Text:
-      "Scroll, Tiefe, Dynamik und hochwertige Details — aber ohne nervige Überladung.",
-
-    servicesOverline: "Leistungen",
-    servicesTitle: "Was Ihre Website bei mir bekommen kann.",
-    service1Title: "Individuelle Website",
-    service1Text:
-      "Eine Website, die nicht nach Baukasten aussieht, sondern nach echter Marke.",
-    service2Title: "Klare Nutzerführung",
-    service2Text:
-      "Aufbau, Texte und Call-to-Actions so, dass Besucher schneller handeln.",
-    service3Title: "Google Sheets optional",
-    service3Text:
-      "Wenn gewünscht, ergänze ich die Website mit sinnvoller digitaler Struktur für Ihren Alltag.",
-    service3Price: "ab 75 €",
-
-    sasOverline: "Referenzprojekt",
-    sasTitle: "Beispiel für einen modernen Website-Auftritt im Bereich Autoteile.",
-    sasText:
-      "Dieses Beispiel zeigt, wie ein Auftritt für den Automotive-Bereich modern, direkt und hochwertig wirken kann — mit klarer Struktur und Fokus auf schnelle Kontaktaufnahme.",
-    sasPoint1: "starke visuelle Wirkung im ersten Screen",
-    sasPoint2: "klare Kontaktwege für schnelle Anfragen",
-    sasPoint3: "hochwertige, moderne Automotive-Optik",
-    sasBtn: "Projekt besprechen",
-
-    pricingOverline: "Preise",
     pricingTitle: "Klar. Direkt. Ohne unnötiges Theater.",
-    websiteTag: "Website",
-    websiteTitle: "ab 280 €",
-    websitePriceNote: "einmalige Zahlung",
-    websiteText:
-      "Für Selbstständige und kleine Businesses, die online hochwertiger wirken wollen.",
-    websiteList1: "individuelles Design",
-    websiteList2: "mobil & Desktop optimiert",
-    websiteList3: "klare Struktur",
-    websiteList4: "Kontakt / WhatsApp Integration",
-    websiteList5: "moderne visuelle Wirkung",
+    pricingSubline: "Einmalige Zahlung • kein Abo • keine versteckten Kosten",
+
+    websiteTitle: "ab 230 €",
+    websitePriceNote: "einmalig",
+    websiteText: "Moderner, klarer Auftritt für Selbstständige und kleine Businesses.",
+    websiteList3: "klare Struktur, die besser verkauft",
+    websiteList5: "moderne Effekte & Premium Look",
     websiteBtn: "Website anfragen",
 
-    sheetsTag: "Google Sheets",
-    sheetsTitle: "ab 75 €",
-    sheetsPriceNote: "je nach Aufwand",
-    sheetsText:
-      "Struktur, Ordnung und Übersicht für Tabellen, Abläufe und Alltag.",
-    sheetsList1: "klare Tabellenstruktur",
-    sheetsList2: "individuelle Lösungen",
-    sheetsList3: "besserer Überblick",
-    sheetsList4: "einfach aufgebaut",
+    videoTag: "KI Video Werbung",
+    videoTitle: "ab 80 €",
+    videoPriceNote: "je nach Aufwand",
+    videoText: "Kurze, moderne Werbevideos für Social Media.",
+    videoList1: "individuelles Konzept",
+    videoList2: "KI Visuals + Story",
+    videoList3: "perfekt für Instagram & TikTok",
+    videoList4: "Aufmerksamkeit in Sekunden",
+    videoBtn: "Video anfragen",
+
+    sheetsTitle: "ab 50 €",
+    sheetsPriceNote: "je nach Aufgabe",
+    sheetsText: "Ordnung, Struktur und Übersicht für Ihren Alltag.",
     sheetsBtn: "Hilfe anfragen",
-
-    aboutOverline: "Über mich",
-    aboutTitle:
-      "Ich erstelle Websites, die nicht nur ordentlich aussehen — sondern wirken.",
-    aboutLead:
-      "Ich bin Maria und verbinde Design, Klarheit und moderne Nutzerführung für Selbstständige.",
-    aboutText1:
-      "Das Ziel ist nicht einfach “eine Website zu haben”, sondern online so aufzutreten, dass Vertrauen, Qualität und Stil sofort spürbar werden.",
-    aboutStrip1: "individuelle Websites",
-    aboutStrip2: "klare Struktur",
-    aboutStrip3: "leichter Kontakt",
-    aboutFloat1Label: "Website",
-    aboutFloat1Value: "klar & modern",
-    aboutFloat2Label: "Google Sheets",
-    aboutFloat2Value: "optional dazu",
-    aboutFloat3Label: "Ziel",
-    aboutFloat3Value: "mehr Wirkung",
-
-    faqOverline: "FAQ",
-    faqTitle: "Fragen, die wirklich zählen.",
-    faq1Q: "Was kostet eine Website?",
-    faq1A:
-      "Eine einfache Website startet ab 280 €. Der Endpreis hängt vom Umfang und den gewünschten Funktionen ab.",
-    faq2Q: "Kann die Website später erweitert werden?",
-    faq2A:
-      "Ja. Sie kann später ergänzt, angepasst und weiterentwickelt werden.",
-    faq3Q: "Helfen Sie bei Texten und Struktur?",
-    faq3A:
-      "Ja. Wenn nötig, helfe ich bei Aufbau, Klarheit und Nutzerführung.",
-    faq4Q: "Helfen Sie auch mit Domain und Technik?",
-    faq4A:
-      "Ja. Je nach Projekt unterstütze ich auch bei Domain und technischer Einrichtung.",
-
-    contactOverline: "Kontakt",
-    contactTitle: "Schreiben Sie mir direkt.",
-    contactText:
-      "Wenn Sie etwas Moderneres, Auffälligeres und Klareres für Ihr Business wollen, schreiben Sie mir direkt.",
-    contactMailLabel: "E-Mail",
-    contactPhoneLabel: "Telefon",
-    contactWhatsappValue: "Nachricht senden",
-    chatTitle: "Frage direkt senden",
-    formName: "Name",
-    formEmail: "E-Mail oder WhatsApp",
-    formMessage: "Nachricht",
-    formBtn: "Anfrage vorbereiten",
-    formNote: "Beim Klick wird Ihre Anfrage als E-Mail vorbereitet.",
-
-    footerText: "Websites mit Wirkung für Selbstständige"
   },
 
   ru: {
     introTitle: "Я делаю вашу подачу заметной.",
 
-    navServices: "Услуги",
-    navCase: "Примеры",
-    navPricing: "Цены",
-    navAbout: "Обо мне",
-    navFaq: "FAQ",
-    navContact: "Контакт",
+    pricingTitle: "Чётко. Просто. Без лишней путаницы.",
+    pricingSubline: "Разовая оплата • без абонемента • без скрытых платежей",
 
-    heroEyebrow: "Сайты от 280 € • ясно • сильно • современно",
-    heroTitle: "Сайты, которые не просто существуют — а запоминаются.",
-    heroSubtitle:
-      "Для предпринимателей и малого бизнеса, которые хотят выглядеть в интернете профессионально, современно и заметно — без ощущения дешёвого или хаотичного сайта.",
-    heroBtn1: "Обсудить проект",
-    heroBtn2: "Посмотреть примеры",
-    heroChip1: "Премиум-подача",
-    heroChip2: "Scroll-эффекты",
-    heroChip3: "понятная структура",
-    heroCard2: "должен цеплять",
-    heroCaseLabel: "Современный пример",
-    heroMetric1Label: "Заявки",
-    heroMetric2Label: "Понятный контакт",
-    heroMetric2Value: "быстро и прямо",
-    heroFloat2: "Эффект",
-    heroFloat3: "Структура",
+    websiteTitle: "от 230 €",
+    websitePriceNote: "разово",
+    websiteText: "Современная и понятная подача для предпринимателей и малого бизнеса.",
+    websiteList3: "понятная структура, которая лучше продаёт",
+    websiteList5: "современные эффекты и премиум-вид",
+    websiteBtn: "Запросить сайт",
 
-    trust1Title: "Сильное первое впечатление",
-    trust1Text:
-      "Не шаблонно. Не скучно. А визуально чётко и с характером.",
-    trust2Title: "Структура, которая продаёт",
-    trust2Text:
-      "Посетители быстрее понимают, что ты предлагаешь и куда им нажать дальше.",
-    trust3Title: "Современно, а не “как у всех”",
-    trust3Text:
-      "Скролл, глубина, динамика и сильные детали — без визуального бардака.",
+    videoTag: "KI видео-реклама",
+    videoTitle: "от 80 €",
+    videoPriceNote: "зависит от сложности",
+    videoText: "Короткие современные рекламные видео для соцсетей.",
+    videoList1: "индивидуальная идея",
+    videoList2: "KI-визуалы + история",
+    videoList3: "под Instagram и TikTok",
+    videoList4: "внимание за первые секунды",
+    videoBtn: "Запросить видео",
 
-    servicesOverline: "Услуги",
-    servicesTitle: "Что может получить ваш сайт у меня.",
-    service1Title: "Индивидуальный сайт",
-    service1Text:
-      "Сайт, который выглядит не как шаблон, а как настоящий бренд.",
-    service2Title: "Понятная логика для клиента",
-    service2Text:
-      "Структура, тексты и блоки выстроены так, чтобы посетитель быстрее действовал.",
-    service3Title: "Google Sheets дополнительно",
-    service3Text:
-      "При желании я дополняю сайт понятной цифровой структурой для повседневной работы.",
-    service3Price: "от 75 €",
-
-    sasOverline: "Пример проекта",
-    sasTitle: "Пример современного сайта для сферы автозапчастей.",
-    sasText:
-      "Этот пример показывает, как может выглядеть современный, уверенный и визуально сильный сайт для automotive-направления — с понятной структурой и быстрым контактом.",
-    sasPoint1: "сильное визуальное впечатление в первом экране",
-    sasPoint2: "понятные точки контакта для быстрых заявок",
-    sasPoint3: "современная и дорогая automotive-эстетика",
-    sasBtn: "Обсудить проект",
-
-    pricingOverline: "Цены",
-    pricingTitle: "Чётко. Прямо. Без лишнего цирка.",
-    websiteTag: "Сайт",
-    websiteTitle: "от 280 €",
-    websitePriceNote: "разовая оплата",
-    websiteText:
-      "Для предпринимателей и малого бизнеса, которые хотят выглядеть в интернете дороже и сильнее.",
-    websiteList1: "индивидуальный дизайн",
-    websiteList2: "адаптация под телефон и компьютер",
-    websiteList3: "понятная структура",
-    websiteList4: "контакт / WhatsApp интеграция",
-    websiteList5: "современная визуальная подача",
-    websiteBtn: "Заказать сайт",
-
-    sheetsTag: "Google Sheets",
-    sheetsTitle: "от 75 €",
+    sheetsTitle: "от 50 €",
     sheetsPriceNote: "зависит от задачи",
-    sheetsText:
-      "Структура, порядок и удобство для таблиц, процессов и ежедневной работы.",
-    sheetsList1: "понятная структура таблиц",
-    sheetsList2: "индивидуальные решения",
-    sheetsList3: "лучший обзор",
-    sheetsList4: "простая логика",
+    sheetsText: "Порядок, структура и обзор для вашей ежедневной работы.",
     sheetsBtn: "Запросить помощь",
-
-    aboutOverline: "Обо мне",
-    aboutTitle:
-      "Я создаю сайты, которые не просто выглядят аккуратно — а реально работают на впечатление.",
-    aboutLead:
-      "Я Мария и соединяю дизайн, ясность и современную логику для предпринимателей.",
-    aboutText1:
-      "Цель не в том, чтобы просто “иметь сайт”, а в том, чтобы онлайн сразу чувствовались доверие, качество и стиль.",
-    aboutStrip1: "индивидуальные сайты",
-    aboutStrip2: "понятная структура",
-    aboutStrip3: "лёгкий контакт",
-    aboutFloat1Label: "Сайт",
-    aboutFloat1Value: "ясно и современно",
-    aboutFloat2Label: "Google Sheets",
-    aboutFloat2Value: "дополнительно",
-    aboutFloat3Label: "Цель",
-    aboutFloat3Value: "больше эффекта",
-
-    faqOverline: "FAQ",
-    faqTitle: "Вопросы, которые действительно важны.",
-    faq1Q: "Сколько стоит сайт?",
-    faq1A:
-      "Простой сайт начинается от 280 €. Финальная цена зависит от объёма и нужных функций.",
-    faq2Q: "Можно ли расширить сайт позже?",
-    faq2A:
-      "Да. Его можно дополнять, менять и развивать дальше.",
-    faq3Q: "Вы помогаете с текстами и структурой?",
-    faq3A:
-      "Да. Если нужно, я помогаю с логикой, ясностью и подачей.",
-    faq4Q: "Вы помогаете с доменом и технической частью?",
-    faq4A:
-      "Да. В зависимости от проекта я могу помочь и с доменом, и с базовой настройкой.",
-
-    contactOverline: "Контакт",
-    contactTitle: "Напишите мне напрямую.",
-    contactText:
-      "Если вы хотите для бизнеса что-то современнее, заметнее и сильнее — напишите мне сразу.",
-    contactMailLabel: "Почта",
-    contactPhoneLabel: "Телефон",
-    contactWhatsappValue: "Отправить сообщение",
-    chatTitle: "Отправить вопрос",
-    formName: "Имя",
-    formEmail: "E-Mail или WhatsApp",
-    formMessage: "Сообщение",
-    formBtn: "Подготовить запрос",
-    formNote: "При нажатии откроется подготовленное письмо.",
-
-    footerText: "Сайты с эффектом для предпринимателей"
   }
 };
 
-/* language */
+/* LANGUAGE */
 function applyLanguage(lang) {
-  document.documentElement.lang = lang === "ru" ? "ru" : "de";
+  const safeLang = translations[lang] ? lang : "de";
+  document.documentElement.lang = safeLang;
 
-  document.querySelectorAll("[data-i18n]").forEach((element) => {
-    const key = element.getAttribute("data-i18n");
-    if (translations[lang] && translations[lang][key]) {
-      element.textContent = translations[lang][key];
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[safeLang][key]) {
+      el.textContent = translations[safeLang][key];
     }
   });
 
   langButtons.forEach((btn) => {
-    btn.classList.toggle("active", btn.dataset.lang === lang);
+    btn.classList.toggle("active", btn.dataset.lang === safeLang);
   });
 
-  localStorage.setItem("flowClarityLang", lang);
+  localStorage.setItem("flowClarityLang", safeLang);
 }
 
-langButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    applyLanguage(button.dataset.lang);
+langButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    applyLanguage(btn.dataset.lang);
   });
 });
 
 applyLanguage(localStorage.getItem("flowClarityLang") || "de");
 
-/* intro */
+/* INTRO */
 window.addEventListener("load", () => {
-  setTimeout(() => {
-    if (intro) intro.classList.add("hide");
-  }, 1500);
+  setTimeout(() => intro?.classList.add("hide"), 1200);
 });
 
-/* reveal observer */
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  },
-  { threshold: 0.14 }
-);
-
-revealElements.forEach((el) => revealObserver.observe(el));
-
-/* mobile menu */
-if (menuToggle && nav) {
-  menuToggle.addEventListener("click", () => {
-    nav.classList.toggle("open");
-    document.body.classList.toggle("menu-open");
+/* REVEAL */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) entry.target.classList.add("visible");
   });
+}, { threshold: 0.15 });
 
-  nav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("open");
-      document.body.classList.remove("menu-open");
-    });
+revealElements.forEach((el) => observer.observe(el));
+
+/* MENU */
+menuToggle?.addEventListener("click", () => {
+  nav?.classList.toggle("open");
+  document.body.classList.toggle("menu-open");
+});
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    nav?.classList.remove("open");
+    document.body.classList.remove("menu-open");
   });
-}
+});
 
-/* active nav */
+/* ACTIVE LINK */
 function setActiveNavLink() {
   const scrollY = window.scrollY + 160;
 
   sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
-    const sectionId = section.getAttribute("id");
-    const currentLink = document.querySelector(`.nav a[href="#${sectionId}"]`);
+    const top = section.offsetTop;
+    const height = section.offsetHeight;
+    const id = section.getAttribute("id");
+    const link = document.querySelector(`.nav a[href="#${id}"]`);
 
-    if (!currentLink) return;
+    if (!link) return;
 
-    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-      navLinks.forEach((link) => link.classList.remove("is-active"));
-      currentLink.classList.add("is-active");
+    if (scrollY >= top && scrollY < top + height) {
+      navLinks.forEach((l) => l.classList.remove("is-active"));
+      link.classList.add("is-active");
     }
   });
 }
 
 window.addEventListener("scroll", setActiveNavLink);
-setActiveNavLink();
 
-/* scroll progress */
+/* SCROLL BAR */
 function updateScrollProgress() {
   if (!scrollProgress) return;
 
-  const scrollTop = window.scrollY;
-  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  const total = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = (window.scrollY / total) * 100;
 
-  scrollProgress.style.width = `${Math.min(progress, 100)}%`;
+  scrollProgress.style.width = `${progress}%`;
 }
 
-window.addEventListener("scroll", updateScrollProgress, { passive: true });
-window.addEventListener("resize", updateScrollProgress);
-updateScrollProgress();
+window.addEventListener("scroll", updateScrollProgress);
 
-/* contact form */
-if (contactForm) {
-  contactForm.addEventListener("submit", (event) => {
-    event.preventDefault();
+/* FORM */
+contactForm?.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-    const name = document.getElementById("name")?.value.trim() || "";
-    const contact = document.getElementById("email")?.value.trim() || "";
-    const message = document.getElementById("message")?.value.trim() || "";
-    const lang = localStorage.getItem("flowClarityLang") || "de";
+  const name = document.getElementById("name")?.value || "";
+  const contact = document.getElementById("email")?.value || "";
+  const message = document.getElementById("message")?.value || "";
 
-    const subject =
-      lang === "ru"
-        ? "Запрос с сайта Flow and Clarity"
-        : "Anfrage über Flow and Clarity";
+  const lang = localStorage.getItem("flowClarityLang") || "de";
 
-    const body =
-      lang === "ru"
-        ? `Имя: ${name}\nКонтакт: ${contact}\n\nСообщение:\n${message}`
-        : `Name: ${name}\nKontakt: ${contact}\n\nNachricht:\n${message}`;
+  const subject = lang === "ru"
+    ? "Запрос с сайта"
+    : "Anfrage von Website";
 
-    const mailto = `mailto:Maria.webhilfe@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
-  });
-}
+  const body = `Name: ${name}\nKontakt: ${contact}\n\n${message}`;
 
-/* faq - only one open */
+  window.location.href = `mailto:Maria.webhilfe@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+});
+
+/* FAQ */
 faqItems.forEach((item) => {
   item.addEventListener("toggle", () => {
     if (item.open) {
-      faqItems.forEach((otherItem) => {
-        if (otherItem !== item) {
-          otherItem.removeAttribute("open");
-        }
+      faqItems.forEach((el) => {
+        if (el !== item) el.removeAttribute("open");
       });
     }
   });
 });
 
-/* magnetic buttons */
-magneticElements.forEach((element) => {
-  element.addEventListener("mousemove", (e) => {
-    if (window.innerWidth < 900) return;
-
-    const rect = element.getBoundingClientRect();
-    const x = e.clientX - rect.left - rect.width / 2;
-    const y = e.clientY - rect.top - rect.height / 2;
-
-    element.style.transform = `translate(${x * 0.12}px, ${y * 0.12}px)`;
-  });
-
-  element.addEventListener("mouseleave", () => {
-    element.style.transform = "";
-  });
-});
-
-/* tilt cards */
-tiltCards.forEach((card) => {
-  card.addEventListener("mousemove", (e) => {
-    if (window.innerWidth < 900) return;
-
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    const rotateY = ((x / rect.width) - 0.5) * 8;
-    const rotateX = ((y / rect.height) - 0.5) * -8;
-
-    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
-  });
-
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = "";
-  });
-});
-
-/* spotlight cards */
-spotlightCards.forEach((card) => {
-  card.addEventListener("mousemove", (e) => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    card.style.setProperty("--mx", `${x}px`);
-    card.style.setProperty("--my", `${y}px`);
-  });
-});
-
-/* hero + cases parallax */
+/* PARALLAX */
 function updateParallax() {
   const scrollY = window.scrollY;
 
-  if (heroBg) {
-    heroBg.style.transform = `scale(1.06) translateY(${scrollY * 0.16}px)`;
-  }
-
-  if (heroStack && window.innerWidth > 900) {
-    heroStack.style.transform = `translateY(${scrollY * -0.05}px)`;
-  }
-
-  if (sasVisual && window.innerWidth > 900) {
-    const rect = sasVisual.getBoundingClientRect();
-    const offset = rect.top / window.innerHeight;
-    sasVisual.style.transform = `translateY(${offset * -22}px)`;
-  }
+  if (heroBg) heroBg.style.transform = `scale(1.06) translateY(${scrollY * 0.15}px)`;
+  if (heroStack && window.innerWidth > 900) heroStack.style.transform = `translateY(${scrollY * -0.05}px)`;
 }
 
-window.addEventListener("scroll", updateParallax, { passive: true });
-window.addEventListener("resize", updateParallax);
-updateParallax();
-
-/* smoother entrance for hero stack */
-window.addEventListener("load", () => {
-  if (heroStack) {
-    heroStack.animate(
-      [
-        { opacity: 0, transform: "translateY(28px) scale(0.96)" },
-        { opacity: 1, transform: "translateY(0) scale(1)" }
-      ],
-      {
-        duration: 1000,
-        easing: "cubic-bezier(0.22, 1, 0.36, 1)",
-        fill: "forwards",
-        delay: 350
-      }
-    );
-  }
-});
-
-/* prevent weird stuck transforms on touch devices */
-window.addEventListener(
-  "touchstart",
-  () => {
-    if (window.innerWidth < 900) {
-      tiltCards.forEach((card) => (card.style.transform = ""));
-      magneticElements.forEach((el) => (el.style.transform = ""));
-    }
-  },
-  { passive: true }
-);
+window.addEventListener("scroll", updateParallax);
