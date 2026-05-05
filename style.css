@@ -1892,3 +1892,230 @@ main,
 .price-card:hover {
   transform: translateY(-8px) scale(1.01);
 }
+/* ===== NEW HERO GROWTH VISUAL ===== */
+
+.growth-stage {
+  position: relative;
+  width: 520px;
+  height: 520px;
+}
+
+.growth-card {
+  position: absolute;
+  border-radius: 24px;
+  padding: 18px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow);
+}
+
+/* главный блок */
+.growth-card--main {
+  width: 100%;
+  height: 260px;
+  bottom: 0;
+  left: 0;
+}
+
+/* маленькие карточки */
+.growth-card--video {
+  top: 0;
+  right: 20px;
+  width: 160px;
+}
+
+.growth-card--website {
+  top: 80px;
+  left: -20px;
+  width: 160px;
+}
+
+/* подписи */
+.growth-card span {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.growth-card strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.95rem;
+}
+
+/* график */
+.growth-graph {
+  position: relative;
+  height: 100px;
+  margin: 16px 0;
+}
+
+/* линия роста */
+.growth-line {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(158,255,214,0.9) 30%,
+    rgba(141,183,255,0.9) 70%
+  );
+  clip-path: polygon(
+    0% 90%,
+    20% 80%,
+    40% 70%,
+    60% 50%,
+    80% 30%,
+    100% 10%,
+    100% 20%,
+    80% 40%,
+    60% 60%,
+    40% 80%,
+    20% 90%,
+    0% 100%
+  );
+  animation: growthPulse 4s ease-in-out infinite;
+}
+
+/* столбики */
+.growth-bars {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  gap: 8px;
+}
+
+.growth-bars i {
+  flex: 1;
+  height: 20px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  border-radius: 6px;
+  animation: growthBars 3s ease-in-out infinite;
+}
+
+.growth-bars i:nth-child(2){height:30px;}
+.growth-bars i:nth-child(3){height:40px;}
+.growth-bars i:nth-child(4){height:50px;}
+.growth-bars i:nth-child(5){height:60px;}
+
+/* статистика */
+.growth-stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.growth-stats span {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.growth-stats strong {
+  display: block;
+  font-size: 1.2rem;
+}
+
+/* пузырьки */
+.growth-bubble {
+  position: absolute;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  font-size: 0.75rem;
+  animation: floatTag 6s ease-in-out infinite;
+}
+
+.growth-bubble--1 { top: 20px; left: 0; }
+.growth-bubble--2 { top: 200px; right: 0; }
+.growth-bubble--3 { bottom: -10px; right: 40px; }
+
+/* орбиты */
+.growth-orbit {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dashed rgba(255,255,255,0.1);
+  animation: rotateOrbit 20s linear infinite;
+}
+
+.growth-orbit--1 {
+  width: 420px;
+  height: 420px;
+  top: 40px;
+  left: 50px;
+}
+
+.growth-orbit--2 {
+  width: 300px;
+  height: 300px;
+  top: 100px;
+  left: 110px;
+}
+
+/* анимации */
+@keyframes growthBars {
+  0%,100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.1); }
+}
+
+@keyframes growthPulse {
+  0%,100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+@keyframes rotateOrbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+/* ===== BUNDLE CARD ===== */
+
+.price-card--bundle {
+  border: 1px solid rgba(158,255,214,0.5);
+  box-shadow:
+    0 0 0 1px rgba(158,255,214,0.2),
+    0 20px 80px rgba(109,240,193,0.3);
+  transform: scale(1.04);
+}
+
+.price-card--bundle::after {
+  content: "BEST DEAL";
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #081018;
+  font-weight: 800;
+  font-size: 0.7rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+/* ===== GROWTH VISUAL INTERACTION ===== */
+
+.growth-stage:hover .growth-line {
+  animation-duration: 1.6s;
+  filter: drop-shadow(0 0 18px rgba(158,255,214,0.45));
+}
+
+.growth-stage:hover .growth-bars i {
+  animation-duration: 1.2s;
+}
+
+.growth-stage:hover .growth-card--main {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(158,255,214,0.35);
+}
+
+.growth-stage:hover .growth-bubble {
+  background: rgba(158,255,214,0.14);
+  border-color: rgba(158,255,214,0.28);
+}
+
+.growth-card,
+.growth-bubble {
+  transition: transform 0.35s ease, border-color 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
+}
+
+.count-up {
+  color: var(--accent);
+  text-shadow: 0 0 18px rgba(158,255,214,0.25);
+}

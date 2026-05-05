@@ -9,70 +9,134 @@ const contactForm = document.getElementById("contactForm");
 const faqItems = document.querySelectorAll(".faq-item");
 const scrollProgress = document.getElementById("scrollProgress");
 const heroBg = document.getElementById("heroBg");
-const heroStack = document.getElementById("heroStack");
 const sasVisual = document.getElementById("sasVisual");
 
 const magneticElements = document.querySelectorAll(".magnetic");
 const tiltCards = document.querySelectorAll(".tilt-card");
 const spotlightCards = document.querySelectorAll(".spotlight-card");
+const countUpElements = document.querySelectorAll(".count-up");
 
 const translations = {
   de: {
     introTitle: "Ich mache Ihre Wirkung sichtbar.",
 
-    pricingTitle: "Klar. Direkt. Ohne unnötiges Theater.",
+    navServices: "Leistungen",
+    navCase: "Referenz",
+    navPricing: "Preise",
+    navAbout: "Über mich",
+    navFaq: "FAQ",
+    navContact: "Kontakt",
+
+    pricingTitle: "Klar. Direkt. Auf Wirkung ausgelegt.",
     pricingSubline: "Einmalige Zahlung • kein Abo • keine versteckten Kosten",
 
+    websiteTag: "Website",
     websiteTitle: "ab 230 €",
-    websitePriceNote: "einmalig",
-    websiteText: "Moderner, klarer Auftritt für Selbstständige und kleine Businesses.",
+    websitePriceNote: "Preis abhängig von Umfang und Funktion",
+    websiteText: "Für Selbstständige und kleine Businesses, die online moderner wirken und mehr Anfragen bekommen wollen.",
+    websiteList1: "individuelles Design",
+    websiteList2: "mobil & Desktop optimiert",
     websiteList3: "klare Struktur, die besser verkauft",
+    websiteList4: "Kontakt / WhatsApp Integration",
     websiteList5: "moderne Effekte & Premium Look",
+    websiteList6: "auf Anfragen optimiert",
     websiteBtn: "Website anfragen",
 
     videoTag: "KI Video Werbung",
     videoTitle: "ab 80 €",
-    videoPriceNote: "je nach Aufwand",
-    videoText: "Kurze, moderne Werbevideos für Social Media.",
+    videoPriceNote: "je nach Aufwand und Länge",
+    videoText: "Kurze, moderne Werbevideos für Instagram, TikTok und Social Media.",
     videoList1: "individuelles Konzept",
     videoList2: "KI Visuals + Story",
     videoList3: "perfekt für Instagram & TikTok",
     videoList4: "Aufmerksamkeit in Sekunden",
     videoBtn: "Video anfragen",
 
+    bundleTag: "Website + KI Werbung",
+    bundleTitle: "ab 280 €",
+    bundlePriceNote: "Vorteilspaket",
+    bundleText: "Für alle, die direkt stärker starten wollen: moderner Webauftritt plus KI Werbevideo für Social Media.",
+    bundleList1: "Website ab 230 €",
+    bundleList2: "1 KI Werbevideo inklusive",
+    bundleList3: "stimmige visuelle Richtung",
+    bundleList4: "ideal für Start & Sichtbarkeit",
+    bundleBtn: "Paket anfragen",
+
+    sheetsTag: "Google Sheets",
     sheetsTitle: "ab 50 €",
     sheetsPriceNote: "je nach Aufgabe",
-    sheetsText: "Ordnung, Struktur und Übersicht für Ihren Alltag.",
+    sheetsText: "Ordnung, Struktur und Übersicht für Tabellen, Abläufe, Kundenlisten oder den Arbeitsalltag.",
+    sheetsList1: "klare Tabellenstruktur",
+    sheetsList2: "individuelle Lösungen",
+    sheetsList3: "besserer Überblick",
+    sheetsList4: "einfach aufgebaut",
     sheetsBtn: "Hilfe anfragen",
+
+    faq3Q: "Kann ich auch ein KI Werbevideo bestellen?",
+    faq3A: "Ja. KI Werbevideos starten ab 80 €. Der Preis hängt von Länge, Stil, Aufwand und gewünschter Umsetzung ab.",
+
+    footerText: "Websites, KI Videos & digitale Struktur für Selbstständige"
   },
 
   ru: {
     introTitle: "Я делаю вашу подачу заметной.",
 
-    pricingTitle: "Чётко. Просто. Без лишней путаницы.",
+    navServices: "Услуги",
+    navCase: "Пример",
+    navPricing: "Цены",
+    navAbout: "Обо мне",
+    navFaq: "FAQ",
+    navContact: "Контакт",
+
+    pricingTitle: "Чётко. Просто. На результат.",
     pricingSubline: "Разовая оплата • без абонемента • без скрытых платежей",
 
+    websiteTag: "Сайт",
     websiteTitle: "от 230 €",
-    websitePriceNote: "разово",
-    websiteText: "Современная и понятная подача для предпринимателей и малого бизнеса.",
+    websitePriceNote: "цена зависит от объёма и функций",
+    websiteText: "Для предпринимателей и малого бизнеса, которые хотят выглядеть современнее и получать больше заявок.",
+    websiteList1: "индивидуальный дизайн",
+    websiteList2: "адаптация под телефон и компьютер",
     websiteList3: "понятная структура, которая лучше продаёт",
+    websiteList4: "контакт / WhatsApp интеграция",
     websiteList5: "современные эффекты и премиум-вид",
+    websiteList6: "ориентация на заявки",
     websiteBtn: "Запросить сайт",
 
     videoTag: "KI видео-реклама",
     videoTitle: "от 80 €",
-    videoPriceNote: "зависит от сложности",
-    videoText: "Короткие современные рекламные видео для соцсетей.",
+    videoPriceNote: "зависит от сложности и длины",
+    videoText: "Короткие современные рекламные видео для Instagram, TikTok и соцсетей.",
     videoList1: "индивидуальная идея",
     videoList2: "KI-визуалы + история",
     videoList3: "под Instagram и TikTok",
     videoList4: "внимание за первые секунды",
     videoBtn: "Запросить видео",
 
+    bundleTag: "Сайт + KI реклама",
+    bundleTitle: "от 280 €",
+    bundlePriceNote: "выгодный пакет",
+    bundleText: "Для тех, кто хочет стартовать сильнее: современный сайт плюс KI рекламное видео для соцсетей.",
+    bundleList1: "сайт от 230 €",
+    bundleList2: "1 KI рекламное видео включено",
+    bundleList3: "единый визуальный стиль",
+    bundleList4: "идеально для старта и видимости",
+    bundleBtn: "Запросить пакет",
+
+    sheetsTag: "Google Sheets",
     sheetsTitle: "от 50 €",
     sheetsPriceNote: "зависит от задачи",
-    sheetsText: "Порядок, структура и обзор для вашей ежедневной работы.",
+    sheetsText: "Порядок, структура и обзор для таблиц, процессов, списков клиентов и ежедневной работы.",
+    sheetsList1: "понятная структура таблиц",
+    sheetsList2: "индивидуальные решения",
+    sheetsList3: "лучший обзор",
+    sheetsList4: "простая логика",
     sheetsBtn: "Запросить помощь",
+
+    faq3Q: "Можно ли заказать KI рекламное видео?",
+    faq3A: "Да. KI рекламные видео начинаются от 80 €. Цена зависит от длины, стиля, сложности и желаемой реализации.",
+
+    footerText: "Сайты, KI видео и цифровая структура для предпринимателей"
   }
 };
 
@@ -83,6 +147,7 @@ function applyLanguage(lang) {
 
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
+
     if (translations[safeLang][key]) {
       el.textContent = translations[safeLang][key];
     }
@@ -105,19 +170,62 @@ applyLanguage(localStorage.getItem("flowClarityLang") || "de");
 
 /* INTRO */
 window.addEventListener("load", () => {
-  setTimeout(() => intro?.classList.add("hide"), 1200);
+  setTimeout(() => {
+    intro?.classList.add("hide");
+  }, 1200);
 });
 
 /* REVEAL */
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) entry.target.classList.add("visible");
-  });
-}, { threshold: 0.15 });
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
 
 revealElements.forEach((el) => observer.observe(el));
 
-/* MENU */
+/* COUNT UP */
+function animateCountUp(element) {
+  const target = Number(element.dataset.target || 0);
+  const suffix = element.dataset.suffix || "";
+  const duration = 1400;
+  const startTime = performance.now();
+
+  function update(now) {
+    const progress = Math.min((now - startTime) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const value = Math.round(target * eased);
+
+    element.textContent = `+${value}${suffix}`;
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    }
+  }
+
+  requestAnimationFrame(update);
+}
+
+const countObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !entry.target.classList.contains("counted")) {
+        entry.target.classList.add("counted");
+        animateCountUp(entry.target);
+      }
+    });
+  },
+  { threshold: 0.6 }
+);
+
+countUpElements.forEach((el) => countObserver.observe(el));
+
+/* MOBILE MENU */
 menuToggle?.addEventListener("click", () => {
   nav?.classList.toggle("open");
   document.body.classList.toggle("menu-open");
@@ -130,7 +238,7 @@ navLinks.forEach((link) => {
   });
 });
 
-/* ACTIVE LINK */
+/* ACTIVE NAV */
 function setActiveNavLink() {
   const scrollY = window.scrollY + 160;
 
@@ -150,34 +258,41 @@ function setActiveNavLink() {
 }
 
 window.addEventListener("scroll", setActiveNavLink);
+setActiveNavLink();
 
-/* SCROLL BAR */
+/* SCROLL PROGRESS */
 function updateScrollProgress() {
   if (!scrollProgress) return;
 
   const total = document.documentElement.scrollHeight - window.innerHeight;
-  const progress = (window.scrollY / total) * 100;
+  const progress = total > 0 ? (window.scrollY / total) * 100 : 0;
 
-  scrollProgress.style.width = `${progress}%`;
+  scrollProgress.style.width = `${Math.min(progress, 100)}%`;
 }
 
-window.addEventListener("scroll", updateScrollProgress);
+window.addEventListener("scroll", updateScrollProgress, { passive: true });
+window.addEventListener("resize", updateScrollProgress);
+updateScrollProgress();
 
-/* FORM */
+/* CONTACT FORM */
 contactForm?.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const name = document.getElementById("name")?.value || "";
-  const contact = document.getElementById("email")?.value || "";
-  const message = document.getElementById("message")?.value || "";
+  const name = document.getElementById("name")?.value.trim() || "";
+  const contact = document.getElementById("email")?.value.trim() || "";
+  const message = document.getElementById("message")?.value.trim() || "";
 
   const lang = localStorage.getItem("flowClarityLang") || "de";
 
-  const subject = lang === "ru"
-    ? "Запрос с сайта"
-    : "Anfrage von Website";
+  const subject =
+    lang === "ru"
+      ? "Запрос с сайта Flow and Clarity"
+      : "Anfrage über Flow and Clarity";
 
-  const body = `Name: ${name}\nKontakt: ${contact}\n\n${message}`;
+  const body =
+    lang === "ru"
+      ? `Имя: ${name}\nКонтакт: ${contact}\n\nСообщение:\n${message}`
+      : `Name: ${name}\nKontakt: ${contact}\n\nNachricht:\n${message}`;
 
   window.location.href = `mailto:Maria.webhilfe@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
@@ -193,12 +308,82 @@ faqItems.forEach((item) => {
   });
 });
 
+/* MAGNETIC BUTTONS */
+magneticElements.forEach((element) => {
+  element.addEventListener("mousemove", (e) => {
+    if (window.innerWidth < 900) return;
+
+    const rect = element.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+
+    element.style.transform = `translate(${x * 0.12}px, ${y * 0.12}px)`;
+  });
+
+  element.addEventListener("mouseleave", () => {
+    element.style.transform = "";
+  });
+});
+
+/* TILT CARDS */
+tiltCards.forEach((card) => {
+  card.addEventListener("mousemove", (e) => {
+    if (window.innerWidth < 900) return;
+
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const rotateY = (x / rect.width - 0.5) * 8;
+    const rotateX = (y / rect.height - 0.5) * -8;
+
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "";
+  });
+});
+
+/* SPOTLIGHT */
+spotlightCards.forEach((card) => {
+  card.addEventListener("mousemove", (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    card.style.setProperty("--mx", `${x}px`);
+    card.style.setProperty("--my", `${y}px`);
+  });
+});
+
 /* PARALLAX */
 function updateParallax() {
   const scrollY = window.scrollY;
 
-  if (heroBg) heroBg.style.transform = `scale(1.06) translateY(${scrollY * 0.15}px)`;
-  if (heroStack && window.innerWidth > 900) heroStack.style.transform = `translateY(${scrollY * -0.05}px)`;
+  if (heroBg) {
+    heroBg.style.transform = `scale(1.06) translateY(${scrollY * 0.15}px)`;
+  }
+
+  if (sasVisual && window.innerWidth > 900) {
+    const rect = sasVisual.getBoundingClientRect();
+    const offset = rect.top / window.innerHeight;
+    sasVisual.style.transform = `translateY(${offset * -20}px)`;
+  }
 }
 
-window.addEventListener("scroll", updateParallax);
+window.addEventListener("scroll", updateParallax, { passive: true });
+window.addEventListener("resize", updateParallax);
+updateParallax();
+
+/* TOUCH FIX */
+window.addEventListener(
+  "touchstart",
+  () => {
+    if (window.innerWidth < 900) {
+      tiltCards.forEach((card) => (card.style.transform = ""));
+      magneticElements.forEach((el) => (el.style.transform = ""));
+    }
+  },
+  { passive: true }
+);
